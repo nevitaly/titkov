@@ -23,7 +23,7 @@
   --white:    #FAF7F3;
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
   font-family: 'DM Sans', sans-serif;
@@ -33,33 +33,26 @@ body {
   overscroll-behavior-x: none;
 }
 
-/* ─── CURSOR — только на устройствах с мышью ─── */
+/* ─── CURSOR ─── */
 @media (pointer: fine) {
   body { cursor: none; }
-  /* Убираем стандартный курсор на всех интерактивных элементах, включая поля формы */
   a, button, input, textarea, select, label,
-.format-card, .svc-card { cursor: none !important; }
-select option { cursor: auto !important; }
+  .format-card, .svc-card { cursor: none !important; }
+  select option { cursor: auto !important; }
 
   .cursor {
     width: 10px; height: 10px;
-    background: var(--terra);
+    background: #ffffff;
     border-radius: 50%;
-    position: fixed;
-    top: 0; left: 0;
-    pointer-events: none;
-    z-index: 9999;
+    position: fixed; top: 0; left: 0;
+    pointer-events: none; z-index: 9999;
     transform: translate(-50%, -50%);
     transition: width 0.25s, height 0.25s, opacity 0.25s;
     mix-blend-mode: difference;
-    background: #ffffff;
   }
   .cursor.hover { width: 36px; height: 36px; opacity: 0.4; }
 }
-@media (pointer: coarse) {
-  /* Мобилка/тач — курсор не нужен совсем */
-  .cursor { display: none; }
-}
+@media (pointer: coarse) { .cursor { display: none; } }
 
 /* NAV */
 nav {
@@ -76,12 +69,33 @@ nav {
   letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink); text-decoration: none;
 }
 .nav-logo span { color: var(--terra); }
-.nav-links { display: flex; gap: 36px; list-style: none; }
-.nav-links a {
+
+.nav-center {
+  display: flex; gap: 36px; list-style: none; align-items: center;
+}
+.nav-center a {
   font-size: 10px; font-weight: 400; letter-spacing: 0.15em; text-transform: uppercase;
   color: var(--ink-soft); text-decoration: none; transition: color 0.3s;
 }
-.nav-links a:hover { color: var(--terra); }
+.nav-center a:hover { color: var(--terra); }
+
+/* Иконки соцсетей в шапке */
+.nav-socials {
+  display: flex; align-items: center; gap: 16px;
+}
+.nav-social {
+  display: flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px;
+  border: 1px solid var(--sand-dark); border-radius: 2px;
+  transition: border-color 0.3s, background 0.3s;
+  text-decoration: none;
+}
+.nav-social:hover { border-color: var(--terra); background: var(--terra); }
+.nav-social svg { width: 14px; height: 14px; fill: var(--ink-soft); transition: fill 0.3s; }
+.nav-social:hover svg { fill: var(--white); }
+
+.nav-right { display: flex; align-items: center; gap: 20px; }
+
 .nav-cta {
   font-family: 'Unbounded', sans-serif; font-size: 10px; font-weight: 700;
   letter-spacing: 0.12em; text-transform: uppercase;
@@ -114,7 +128,6 @@ nav {
   font-family: 'Cormorant Garamond', serif; font-size: clamp(52px, 6vw, 84px);
   font-weight: 400; font-style: italic; text-transform: none; letter-spacing: -0.01em;
   color: var(--terra); line-height: 0.9; display: block; margin: 8px 0 16px 0;
-  
 }
 .hero-desc { font-size: 15px; font-weight: 300; line-height: 1.8; color: var(--ink-mid); max-width: 400px; margin-top: 36px; }
 .hero-bottom {
@@ -124,8 +137,8 @@ nav {
 .hero-btn {
   font-family: 'Unbounded', sans-serif; font-size: 10px; font-weight: 700;
   letter-spacing: 0.15em; text-transform: uppercase; color: var(--white); background: var(--terra);
-  padding: 20px 48px; border-radius: 2px; text-decoration: none; display: inline-block; transition: background 0.3s, transform 0.2s;
-  text-align: center;
+  padding: 20px 48px; border-radius: 2px; text-decoration: none; display: inline-block;
+  transition: background 0.3s, transform 0.2s; text-align: center;
 }
 .hero-btn:hover { background: var(--terra-lt); transform: translateY(-2px); }
 .hero-scroll-hint {
@@ -150,10 +163,9 @@ nav {
   width: 280px; height: 360px;
   border: 1px solid rgba(255,255,255,0.1); border-radius: 2px;
   display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 16px; position: relative;
+  overflow: hidden;
 }
-.hero-photo-frame::before { content: ''; position: absolute; inset: 8px; border: 1px solid rgba(196,96,42,0.3); border-radius: 1px; }
-.photo-emoji { font-size: 48px; opacity: 0.3; }
-.photo-hint { font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(255,255,255,0.2); }
+.hero-photo-frame::before { content: ''; position: absolute; inset: 8px; border: 1px solid rgba(196,96,42,0.3); border-radius: 1px; pointer-events: none; z-index: 1; }
 .hero-right-stats {
   display: flex; border-top: 1px solid rgba(255,255,255,0.08);
   margin: 0 -48px -64px; padding: 0 48px;
@@ -275,6 +287,23 @@ nav {
 .contact-icon { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
 .contact-label { font-family: 'Unbounded', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--terra); margin-bottom: 4px; }
 .contact-val { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.65); }
+.contact-val a { color: rgba(255,255,255,0.65); text-decoration: none; transition: color 0.3s; }
+.contact-val a:hover { color: var(--terra); }
+
+/* Иконки соцсетей в контактах */
+.contact-socials {
+  display: flex; gap: 12px; margin-top: 40px; padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.contact-social {
+  display: flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px;
+  border: 1px solid rgba(255,255,255,0.1); border-radius: 2px;
+  text-decoration: none; transition: border-color 0.3s, background 0.3s;
+}
+.contact-social:hover { border-color: var(--terra); background: var(--terra); }
+.contact-social svg { width: 18px; height: 18px; fill: rgba(255,255,255,0.4); transition: fill 0.3s; }
+.contact-social:hover svg { fill: var(--white); }
 
 /* FORM */
 .contact-right { padding: 80px 56px; background: var(--sand); }
@@ -293,14 +322,7 @@ nav {
 .form-textarea { resize: none; height: 80px; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 
-/* ── HONEYPOT: скрыто от людей, видно ботам ── */
-.hp-trap {
-  position: absolute;
-  left: -9999px; top: auto;
-  width: 1px; height: 1px;
-  overflow: hidden; opacity: 0;
-  pointer-events: none; tab-index: -1;
-}
+.hp-trap { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; opacity: 0; pointer-events: none; }
 
 .form-submit {
   width: 100%; padding: 20px; background: var(--ink); color: var(--white);
@@ -311,13 +333,8 @@ nav {
 }
 .form-submit:not(:disabled):hover { background: var(--terra); transform: translateY(-2px); }
 .form-submit:disabled { background: #888; opacity: 0.7; }
-
 .form-note { font-size: 11px; font-weight: 300; color: var(--ink-soft); text-align: center; margin-top: 16px; line-height: 1.6; }
-
-.form-feedback {
-  margin-top: 16px; padding: 14px 20px; border-radius: 2px;
-  font-size: 13px; font-weight: 400; text-align: center; display: none;
-}
+.form-feedback { margin-top: 16px; padding: 14px 20px; border-radius: 2px; font-size: 13px; font-weight: 400; text-align: center; display: none; }
 .form-feedback.ok  { background: #d4edda; color: #2d6a4f; display: block; }
 .form-feedback.err { background: #f8d7da; color: #842029; display: block; }
 
@@ -342,7 +359,8 @@ footer { background: var(--ink); padding: 0 56px; }
 /* RESPONSIVE */
 @media (max-width: 900px) {
   nav { padding: 16px 24px; }
-  .nav-links { display: none; }
+  .nav-center { display: none; }
+  .nav-socials { display: none; }
   .hero { grid-template-columns: 1fr; }
   .hero-right { height: 320px; }
   .hero-left { padding: 10px 24px 15px 24px; }
@@ -350,7 +368,7 @@ footer { background: var(--ink); padding: 0 56px; }
   .hero-title-italic { font-size: 40px; }
   .hero-eyebrow { margin-bottom: 16px; }
   .hero-scroll-hint { display: none !important; }
-  .hero-bottom { justify-content: flex-start; margin-top: 10px;}
+  .hero-bottom { justify-content: flex-start; margin-top: 10px; }
   .hero-btn { width: auto; align-self: flex-start; }
   .about, .format, .contact { grid-template-columns: 1fr; }
   .about-left, .about-right, .format-left, .contact-left, .contact-right { padding: 60px 24px; border-right: none; }
@@ -367,8 +385,7 @@ footer { background: var(--ink); padding: 0 56px; }
   .form-row { grid-template-columns: 1fr; }
   .hero-bg-text { font-size: 60px; }
   .footer-links { flex-wrap: wrap; justify-content: center; gap: 16px; }
-  .footer-links a { text-align: center; 
-  
+  .footer-links a { text-align: center; }
 }
 </style>
   <!-- Yandex.Metrika counter -->
@@ -379,7 +396,6 @@ footer { background: var(--ink); padding: 0 56px; }
         for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
         k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
     })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=107284276', 'ym');
-
     ym(107284276, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/107284276" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
@@ -392,12 +408,29 @@ footer { background: var(--ink); padding: 0 56px; }
 <!-- NAV -->
 <nav id="nav">
   <a href="#" class="nav-logo">А.<span>Титков</span></a>
-  <ul class="nav-links">
+  <ul class="nav-center">
     <li><a href="#about">О психологе</a></li>
     <li><a href="#services">Услуги</a></li>
     <li><a href="#process">Как работаем</a></li>
-    <li><a href="#contact" class="nav-cta">Записаться</a></li>
   </ul>
+  <div class="nav-right">
+    <!-- Иконки соцсетей -->
+    <div class="nav-socials">
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/titkov_psy?igsh=azhoNzl3cGNmNWt6" target="_blank" class="nav-social" title="Instagram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <!-- Telegram -->
+      <a href="https://t.me/sashatitkov1998" target="_blank" class="nav-social" title="Telegram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+      </a>
+      <!-- WhatsApp -->
+      <a href="https://wa.me/79957609588" target="_blank" class="nav-social" title="WhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+      </a>
+    </div>
+    <a href="#contact" class="nav-cta">Записаться</a>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -565,26 +598,55 @@ footer { background: var(--ink); padding: 0 56px; }
     <div class="section-title">Начнём<span class="section-title-italic">вместе?</span></div>
     <p class="contact-tagline">Первый шаг — самый важный. Напишите мне, и мы найдём удобное время для первой встречи.</p>
     <div class="contact-items">
-      <div class="contact-item"><div class="contact-icon">📧</div><div><div class="contact-label">Email</div><div class="contact-val">titkov@example.com</div></div></div>
-      <div class="contact-item"><div class="contact-icon">📱</div><div><div class="contact-label">Телефон / WhatsApp</div><div class="contact-val">+7 (___) ___-__-__</div></div></div>
-      <div class="contact-item"><div class="contact-icon">📍</div><div><div class="contact-label">Адрес (офлайн)</div><div class="contact-val">Уточняется при записи</div></div></div>
-      <div class="contact-item"><div class="contact-icon">🕐</div><div><div class="contact-label">Время работы</div><div class="contact-val">Пн–Сб, 10:00–20:00</div></div></div>
+      <div class="contact-item">
+        <div class="contact-icon">📧</div>
+        <div>
+          <div class="contact-label">Email</div>
+          <div class="contact-val"><a href="mailto:">— добавить позже —</a></div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📱</div>
+        <div>
+          <div class="contact-label">Телефон / WhatsApp</div>
+          <div class="contact-val"><a href="tel:+79957609588">+7 (995) 760-95-88</a></div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">✈️</div>
+        <div>
+          <div class="contact-label">Telegram</div>
+          <div class="contact-val"><a href="https://t.me/sashatitkov1998" target="_blank">@sashatitkov1998</a></div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">🕐</div>
+        <div>
+          <div class="contact-label">Время работы</div>
+          <div class="contact-val">Пн–Сб, 10:00–20:00</div>
+        </div>
+      </div>
+    </div>
+    <!-- Иконки соцсетей -->
+    <div class="contact-socials">
+      <a href="https://www.instagram.com/titkov_psy?igsh=azhoNzl3cGNmNWt6" target="_blank" class="contact-social" title="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <a href="https://t.me/sashatitkov1998" target="_blank" class="contact-social" title="Telegram">
+        <svg viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+      </a>
+      <a href="https://wa.me/79957609588" target="_blank" class="contact-social" title="WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+      </a>
     </div>
   </div>
 
   <div class="contact-right reveal">
     <div class="form-title">Оставить заявку<span>на консультацию</span></div>
-
-    <!--
-      HONEYPOT — поле-ловушка для ботов.
-      Люди его не видят (убрано в CSS за экран).
-      Боты заполняют автоматически → отправка блокируется.
-    -->
     <div class="hp-trap" aria-hidden="true">
       <label for="hp-website">Leave this empty</label>
       <input type="text" id="hp-website" name="website" tabindex="-1" autocomplete="off">
     </div>
-
     <div class="form-row">
       <div class="form-group">
         <label class="form-label">Имя</label>
@@ -608,7 +670,6 @@ footer { background: var(--ink); padding: 0 56px; }
       <label class="form-label">С чем хотите разобраться?</label>
       <textarea class="form-textarea" id="f-message" placeholder="Напишите в нескольких словах, если хотите..."></textarea>
     </div>
-
     <button class="form-submit" id="submitBtn" onclick="submitForm(this)">Отправить заявку →</button>
     <div class="form-feedback" id="formFeedback"></div>
     <p class="form-note">Конфиденциальность гарантирована. Отвечу в течение 24 часов.</p>
@@ -633,41 +694,27 @@ footer { background: var(--ink); padding: 0 56px; }
 </footer>
 
 <script>
-/* ═══════════════════════════════════════════════════════
-   TELEGRAM — вставь свои значения
-   ───────────────────────────────────────────────────────
-   Шаг 1: Открой @BotFather в Telegram
-           → /newbot → получи BOT_TOKEN
-   Шаг 2: Напиши своему боту любое сообщение
-   Шаг 3: Открой в браузере:
-           https://api.telegram.org/bot<BOT_TOKEN>/getUpdates
-           Найди "chat":{"id": 123456} — это твой CHAT_ID
-   ═══════════════════════════════════════════════════════ */
-const TG_TOKEN   = 'ВСТАВЬ_BOT_TOKEN_СЮДА';   // пример: '7412345678:AAFxxx...'
-const TG_CHAT_ID = 'ВСТАВЬ_CHAT_ID_СЮДА';     // пример: '123456789'
+const TG_TOKEN   = 'ВСТАВЬ_BOT_TOKEN_СЮДА';
+const TG_CHAT_ID = 'ВСТАВЬ_CHAT_ID_СЮДА';
 
-/* ── Кастомный курсор (только мышь, не тач) ── */
 if (window.matchMedia('(pointer: fine)').matches) {
   const cursor = document.getElementById('cursor');
   document.addEventListener('mousemove', e => {
     cursor.style.left = e.clientX + 'px';
     cursor.style.top  = e.clientY + 'px';
   });
-  const hoverTargets = 'a, button, input, textarea, select, .format-card, .svc-card';
-  document.querySelectorAll(hoverTargets).forEach(el => {
+  document.querySelectorAll('a, button, input, textarea, select, .format-card, .svc-card').forEach(el => {
     el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
     el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
   });
 }
 
-/* ── Scroll reveal ── */
 const revealObs = new IntersectionObserver(
   entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
   { threshold: 0.12 }
 );
 document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
-/* ── Sticky nav shrink ── */
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
   const wide = window.innerWidth > 900;
@@ -676,28 +723,20 @@ window.addEventListener('scroll', () => {
     : (wide ? '20px 56px' : '16px 24px');
 });
 
-/* ── Отправка формы ── */
 async function submitForm(btn) {
-
-  /* 1. HONEYPOT: если скрытое поле заполнено → бот, тихо игнорируем */
   const hp = document.getElementById('hp-website');
   if (hp && hp.value.trim() !== '') {
     showFeedback('ok', '✓ Заявка отправлена! Свяжусь с вами в течение 24 часов.');
     return;
   }
-
-  /* 2. Базовая валидация */
   const name    = document.getElementById('f-name').value.trim();
   const contact = document.getElementById('f-contact').value.trim();
   const format  = document.getElementById('f-format').value;
   const message = document.getElementById('f-message').value.trim();
-
   if (!name || !contact) {
     showFeedback('err', '⚠ Пожалуйста, укажите имя и способ связи.');
     return;
   }
-
-  /* 3. Собираем текст сообщения для Telegram */
   const now  = new Date().toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' });
   const text = `📬 <b>Новая заявка с сайта</b>\n\n` +
                `👤 <b>Имя:</b> ${esc(name)}\n` +
@@ -705,20 +744,15 @@ async function submitForm(btn) {
                `🖥 <b>Формат:</b> ${esc(format || 'не указан')}\n` +
                `💬 <b>Запрос:</b> ${esc(message || '—')}\n\n` +
                `🕐 ${now} (МСК)`;
-
-  /* 4. Отправляем */
   btn.disabled    = true;
   btn.textContent = 'Отправляю...';
-
   try {
     const res = await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
-      method:  'POST',
+      method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ chat_id: TG_CHAT_ID, text, parse_mode: 'HTML' })
     });
-
     const data = await res.json();
-
     if (data.ok) {
       btn.textContent = '✓ Отправлено';
       showFeedback('ok', '✓ Заявка отправлена! Свяжусь с вами в течение 24 часов.');
@@ -726,14 +760,12 @@ async function submitForm(btn) {
         const el = document.getElementById(id);
         if (el) el.value = '';
       });
-    } else {
-      throw new Error(data.description || 'Telegram error');
-    }
+    } else { throw new Error(data.description || 'Telegram error'); }
   } catch (err) {
     console.error(err);
     btn.disabled    = false;
     btn.textContent = 'Отправить заявку →';
-    showFeedback('err', '⚠ Ошибка отправки. Напишите напрямую на email или в WhatsApp.');
+    showFeedback('err', '⚠ Ошибка отправки. Напишите напрямую в Telegram или WhatsApp.');
   }
 }
 
@@ -742,8 +774,6 @@ function showFeedback(type, msg) {
   el.className   = 'form-feedback ' + type;
   el.textContent = msg;
 }
-
-/* Экранируем спецсимволы HTML для Telegram parse_mode=HTML */
 function esc(s) {
   return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 }
