@@ -221,6 +221,14 @@ nav {
 .approach-text { font-size: 14px; font-weight: 400; color: var(--ink-mid); }
 .approach-arrow { margin-left: auto; font-family: 'Unbounded', sans-serif; font-size: 10px; color: var(--terra); }
 
+.certs { margin-top: 32px; padding-top: 32px; border-top: 1px solid var(--sand-dark); }
+.certs-label { font-family: 'Unbounded', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: var(--terra); margin-bottom: 16px; }
+.certs-scroll { display: flex; gap: 16px; overflow-x: auto; padding-bottom: 8px; scrollbar-width: none; }
+.certs-scroll::-webkit-scrollbar { display: none; }
+.cert-card { flex-shrink: 0; width: 140px; height: 100px; background: var(--white); border: 1px solid var(--sand-dark); border-radius: 2px; display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--ink-soft); text-align: center; overflow: hidden; cursor: pointer; transition: border-color 0.3s; }
+.cert-card:hover { border-color: var(--terra); }
+.cert-card img { width: 100%; height: 100%; object-fit: cover; }
+  
 /* SERVICES */
 .services { background: var(--ink); border-bottom: 2px solid var(--ink); }
 .services-header { padding: 64px 56px 48px; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; align-items: flex-end; justify-content: space-between; }
@@ -502,6 +510,15 @@ footer { background: var(--ink); padding: 0 56px; }
       <div class="cred"><span class="cred-num">03</span> Регулярная супервизия и повышение квалификации</div>
       <div class="cred"><span class="cred-num">04</span> Член профессиональной психологической ассоциации</div>
     </div>
+    <div class="certs">
+  <div class="certs-label">Документы и сертификаты</div>
+  <div class="certs-scroll">
+    <div class="cert-card">Сертификат 1</div>
+    <div class="cert-card">Сертификат 2</div>
+    <div class="cert-card">Сертификат 3</div>
+    <div class="cert-card">Сертификат 4</div>
+  </div>
+</div>
   </div>
   <div class="about-right reveal">
     <div class="about-quote-wrap">
@@ -511,7 +528,7 @@ footer { background: var(--ink); padding: 0 56px; }
     </div>
     <div class="about-approach">
       <div class="approach-item"><span class="approach-icon">🧭</span><span class="approach-text">Безопасная и доверительная атмосфера</span><span class="approach-arrow">→</span></div>
-      <div class="approach-item"><span class="approach-icon">🔍</span><span class="approach-text">Работа на вашем темпе, без давления</span><span class="approach-arrow">→</span></div>
+      <div class="approach-item"><span class="approach-icon">🔍</span><span class="approach-text">Работа в вашем темпе, без давления</span><span class="approach-arrow">→</span></div>
       <div class="approach-item"><span class="approach-icon">🌱</span><span class="approach-text">Фокус на долгосрочных изменениях</span><span class="approach-arrow">→</span></div>
     </div>
   </div>
