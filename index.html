@@ -568,10 +568,11 @@ footer { background: var(--ink); padding: 0 56px; }
   <div class="cert-card" onclick="openCert('sert5.jpg')"><img src="sert5.jpg" alt="Сертификат 5"></div>
 </div>
 
-<!-- Лайтбокс -->
-<div id="lightbox" onclick="closeCert()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.9);z-index:9998;display:none;align-items:center;justify-content:center;padding:24px;">
+<div id="lightbox" onclick="closeCert()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.9);z-index:9998;align-items:center;justify-content:center;padding:24px;">
   <img id="lightbox-img" src="" style="max-width:90vw;max-height:90vh;object-fit:contain;border-radius:2px;">
   <div onclick="closeCert()" style="position:absolute;top:20px;right:28px;font-size:32px;color:white;cursor:pointer;line-height:1;">×</div>
+  <div onclick="event.stopPropagation();prevCert()" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);font-size:40px;color:white;cursor:pointer;user-select:none;padding:16px;">‹</div>
+  <div onclick="event.stopPropagation();nextCert()" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:40px;color:white;cursor:pointer;user-select:none;padding:16px;">›</div>
 </div>
          
     <div class="about-approach">
@@ -842,7 +843,11 @@ function showFeedback(type, msg) {
 function esc(s) {
   return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 }
-  function openCert(src) {
+  const certImages = ['sert1.jpg','sert2.jpg','sert3.jpg','sert4.jpg','sert5.jpg'];
+let currentCert = 0;
+
+function openCert(src) {
+  currentCert = certImages.indexOf(src);
   const lb = document.getElementById('lightbox');
   document.getElementById('lightbox-img').src = src;
   lb.style.display = 'flex';
@@ -852,7 +857,19 @@ function closeCert() {
   document.getElementById('lightbox').style.display = 'none';
   document.body.style.overflow = '';
 }
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCert(); });
+function nextCert() {
+  currentCert = (currentCert + 1) % certImages.length;
+  document.getElementById('lightbox-img').src = certImages[currentCert];
+}
+function prevCert() {
+  currentCert = (currentCert - 1 + certImages.length) % certImages.length;
+  document.getElementById('lightbox-img').src = certImages[currentCert];
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeCert();
+  if (e.key === 'ArrowRight') nextCert();
+  if (e.key === 'ArrowLeft') prevCert();
+});
 </script>
 </body>
 </html>
