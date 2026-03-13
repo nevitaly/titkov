@@ -385,7 +385,7 @@ if (window.matchMedia('(pointer: fine)').matches) {
     cursor.style.left = e.clientX + 'px';
     cursor.style.top  = e.clientY + 'px';
   });
-  document.querySelectorAll('a, button, input, textarea, select, .format-card, .svc-card').forEach(el => {
+  document.querySelectorAll('a, button, input, textarea, select, .format-card, .svc-card, .cert-card, .certs-btn').forEach(el => {
     el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
     el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
   });
