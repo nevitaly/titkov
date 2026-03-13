@@ -218,8 +218,8 @@ nav {
 
 .certs { margin-top: 32px; padding-top: 32px; border-top: 1px solid var(--sand-dark); }
 .certs-label { font-family: 'Unbounded', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: var(--terra); margin-bottom: 16px; }
-.certs-wrapper { position: relative; }
-.certs-scroll { display: flex; gap: 16px; overflow: hidden; padding-bottom: 8px; }
+.certs-wrapper { position: relative; display: flex; align-items: center; gap: 8px; }
+.certs-scroll { display: flex; gap: 16px; overflow: hidden; padding-bottom: 8px; width: calc(4 * 140px + 3 * 16px); flex-shrink: 0; }
 .cert-card {
   flex-shrink: 0; width: 140px; height: 100px;
   background: var(--white); border: 1px solid var(--sand-dark); border-radius: 2px;
@@ -229,12 +229,12 @@ nav {
 }
 .cert-card:hover { border-color: var(--terra); }
 .cert-card img { width: 100%; height: 100%; object-fit: cover; }
-.certs-nav { display: flex; gap: 8px; margin-top: 12px; }
 .certs-btn {
-  width: 32px; height: 32px; border: 1px solid var(--sand-dark); border-radius: 2px;
+  width: 32px; height: 32px; flex-shrink: 0;
+  border: 1px solid var(--sand-dark); border-radius: 2px;
   background: var(--white); display: flex; align-items: center; justify-content: center;
-  font-size: 16px; color: var(--ink); cursor: pointer; transition: border-color 0.3s, background 0.3s;
-  user-select: none;
+  font-size: 16px; color: var(--ink); cursor: pointer;
+  transition: border-color 0.3s, color 0.3s; user-select: none;
 }
 .certs-btn:hover { border-color: var(--terra); color: var(--terra); }
 .cert-card { flex-shrink: 0; width: 140px; height: 100px; background: var(--white); border: 1px solid var(--sand-dark); border-radius: 2px; display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--ink-soft); text-align: center; overflow: hidden; cursor: pointer; transition: border-color 0.3s; }
@@ -406,4 +406,8 @@ footer { background: var(--ink); padding: 0 56px; }
   .hero-bg-text { font-size: 60px; }
   .footer-links { flex-wrap: wrap; justify-content: center; gap: 16px; }
   .footer-links a { text-align: center; }
+  .certs-wrapper { gap: 0; }
+  .certs-btn { display: none; }
+  .certs-scroll { overflow-x: auto; width: 100%; scrollbar-width: none; }
+  .certs-scroll::-webkit-scrollbar { display: none; }
 }
