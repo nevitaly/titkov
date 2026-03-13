@@ -598,6 +598,12 @@ footer { background: var(--ink); padding: 0 56px; }
   <div onclick="event.stopPropagation();prevCert()" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);font-size:40px;color:white;cursor:pointer;user-select:none;padding:16px;">‹</div>
   <div onclick="event.stopPropagation();nextCert()" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:40px;color:white;cursor:pointer;user-select:none;padding:16px;">›</div>
 </div>
+   <div id="office-lightbox" onclick="closeOffice()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.9);z-index:9998;align-items:center;justify-content:center;padding:24px;">
+  <img id="office-img" src="" style="max-width:90vw;max-height:90vh;object-fit:contain;border-radius:2px;">
+  <div onclick="closeOffice()" style="position:absolute;top:20px;right:28px;font-size:32px;color:white;cursor:pointer;line-height:1;">×</div>
+  <div onclick="event.stopPropagation();prevOffice()" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);font-size:40px;color:white;cursor:pointer;user-select:none;padding:16px;">‹</div>
+  <div onclick="event.stopPropagation();nextOffice()" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:40px;color:white;cursor:pointer;user-select:none;padding:16px;">›</div>
+</div>
          
     <div class="about-approach">
       <div class="approach-item"><span class="approach-icon">🧭</span><span class="approach-text">Безопасная и доверительная атмосфера</span><span class="approach-arrow">→</span></div>
@@ -652,6 +658,7 @@ footer { background: var(--ink); padding: 0 56px; }
       <div class="format-card">
         <div class="format-icon-wrap">🏡</div>
         <div><div class="format-title">Офлайн</div><div class="format-desc">Встречаемся лично в уютном, приватном кабинете с видом на Дон. Как добраться и найти — пришлю после записи.</div></div>
+        <button class="office-btn" onclick="openOffice()">📷 Посмотреть офис</button>
       </div>
     </div>
   </div>
@@ -913,6 +920,27 @@ function updateCtaHref() {
 }
 updateCtaHref();
 window.addEventListener('resize', updateCtaHref);
+  const officeImages = ['office1.jpg','office2.jpg','office3.jpg'];
+let currentOffice = 0;
+
+function openOffice() {
+  currentOffice = 0;
+  document.getElementById('office-img').src = officeImages[0];
+  document.getElementById('office-lightbox').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+function closeOffice() {
+  document.getElementById('office-lightbox').style.display = 'none';
+  document.body.style.overflow = '';
+}
+function nextOffice() {
+  currentOffice = (currentOffice + 1) % officeImages.length;
+  document.getElementById('office-img').src = officeImages[currentOffice];
+}
+function prevOffice() {
+  currentOffice = (currentOffice - 1 + officeImages.length) % officeImages.length;
+  document.getElementById('office-img').src = officeImages[currentOffice];
+}
 </script>
 </body>
 </html>
