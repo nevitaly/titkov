@@ -408,6 +408,6 @@ footer { background: var(--ink); padding: 0 56px; }
   .footer-links a { text-align: center; }
   .certs-wrapper { gap: 0; }
   .certs-btn { display: none; }
-  .certs-scroll { overflow-x: auto; width: 100%; scrollbar-width: none; }
+  .certs-scroll { overflow-x: auto !important; width: 100%; scrollbar-width: none; }
   .certs-scroll::-webkit-scrollbar { display: none; }
 }
