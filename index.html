@@ -170,8 +170,8 @@
       <div class="quote-author">— Александр Титков, психолог</div>
     </div>
        <div class="certs">
-<div class="certs-label">Документы и сертификаты</div>
 <div class="certs-wrapper">
+  <div class="certs-btn" onclick="scrollCerts(-1)">‹</div>
   <div class="certs-scroll" id="certsScroll">
     <div class="cert-card" onclick="openCert('sert1.jpg')"><img src="sert1.jpg" alt="Сертификат 1"></div>
     <div class="cert-card" onclick="openCert('sert2.jpg')"><img src="sert2.jpg" alt="Сертификат 2"></div>
@@ -181,10 +181,7 @@
     <div class="cert-card" onclick="openCert('sert6.jpg')"><img src="sert6.jpg" alt="Сертификат 6"></div>
     <div class="cert-card" onclick="openCert('sert7.jpg')"><img src="sert7.jpg" alt="Сертификат 7"></div>
   </div>
-  <div class="certs-nav">
-    <div class="certs-btn" onclick="scrollCerts(-1)">‹</div>
-    <div class="certs-btn" onclick="scrollCerts(1)">›</div>
-  </div>
+  <div class="certs-btn" onclick="scrollCerts(1)">›</div>
 </div>
 
 <div id="lightbox" onclick="closeCert()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.9);z-index:9998;align-items:center;justify-content:center;padding:24px;">
