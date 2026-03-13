@@ -962,6 +962,10 @@ function prevOffice() {
   currentOffice = (currentOffice - 1 + officeImages.length) % officeImages.length;
   document.getElementById('office-img').src = officeImages[currentOffice];
 }
+document.querySelectorAll('.form-input, .form-textarea, .form-select').forEach(el => {
+  el.addEventListener('focus', () => document.body.style.overscrollBehaviorX = 'none');
+  el.addEventListener('blur', () => document.body.style.overscrollBehaviorX = 'auto');
+});
 </script>
 </body>
 </html>
