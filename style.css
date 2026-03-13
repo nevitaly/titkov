@@ -13,7 +13,12 @@
   --white:    #FAF7F3;
 }
 
-html { scroll-behavior: smooth; overflow-x: hidden; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
+} 
+    
 
 body {
   font-family: 'DM Sans', sans-serif;
