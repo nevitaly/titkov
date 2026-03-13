@@ -607,7 +607,7 @@ footer { background: var(--ink); padding: 0 56px; }
   <div onclick="event.stopPropagation();prevCert()" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);font-size:40px;color:white;cursor:pointer;user-select:none;padding:16px;">‹</div>
   <div onclick="event.stopPropagation();nextCert()" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:40px;color:white;cursor:pointer;user-select:none;padding:16px;">›</div>
 </div>
-   <div id="office-lightbox" onclick="closeOffice()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.9);z-index:9998;align-items:center;justify-content:center;padding:24px;">
+   <div id="office-lightbox" onclick="closeOffice()" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.9);z-index:99999;align-items:center;justify-content:center;padding:24px;">
   <img id="office-img" src="" style="max-width:90vw;max-height:90vh;object-fit:contain;border-radius:2px;">
   <div onclick="closeOffice()" style="position:absolute;top:20px;right:28px;font-size:32px;color:white;cursor:pointer;line-height:1;">×</div>
   <div onclick="event.stopPropagation();prevOffice()" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);font-size:40px;color:white;cursor:pointer;user-select:none;padding:16px;">‹</div>
