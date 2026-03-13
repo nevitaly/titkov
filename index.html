@@ -559,14 +559,21 @@ footer { background: var(--ink); padding: 0 56px; }
       <div class="quote-author">— Александр Титков, психолог</div>
     </div>
        <div class="certs">
-  <div class="certs-label">Документы и сертификаты</div>
-  <div class="certs-scroll">
-    <div class="cert-card">Сертификат 1</div>
-    <div class="cert-card">Сертификат 2</div>
-    <div class="cert-card">Сертификат 3</div>
-    <div class="cert-card">Сертификат 4</div>
-  </div>
+ <div class="certs-label">Документы и сертификаты</div>
+<div class="certs-scroll">
+  <div class="cert-card" onclick="openCert('sert1.jpg')"><img src="sert1.jpg" alt="Сертификат 1"></div>
+  <div class="cert-card" onclick="openCert('sert2.jpg')"><img src="sert2.jpg" alt="Сертификат 2"></div>
+  <div class="cert-card" onclick="openCert('sert3.jpg')"><img src="sert3.jpg" alt="Сертификат 3"></div>
+  <div class="cert-card" onclick="openCert('sert4.jpg')"><img src="sert4.jpg" alt="Сертификат 4"></div>
+  <div class="cert-card" onclick="openCert('sert5.jpg')"><img src="sert5.jpg" alt="Сертификат 5"></div>
 </div>
+
+<!-- Лайтбокс -->
+<div id="lightbox" onclick="closeCert()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.9);z-index:9998;display:none;align-items:center;justify-content:center;padding:24px;">
+  <img id="lightbox-img" src="" style="max-width:90vw;max-height:90vh;object-fit:contain;border-radius:2px;">
+  <div onclick="closeCert()" style="position:absolute;top:20px;right:28px;font-size:32px;color:white;cursor:pointer;line-height:1;">×</div>
+</div>
+         
     <div class="about-approach">
       <div class="approach-item"><span class="approach-icon">🧭</span><span class="approach-text">Безопасная и доверительная атмосфера</span><span class="approach-arrow">→</span></div>
       <div class="approach-item"><span class="approach-icon">🔍</span><span class="approach-text">Работа в вашем темпе, без давления</span><span class="approach-arrow">→</span></div>
@@ -835,6 +842,17 @@ function showFeedback(type, msg) {
 function esc(s) {
   return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 }
+  function openCert(src) {
+  const lb = document.getElementById('lightbox');
+  document.getElementById('lightbox-img').src = src;
+  lb.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+function closeCert() {
+  document.getElementById('lightbox').style.display = 'none';
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCert(); });
 </script>
 </body>
 </html>
