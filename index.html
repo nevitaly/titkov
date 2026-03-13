@@ -170,15 +170,21 @@
       <div class="quote-author">— Александр Титков, психолог</div>
     </div>
        <div class="certs">
- <div class="certs-label">Документы и сертификаты</div>
-<div class="certs-scroll">
-  <div class="cert-card" onclick="openCert('sert1.jpg')"><img src="sert1.jpg" alt="Сертификат 1"></div>
-  <div class="cert-card" onclick="openCert('sert2.jpg')"><img src="sert2.jpg" alt="Сертификат 2"></div>
-  <div class="cert-card" onclick="openCert('sert3.jpg')"><img src="sert3.jpg" alt="Сертификат 3"></div>
-  <div class="cert-card" onclick="openCert('sert4.jpg')"><img src="sert4.jpg" alt="Сертификат 4"></div>
-  <div class="cert-card" onclick="openCert('sert5.jpg')"><img src="sert5.jpg" alt="Сертификат 5"></div>
-  <div class="cert-card" onclick="openCert('sert6.jpg')"><img src="sert6.jpg" alt="Сертификат 6"></div>
-  <div class="cert-card" onclick="openCert('sert7.jpg')"><img src="sert7.jpg" alt="Сертификат 7"></div>
+<div class="certs-label">Документы и сертификаты</div>
+<div class="certs-wrapper">
+  <div class="certs-scroll" id="certsScroll">
+    <div class="cert-card" onclick="openCert('sert1.jpg')"><img src="sert1.jpg" alt="Сертификат 1"></div>
+    <div class="cert-card" onclick="openCert('sert2.jpg')"><img src="sert2.jpg" alt="Сертификат 2"></div>
+    <div class="cert-card" onclick="openCert('sert3.jpg')"><img src="sert3.jpg" alt="Сертификат 3"></div>
+    <div class="cert-card" onclick="openCert('sert4.jpg')"><img src="sert4.jpg" alt="Сертификат 4"></div>
+    <div class="cert-card" onclick="openCert('sert5.jpg')"><img src="sert5.jpg" alt="Сертификат 5"></div>
+    <div class="cert-card" onclick="openCert('sert6.jpg')"><img src="sert6.jpg" alt="Сертификат 6"></div>
+    <div class="cert-card" onclick="openCert('sert7.jpg')"><img src="sert7.jpg" alt="Сертификат 7"></div>
+  </div>
+  <div class="certs-nav">
+    <div class="certs-btn" onclick="scrollCerts(-1)">‹</div>
+    <div class="certs-btn" onclick="scrollCerts(1)">›</div>
+  </div>
 </div>
 
 <div id="lightbox" onclick="closeCert()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.9);z-index:9998;align-items:center;justify-content:center;padding:24px;">
@@ -455,6 +461,10 @@ function showFeedback(type, msg) {
 }
 function esc(s) {
   return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+  function scrollCerts(dir) {
+  const el = document.getElementById('certsScroll');
+  el.scrollBy({ left: dir * 156, behavior: 'smooth' });
 }
   const certImages = ['sert1.jpg','sert2.jpg','sert3.jpg','sert4.jpg','sert5.jpg','sert6.jpg','sert7.jpg'];
 let currentCert = 0;
