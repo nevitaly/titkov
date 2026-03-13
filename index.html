@@ -731,7 +731,7 @@ footer { background: var(--ink); padding: 0 56px; }
     </div>
   </div>
 
-  <div class="contact-right reveal">
+  <div class="contact-right reveal" id="contact-form">
     <div class="form-title">Оставить заявку<span>на консультацию</span></div>
     <div class="hp-trap" aria-hidden="true">
       <label for="hp-website">Leave this empty</label>
@@ -906,6 +906,12 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowRight') nextCert();
   if (e.key === 'ArrowLeft') prevCert();
 });
+  const navCta = document.querySelector('.nav-cta');
+function updateCtaHref() {
+  navCta.href = window.innerWidth <= 900 ? '#contact-form' : '#contact';
+}
+updateCtaHref();
+window.addEventListener('resize', updateCtaHref);
 </script>
 </body>
 </html>
