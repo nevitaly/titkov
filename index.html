@@ -474,3 +474,13 @@ function nextCert() {
 }
 function prevCert() {
   currentCert = (currentCert - 1 + certImages.length) % certImages.length;
+  document.getElementById('lightbox-img').src = certImages[currentCert];
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeCert();
+  if (e.key === 'ArrowRight') nextCert();
+  if (e.key === 'ArrowLeft') prevCert();
+});
+</script>
+</body>
+</html>
