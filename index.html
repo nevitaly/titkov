@@ -471,7 +471,7 @@ footer { background: var(--ink); padding: 0 56px; }
   width: 100%; }
   .issues .process-header {
   padding: 44px 24px 28px;
-  gap: 14px;
+  gap: 10px !important;
 }
 
 .issues .process-steps {
@@ -481,15 +481,11 @@ footer { background: var(--ink); padding: 0 56px; }
 .issues .step {
   padding: 24px 20px 20px;
 }
-
-/* горизонтальная линия между 1-2 и 3-4 / 5-6 и т.д. */
-.issues .step:nth-child(n+3) {
-  border-top: 1px solid var(--sand-dark);
+.issues .step:nth-child(3),
+.issues .step:nth-child(4) {
+  border-top: 1px solid var(--sand-dark); }
 }
-}
-.issues .step:nth-child(n+5) {
-  box-shadow: inset 0 1px 0 var(--sand-dark);
-}
+  
 </style>
 </head>
   
