@@ -476,29 +476,37 @@ footer { background: var(--ink); padding: 0 56px; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   border-bottom: 2px solid var(--ink);
+  align-items: stretch;
 }
 
 .issues-photo {
   background: var(--ink);
   border-right: 2px solid var(--ink);
-  padding: 0;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 48px;
   overflow: hidden;
-  min-height: 100%;
 }
 
 .issues-photo-inner {
-  height: 520px;
+  width: 280px;
+  height: 360px;
   position: relative;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
-.issues-photo-inner::after {
+.issues-photo-inner::before {
   content: '';
   position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(to bottom, rgba(28,26,23,0.2) 0%, rgba(28,26,23,0.15) 45%, rgba(28,26,23,0.45) 100%);
+  inset: 8px;
+  border: 1px solid rgba(196,96,42,0.3);
+  border-radius: 1px;
   pointer-events: none;
+  z-index: 1;
 }
 
 .issues-photo img {
@@ -506,8 +514,8 @@ footer { background: var(--ink); padding: 0 56px; }
   height: 100%;
   display: block;
   object-fit: cover;
-  object-position: center top;
-  filter: saturate(0.92) contrast(1.02);
+  object-position: center center;
+  border-radius: 2px;
 }
 
 .issues-content {
@@ -594,8 +602,7 @@ footer { background: var(--ink); padding: 0 56px; }
   color: var(--ink);
 }
 
-/* MOBILE */
-@media (max-width: 900px) {
+  @media (max-width: 900px) {
   .issues-split {
     grid-template-columns: 1fr;
   }
@@ -603,14 +610,12 @@ footer { background: var(--ink); padding: 0 56px; }
   .issues-photo {
     border-right: none;
     border-bottom: 2px solid var(--ink);
+    padding: 40px 24px;
   }
 
   .issues-photo-inner {
-    min-height: 360px;
-  }
-
-  .issues-photo img {
-    object-position: center 20%;
+    width: min(100%, 280px);
+    height: 360px;
   }
 
   .issues-header {
@@ -815,7 +820,7 @@ footer { background: var(--ink); padding: 0 56px; }
 <section class="issues-split">
   <div class="issues-photo reveal">
     <div class="issues-photo-inner">
-      <img src="img/photo2.jpg" alt="Александр Титков" style="width:100%;height:100%;object-fit:cover;border-radius:2px;">
+      <img src="img/photo2.jpg" alt="Александр Титков">
     </div>
   </div>
 
