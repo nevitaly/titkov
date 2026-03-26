@@ -44,8 +44,8 @@
   "description": "Практикующий психолог. Индивидуальные консультации онлайн и офлайн. Работа с тревогой, стрессом, отношениями и жизненными переходами."
 }
 </script>
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+<link rel="shortcut icon" href="favicon/favicon.ico">
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
@@ -484,6 +484,8 @@ footer { background: var(--ink); padding: 0 56px; }
 <noscript><div><img src="https://mc.yandex.ru/watch/107284276" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 </head>        
+<body>
+  
 <div id="lightbox" onclick="closeCert()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.9);z-index:9998;align-items:center;justify-content:center;padding:24px;">
   <img id="lightbox-img" src="" style="max-width:90vw;max-height:90vh;object-fit:contain;border-radius:2px;">
   <div onclick="closeCert()" style="position:absolute;top:20px;right:28px;font-size:32px;color:white;cursor:none;line-height:1;">×</div>
@@ -497,8 +499,6 @@ footer { background: var(--ink); padding: 0 56px; }
   <div onclick="event.stopPropagation();prevOffice()" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);font-size:40px;color:white;cursor:none;user-select:none;padding:16px;">‹</div>
   <div onclick="event.stopPropagation();nextOffice()" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:40px;color:white;cursor:none;user-select:none;padding:16px;">›</div>
 </div>
-<body>
-
 <div class="cursor" id="cursor"></div>
 
 <!-- NAV -->
@@ -555,7 +555,7 @@ footer { background: var(--ink); padding: 0 56px; }
     <div class="hero-bg-text">А.ТИТКОВ</div>
     <div class="hero-photo-area">
       <div class="hero-photo-frame">
-        <img src="photo.jpg" alt="Александр Титков" style="width:100%;height:100%;object-fit:cover;border-radius:2px;">
+        <img src="img/photo.jpg" alt="Александр Титков" style="width:100%;height:100%;object-fit:cover;border-radius:2px;">
       </div>
     </div>
     <div class="hero-right-stats">
@@ -610,13 +610,13 @@ footer { background: var(--ink); padding: 0 56px; }
        <div class="certs">
  <div class="certs-label">Документы и сертификаты</div>
 <div class="certs-scroll">
-  <div class="cert-card" onclick="openCert('sert1.jpg')"><img src="sert1.jpg" alt="Сертификат 1"></div>
-  <div class="cert-card" onclick="openCert('sert2.jpg')"><img src="sert2.jpg" alt="Сертификат 2"></div>
-  <div class="cert-card" onclick="openCert('sert3.jpg')"><img src="sert3.jpg" alt="Сертификат 3"></div>
-  <div class="cert-card" onclick="openCert('sert4.jpg')"><img src="sert4.jpg" alt="Сертификат 4"></div>
-  <div class="cert-card" onclick="openCert('sert5.jpg')"><img src="sert5.jpg" alt="Сертификат 5"></div>
-  <div class="cert-card" onclick="openCert('sert5.jpg')"><img src="sert6.jpg" alt="Сертификат 6"></div>
-  <div class="cert-card" onclick="openCert('sert5.jpg')"><img src="sert7.jpg" alt="Сертификат 7"></div>
+  <div class="cert-card" onclick="openCert('img/sert/sert1.jpg')"><img src="img/sert/sert1.jpg" alt="Сертификат 1"></div>
+  <div class="cert-card" onclick="openCert('img/sert/sert2.jpg')"><img src="img/sert/sert2.jpg" alt="Сертификат 2"></div>
+  <div class="cert-card" onclick="openCert('img/sert/sert3.jpg')"><img src="img/sert/sert3.jpg" alt="Сертификат 3"></div>
+  <div class="cert-card" onclick="openCert('img/sert/sert4.jpg')"><img src="img/sert/sert4.jpg" alt="Сертификат 4"></div>
+  <div class="cert-card" onclick="openCert('img/sert/sert5.jpg')"><img src="img/sert/sert5.jpg" alt="Сертификат 5"></div>
+  <div class="cert-card" onclick="openCert('img/sert/sert6.jpg')"><img src="img/sert/sert6.jpg" alt="Сертификат 6"></div>
+  <div class="cert-card" onclick="openCert('img/sert/sert7.jpg')"><img src="img/sert/sert7.jpg" alt="Сертификат 7"></div>
 </div>
 <div class="certs-nav">
   <button class="certs-arrow" onclick="scrollCerts(-1)">‹</button>
@@ -790,7 +790,7 @@ footer { background: var(--ink); padding: 0 56px; }
     </div>
     <button class="form-submit" id="submitBtn" onclick="submitForm(this)">Отправить заявку →</button>
     <div class="form-feedback" id="formFeedback"></div>
-    <p class="form-note">Конфиденциальность гарантирована. Отвечу в течение 24 часов.<br>Нажимая кнопку, вы соглашаетесь с <a href="/privacy.html" style="color:var(--ink-soft);text-decoration:underline;">политикой конфиденциальности</a></p>
+    <p class="form-note">Конфиденциальность гарантирована. Отвечу в течение 24 часов.<br>Нажимая кнопку, вы соглашаетесь с <a href="privacy.html" style="color:var(--ink-soft);text-decoration:underline;">политикой конфиденциальности</a></p>
   </div>
 </section>
 
@@ -907,7 +907,14 @@ function esc(s) {
   if (next < 0) next = maxScroll;
   scroll.scrollTo({ left: next, behavior: 'smooth' });
 }
-  const certImages = ['sert1.jpg','sert2.jpg','sert3.jpg','sert4.jpg','sert5.jpg','sert6.jpg','sert7.jpg'];
+  const certImages = ['img/sert/sert1.jpg',
+  'img/sert/sert2.jpg',
+  'img/sert/sert3.jpg',
+  'img/sert/sert4.jpg',
+  'img/sert/sert5.jpg',
+  'img/sert/sert6.jpg',
+  'img/sert/sert7.jpg'
+];
 let currentCert = 0;
 
 function openCert(src) {
@@ -940,7 +947,12 @@ function updateCtaHref() {
 }
 updateCtaHref();
 window.addEventListener('resize', updateCtaHref);
-  const officeImages = ['office1.jpg','office2.jpg','office3.jpg','office4.jpg'];
+  const officeImages = [
+  'img/office/office1.jpg',
+  'img/office/office2.jpg',
+  'img/office/office3.jpg',
+  'img/office/office4.jpg'
+  ];
 let currentOffice = 0;
 
 function openOffice() {
