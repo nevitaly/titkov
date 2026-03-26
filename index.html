@@ -487,70 +487,66 @@ footer { background: var(--ink); padding: 0 56px; }
 }
 
 .issues-header-right {
-  max-width: 340px;
+  max-width: 360px;
   font-size: 15px;
   font-weight: 300;
   line-height: 1.8;
   color: var(--ink-soft);
 }
 
-.issues-grid {
+.issues-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 1fr;
 }
 
-.issue-card {
-  padding: 36px 32px;
+.issue-row {
+  padding: 34px 40px;
   border-right: 1px solid var(--sand-dark);
   border-bottom: 1px solid var(--sand-dark);
-  transition: background 0.3s, transform 0.3s;
-  min-height: 220px;
+  transition: background 0.3s, padding-left 0.3s;
 }
 
-.issue-card:nth-child(4n) {
+.issue-row:nth-child(2n) {
   border-right: none;
 }
 
-.issue-card:hover {
+.issue-row:hover {
   background: var(--sand);
-  transform: translateY(-2px);
+  padding-left: 48px;
 }
 
-.issue-icon {
-  font-size: 24px;
-  margin-bottom: 20px;
-  display: block;
+.issue-content {
+  max-width: 480px;
 }
 
-.issue-title {
+.issue-name {
   font-family: 'Unbounded', sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   line-height: 1.35;
   text-transform: uppercase;
+  letter-spacing: -0.01em;
   color: var(--ink);
   margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
-.issue-desc {
+.issue-name::before {
+  content: '';
+  display: inline-block;
+  width: 26px;
+  height: 1px;
+  background: var(--terra);
+  flex-shrink: 0;
+}
+
+.issue-text {
   font-size: 15px;
   font-weight: 300;
-  line-height: 1.75;
+  line-height: 1.8;
   color: var(--ink-mid);
-}
-
-@media (max-width: 1200px) {
-  .issues-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .issue-card:nth-child(4n) {
-    border-right: 1px solid var(--sand-dark);
-  }
-
-  .issue-card:nth-child(2n) {
-    border-right: none;
-  }
 }
 
 @media (max-width: 900px) {
@@ -561,14 +557,35 @@ footer { background: var(--ink); padding: 0 56px; }
     padding: 48px 24px 32px;
   }
 
-  .issues-grid {
+  .issues-list {
     grid-template-columns: 1fr;
   }
 
-  .issue-card {
-    padding: 28px 24px;
-    border-right: none !important;
-    min-height: auto;
+  .issue-row {
+    padding: 26px 24px;
+    border-right: none;
+  }
+
+  .issue-row:hover {
+    padding-left: 30px;
+  }
+
+  .issues-header-right {
+    max-width: 100%;
+  }
+
+  .issue-name {
+    font-size: 13px;
+    gap: 10px;
+  }
+
+  .issue-name::before {
+    width: 18px;
+  }
+
+  .issue-text {
+    font-size: 14px;
+    line-height: 1.7;
   }
 }
 </style>
@@ -736,67 +753,75 @@ footer { background: var(--ink); padding: 0 56px; }
   </div>
 </section>
 
-  <!-- WHAT I WORK WITH -->
+<!-- WHAT I WORK WITH -->
 <section class="issues">
   <div class="issues-header reveal">
     <div>
-      <div class="section-tag">Запросы</div>
+      <div class="section-tag">Частые запросы</div>
       <div class="section-title">
-        С чем я<span class="section-title-italic">работаю</span>
+        С чем можно<span class="section-title-italic">обратиться</span>
       </div>
     </div>
     <div class="issues-header-right">
-      Вы можете прийти с чётким запросом или просто с ощущением, что что-то не так. Это уже достаточная причина начать.
+      Вы можете прийти с чётким запросом или просто с ощущением, что что-то не так. Ниже — лишь часть тем, с которыми ко мне обращаются чаще всего.
     </div>
   </div>
 
-  <div class="issues-grid">
-    <div class="issue-card reveal">
-      <div class="issue-icon">🧠</div>
-      <div class="issue-title">Тревога и напряжение</div>
-      <div class="issue-desc">Когда сложно расслабиться, остановить мысли и почувствовать внутреннюю опору.</div>
+  <div class="issues-list">
+    <div class="issue-row reveal">
+      <div class="issue-content">
+        <div class="issue-name">Тревога и напряжение</div>
+        <div class="issue-text">Когда сложно расслабиться, остановить мысли и почувствовать внутреннюю опору.</div>
+      </div>
     </div>
 
-    <div class="issue-card reveal">
-      <div class="issue-icon">🔥</div>
-      <div class="issue-title">Выгорание и усталость</div>
-      <div class="issue-desc">Когда сил всё меньше, а привычная жизнь начинает давить и утомлять.</div>
+    <div class="issue-row reveal">
+      <div class="issue-content">
+        <div class="issue-name">Выгорание и усталость</div>
+        <div class="issue-text">Когда сил всё меньше, а привычная жизнь начинает давить и утомлять.</div>
+      </div>
     </div>
 
-    <div class="issue-card reveal">
-      <div class="issue-icon">💬</div>
-      <div class="issue-title">Отношения и близость</div>
-      <div class="issue-desc">Когда трудно выстраивать контакт, говорить о важном и чувствовать понимание.</div>
+    <div class="issue-row reveal">
+      <div class="issue-content">
+        <div class="issue-name">Отношения и близость</div>
+        <div class="issue-text">Когда трудно выстраивать контакт, говорить о важном и чувствовать понимание.</div>
+      </div>
     </div>
 
-    <div class="issue-card reveal">
-      <div class="issue-icon">🌿</div>
-      <div class="issue-title">Сомнения в себе</div>
-      <div class="issue-desc">Когда внутренней критики слишком много, а уверенности в себе и своих решениях не хватает.</div>
+    <div class="issue-row reveal">
+      <div class="issue-content">
+        <div class="issue-name">Сомнения в себе</div>
+        <div class="issue-text">Когда внутренней критики слишком много, а уверенности в себе и своих решениях не хватает.</div>
+      </div>
     </div>
 
-    <div class="issue-card reveal">
-      <div class="issue-icon">🌀</div>
-      <div class="issue-title">Ощущение “что-то не так”</div>
-      <div class="issue-desc">Когда тяжело объяснить словами, но внутри давно есть напряжение, пустота или потерянность.</div>
+    <div class="issue-row reveal">
+      <div class="issue-content">
+        <div class="issue-name">Ощущение, что что-то не так</div>
+        <div class="issue-text">Когда тяжело объяснить словами, но внутри давно есть напряжение, потерянность или внутренний дискомфорт.</div>
+      </div>
     </div>
 
-    <div class="issue-card reveal">
-      <div class="issue-icon">🔄</div>
-      <div class="issue-title">Жизненные перемены</div>
-      <div class="issue-desc">Когда приходится проходить через кризис, расставание, потерю или новый этап жизни.</div>
+    <div class="issue-row reveal">
+      <div class="issue-content">
+        <div class="issue-name">Жизненные перемены</div>
+        <div class="issue-text">Когда приходится проходить через кризис, расставание, потерю или новый этап жизни.</div>
+      </div>
     </div>
 
-    <div class="issue-card reveal">
-      <div class="issue-icon">🧑‍🎓</div>
-      <div class="issue-title">Подростковый возраст</div>
-      <div class="issue-desc">Конфликты, тревога, поиск себя и сложности во взаимоотношениях с близкими.</div>
+    <div class="issue-row reveal">
+      <div class="issue-content">
+        <div class="issue-name">Подростковый возраст</div>
+        <div class="issue-text">Конфликты, тревога, поиск себя и сложности во взаимоотношениях с близкими.</div>
+      </div>
     </div>
 
-    <div class="issue-card reveal">
-      <div class="issue-icon">⏳</div>
-      <div class="issue-title">Прокрастинация и выбор</div>
-      <div class="issue-desc">Когда трудно решиться, начать, не откладывать и двигаться дальше.</div>
+    <div class="issue-row reveal">
+      <div class="issue-content">
+        <div class="issue-name">И многое другое</div>
+        <div class="issue-text">Если вы не нашли свой запрос в этом списке, это не значит, что с ним нельзя работать.</div>
+      </div>
     </div>
   </div>
 </section>
