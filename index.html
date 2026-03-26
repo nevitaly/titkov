@@ -477,12 +477,27 @@ footer { background: var(--ink); padding: 0 56px; }
   background: var(--bg);
 }
 
+/* HEADER */
 .issues-intro {
   padding: 64px 56px 40px;
   border-bottom: 1px solid var(--sand-dark);
-  text-align: left;
-  max-width: none;
-  margin: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+}
+
+.issues-intro-left {
+  max-width: 560px;
+}
+
+.issues-intro-right {
+  max-width: 420px;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--ink-soft);
 }
 
 .issues-tag {
@@ -504,47 +519,30 @@ footer { background: var(--ink); padding: 0 56px; }
   color: var(--ink);
 }
 
-.issues-title .section-title-italic {
-  display: block;
-  margin-top: 6px;
-  margin-bottom: 18px;
-}
-
-.issues-intro-text {
-  max-width: 620px;
-  margin: 0 auto;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.85;
-  color: var(--ink-soft);
-}
-
+/* GRID */
 .issues-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: start;
 }
 
+/* CARDS */
 .issue-card {
-  position: relative;
-  padding: 34px 56px 32px 56px;
+  padding: 24px 40px;
   border-bottom: 1px solid var(--sand-dark);
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.issue-card:nth-child(odd) {
-  border-right: 1px solid var(--sand-dark);
+  position: relative;
+  transition: background 0.3s;
 }
 
 .issue-card::before {
   content: '';
   position: absolute;
-  top: 34px;
-  left: 56px;
-  width: 26px;
+  top: 28px;
+  left: 40px;
+  width: 24px;
   height: 1px;
   background: var(--terra);
-  transition: width 0.3s ease, opacity 0.3s ease;
+  transition: width 0.3s;
 }
 
 .issue-card:hover {
@@ -552,30 +550,24 @@ footer { background: var(--ink); padding: 0 56px; }
 }
 
 .issue-card:hover::before {
-  width: 42px;
+  width: 40px;
 }
 
-.issue-card:hover .issue-name {
-  color: var(--terra);
-  transform: translateX(10px);
-}
-
+.issue-card:hover .issue-name,
 .issue-card:hover .issue-text {
-  color: var(--ink);
-  transform: translateX(10px);
+  transform: translateX(8px);
 }
 
+/* TEXT */
 .issue-name {
   font-family: 'Unbounded', sans-serif;
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: -0.01em;
   color: var(--ink);
-  line-height: 1.35;
-  margin-bottom: 14px;
-  padding-left: 42px;
-  transition: color 0.3s ease, transform 0.3s ease;
+  margin-bottom: 10px;
+  padding-left: 36px;
+  transition: color 0.3s, transform 0.3s;
 }
 
 .issue-text {
@@ -583,14 +575,18 @@ footer { background: var(--ink); padding: 0 56px; }
   font-weight: 300;
   line-height: 1.8;
   color: var(--ink-mid);
-  padding-left: 42px;
-  max-width: 460px;
-  transition: color 0.3s ease, transform 0.3s ease;
+  padding-left: 36px;
+  max-width: 420px;
+  transition: color 0.3s, transform 0.3s;
 }
 
+/* MOBILE */
 @media (max-width: 900px) {
   .issues-intro {
+    flex-direction: column;
+    align-items: flex-start;
     padding: 60px 24px 40px;
+    gap: 20px;
   }
 
   .issues-grid {
@@ -598,39 +594,16 @@ footer { background: var(--ink); padding: 0 56px; }
   }
 
   .issue-card {
-    padding: 26px 24px 24px 24px;
-  }
-
-  .issue-card:nth-child(odd) {
-    border-right: none;
+    padding: 20px 24px;
   }
 
   .issue-card::before {
-    top: 26px;
     left: 24px;
-    width: 20px;
   }
 
-  .issue-card:hover::before {
-    width: 30px;
-  }
-
-  .issue-name {
-    font-size: 13px;
-    padding-left: 32px;
-    margin-bottom: 10px;
-  }
-
+  .issue-name,
   .issue-text {
-    font-size: 14px;
-    line-height: 1.75;
-    padding-left: 32px;
-    max-width: 100%;
-  }
-
-  .issue-card:hover .issue-name,
-  .issue-card:hover .issue-text {
-    transform: translateX(6px);
+    padding-left: 28px;
   }
 }
   
@@ -802,11 +775,15 @@ footer { background: var(--ink); padding: 0 56px; }
 <!-- ISSUES -->
 <section class="issues" id="issues">
   <div class="issues-intro reveal">
-    <div class="section-tag issues-tag">Частые запросы</div>
-    <div class="issues-title">
-      С чем можно<span class="section-title-italic">обратиться</span>
+    <div class="issues-intro-left">
+      <div class="section-tag issues-tag">Частые запросы</div>
+      <div class="issues-title">
+        С чем можно
+        <span class="section-title-italic">обратиться</span>
+      </div>
     </div>
-    <div class="issues-intro-text">
+
+    <div class="issues-intro-right">
       Вы можете прийти с чётким запросом или просто с ощущением, что что-то не так. Ниже — лишь часть тем, с которыми ко мне обращаются чаще всего.
     </div>
   </div>
@@ -833,11 +810,6 @@ footer { background: var(--ink); padding: 0 56px; }
     </div>
 
     <div class="issue-card reveal">
-      <div class="issue-name">Ощущение, что что-то не так</div>
-      <div class="issue-text">Когда тяжело объяснить словами, но внутри давно есть напряжение, потерянность или внутренний дискомфорт.</div>
-    </div>
-
-    <div class="issue-card reveal">
       <div class="issue-name">Жизненные перемены</div>
       <div class="issue-text">Когда приходится проходить через кризис, расставание, потерю или новый этап жизни.</div>
     </div>
@@ -845,6 +817,11 @@ footer { background: var(--ink); padding: 0 56px; }
     <div class="issue-card reveal">
       <div class="issue-name">Подростковый возраст</div>
       <div class="issue-text">Конфликты, тревога, поиск себя и сложности во взаимоотношениях с близкими.</div>
+    </div>
+
+    <div class="issue-card reveal">
+      <div class="issue-name">Ощущение, что что-то не так</div>
+      <div class="issue-text">Когда тяжело объяснить словами, но внутри давно есть напряжение, потерянность или внутренний дискомфорт.</div>
     </div>
 
     <div class="issue-card reveal">
