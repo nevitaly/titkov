@@ -471,128 +471,6 @@ footer { background: var(--ink); padding: 0 56px; }
   width: 100%; }
 }
 
-/* ISSUES */
-.issues {
-  border-bottom: 2px solid var(--ink);
-}
-
-.issues-header {
-  padding: 80px 56px 56px;
-  border-bottom: 1px solid var(--sand-dark);
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 40px;
-}
-
-.issues-header-right {
-  max-width: 320px;
-  font-size: 14px;
-  font-weight: 300;
-  color: var(--ink-soft);
-  line-height: 1.7;
-}
-
-.issues-steps {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.issue-step {
-  padding: 42px 40px 36px;
-  border-right: 1px solid var(--sand-dark);
-  border-bottom: 1px solid var(--sand-dark);
-  position: relative;
-  transition: background 0.3s ease;
-}
-
-.issue-step:nth-child(2n) {
-  border-right: none;
-}
-
-.issue-step:hover {
-  background: var(--sand);
-}
-
-.issue-line {
-  position: absolute;
-  top: 42px;
-  left: 40px;
-  width: 22px;
-  height: 1px;
-  background: var(--terra);
-  transition: width 0.3s ease;
-}
-
-.issue-step:hover .issue-line {
-  width: 38px;
-}
-
-.issue-name {
-  font-family: 'Unbounded', sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--ink);
-  margin-bottom: 14px;
-  padding-left: 34px;
-  line-height: 1.35;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.issue-text {
-  font-size: 15px;
-  font-weight: 300;
-  line-height: 1.8;
-  color: var(--ink-mid);
-  padding-left: 34px;
-  max-width: 430px;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.issue-step:hover .issue-name,
-.issue-step:hover .issue-text {
-  transform: translateX(6px);
-}
-
-@media (max-width: 900px) {
-  .issues-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 60px 24px 40px;
-  }
-
-  .issues-header-right {
-    max-width: 100%;
-  }
-
-  .issues-steps {
-    grid-template-columns: 1fr;
-  }
-
-  .issue-step {
-    padding: 28px 24px 24px;
-    border-right: none;
-  }
-
-  .issue-line {
-    top: 28px;
-    left: 24px;
-  }
-
-  .issue-name,
-  .issue-text {
-    padding-left: 28px;
-  }
-
-  .issue-text {
-    max-width: 100%;
-    font-size: 14px;
-    line-height: 1.75;
-  }
-}
-  
 </style>
 </head>
   
@@ -760,66 +638,69 @@ footer { background: var(--ink); padding: 0 56px; }
 
 <!-- ISSUES -->
 <section class="issues" id="issues">
-  <div class="issues-header reveal">
+  <div class="process-header reveal">
     <div>
       <div class="section-tag">Частые запросы</div>
-      <div class="section-title">
-        С чем можно
-        <span class="section-title-italic">обратиться</span>
-      </div>
+      <div class="section-title">С чем можно<span class="section-title-italic">обратиться</span></div>
     </div>
-    <div class="issues-header-right">
+    <div style="max-width:280px;font-size:14px;font-weight:300;color:var(--ink-soft);line-height:1.7;">
       Вы можете прийти с чётким запросом или просто с ощущением, что что-то не так. Ниже — лишь часть тем, с которыми ко мне обращаются чаще всего.
     </div>
   </div>
 
-  <div class="issues-steps">
-    <div class="issue-step reveal">
-      <div class="issue-line"></div>
-      <div class="issue-name">Тревога и напряжение</div>
-      <p class="issue-text">Когда сложно расслабиться, остановить мысли и почувствовать внутреннюю опору.</p>
+  <div class="process-steps">
+    <div class="step reveal">
+      <div class="step-line"></div>
+      <div class="step-num">01 —</div>
+      <div class="step-title">Тревога и напряжение</div>
+      <p class="step-desc">Когда сложно расслабиться, остановить мысли и почувствовать внутреннюю опору.</p>
     </div>
 
-    <div class="issue-step reveal">
-      <div class="issue-line"></div>
-      <div class="issue-name">Выгорание и усталость</div>
-      <p class="issue-text">Когда сил всё меньше, а привычная жизнь начинает давить и утомлять.</p>
+    <div class="step reveal">
+      <div class="step-line"></div>
+      <div class="step-num">02 —</div>
+      <div class="step-title">Выгорание и усталость</div>
+      <p class="step-desc">Когда сил всё меньше, а привычная жизнь начинает давить и утомлять.</p>
     </div>
 
-    <div class="issue-step reveal">
-      <div class="issue-line"></div>
-      <div class="issue-name">Отношения и близость</div>
-      <p class="issue-text">Когда трудно выстраивать контакт, говорить о важном и чувствовать понимание.</p>
+    <div class="step reveal">
+      <div class="step-line"></div>
+      <div class="step-num">03 —</div>
+      <div class="step-title">Отношения и близость</div>
+      <p class="step-desc">Когда трудно выстраивать контакт, говорить о важном и чувствовать понимание.</p>
     </div>
 
-    <div class="issue-step reveal">
-      <div class="issue-line"></div>
-      <div class="issue-name">Сомнения в себе</div>
-      <p class="issue-text">Когда внутренней критики слишком много, а уверенности в себе и своих решениях не хватает.</p>
+    <div class="step reveal">
+      <div class="step-num">04 —</div>
+      <div class="step-title">Сомнения в себе</div>
+      <p class="step-desc">Когда внутренней критики слишком много, а уверенности в себе и своих решениях не хватает.</p>
     </div>
 
-    <div class="issue-step reveal">
-      <div class="issue-line"></div>
-      <div class="issue-name">Жизненные перемены</div>
-      <p class="issue-text">Когда приходится проходить через кризис, расставание, потерю или новый этап жизни.</p>
+    <div class="step reveal">
+      <div class="step-line"></div>
+      <div class="step-num">05 —</div>
+      <div class="step-title">Жизненные перемены</div>
+      <p class="step-desc">Когда приходится проходить через кризис, расставание, потерю или новый этап жизни.</p>
     </div>
 
-    <div class="issue-step reveal">
-      <div class="issue-line"></div>
-      <div class="issue-name">Подростковый возраст</div>
-      <p class="issue-text">Конфликты, тревога, поиск себя и сложности во взаимоотношениях с близкими.</p>
+    <div class="step reveal">
+      <div class="step-line"></div>
+      <div class="step-num">06 —</div>
+      <div class="step-title">Подростковый возраст</div>
+      <p class="step-desc">Конфликты, тревога, поиск себя и сложности во взаимоотношениях с близкими.</p>
     </div>
 
-    <div class="issue-step reveal">
-      <div class="issue-line"></div>
-      <div class="issue-name">Ощущение, что что-то не так</div>
-      <p class="issue-text">Когда тяжело объяснить словами, но внутри давно есть напряжение, потерянность или внутренний дискомфорт.</p>
+    <div class="step reveal">
+      <div class="step-line"></div>
+      <div class="step-num">07 —</div>
+      <div class="step-title">Ощущение, что что-то не так</div>
+      <p class="step-desc">Когда тяжело объяснить словами, но внутри давно есть напряжение, потерянность или внутренний дискомфорт.</p>
     </div>
 
-    <div class="issue-step reveal">
-      <div class="issue-line"></div>
-      <div class="issue-name">И многое другое</div>
-      <p class="issue-text">Если вы не нашли свой запрос в этом списке, это не значит, что с ним нельзя работать.</p>
+    <div class="step reveal">
+      <div class="step-num">08 —</div>
+      <div class="step-title">И многое другое</div>
+      <p class="step-desc">Если вы не нашли свой запрос в этом списке, это не значит, что с ним нельзя работать.</p>
     </div>
   </div>
 </section>
