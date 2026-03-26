@@ -474,100 +474,70 @@ footer { background: var(--ink); padding: 0 56px; }
 /* ISSUES */
 .issues {
   border-bottom: 2px solid var(--ink);
-  background: var(--bg);
 }
 
-/* HEADER */
-.issues-intro {
-  padding: 64px 56px 40px;
+.issues-header {
+  padding: 80px 56px 56px;
   border-bottom: 1px solid var(--sand-dark);
-
   display: flex;
-  justify-content: space-between;
   align-items: flex-end;
+  justify-content: space-between;
   gap: 40px;
 }
 
-.issues-intro-left {
-  max-width: 560px;
-}
-
-.issues-intro-right {
-  max-width: 420px;
-  font-size: 15px;
+.issues-header-right {
+  max-width: 320px;
+  font-size: 14px;
   font-weight: 300;
-  line-height: 1.8;
   color: var(--ink-soft);
+  line-height: 1.7;
 }
 
-.issues-tag {
-  justify-content: flex-start;
-  margin-bottom: 24px;
-}
-
-.issues-tag::after {
-  display: none;
-}
-
-.issues-title {
-  font-family: 'Unbounded', sans-serif;
-  font-size: clamp(30px, 3.4vw, 46px);
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: -0.02em;
-  line-height: 1.05;
-  color: var(--ink);
-}
-
-/* GRID */
-.issues-grid {
+.issues-steps {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: start;
 }
 
-/* CARDS */
-.issue-card {
-  padding: 24px 40px;
+.issue-step {
+  padding: 42px 40px 36px;
+  border-right: 1px solid var(--sand-dark);
   border-bottom: 1px solid var(--sand-dark);
   position: relative;
-  transition: background 0.3s;
+  transition: background 0.3s ease;
 }
 
-.issue-card::before {
-  content: '';
-  position: absolute;
-  top: 28px;
-  left: 40px;
-  width: 24px;
-  height: 1px;
-  background: var(--terra);
-  transition: width 0.3s;
+.issue-step:nth-child(2n) {
+  border-right: none;
 }
 
-.issue-card:hover {
+.issue-step:hover {
   background: var(--sand);
 }
 
-.issue-card:hover::before {
-  width: 40px;
+.issue-line {
+  position: absolute;
+  top: 42px;
+  left: 40px;
+  width: 22px;
+  height: 1px;
+  background: var(--terra);
+  transition: width 0.3s ease;
 }
 
-.issue-card:hover .issue-name,
-.issue-card:hover .issue-text {
-  transform: translateX(8px);
+.issue-step:hover .issue-line {
+  width: 38px;
 }
 
-/* TEXT */
 .issue-name {
   font-family: 'Unbounded', sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--ink);
-  margin-bottom: 10px;
-  padding-left: 36px;
-  transition: color 0.3s, transform 0.3s;
+  margin-bottom: 14px;
+  padding-left: 34px;
+  line-height: 1.35;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .issue-text {
@@ -575,35 +545,51 @@ footer { background: var(--ink); padding: 0 56px; }
   font-weight: 300;
   line-height: 1.8;
   color: var(--ink-mid);
-  padding-left: 36px;
-  max-width: 420px;
-  transition: color 0.3s, transform 0.3s;
+  padding-left: 34px;
+  max-width: 430px;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* MOBILE */
+.issue-step:hover .issue-name,
+.issue-step:hover .issue-text {
+  transform: translateX(6px);
+}
+
 @media (max-width: 900px) {
-  .issues-intro {
+  .issues-header {
     flex-direction: column;
     align-items: flex-start;
-    padding: 60px 24px 40px;
     gap: 20px;
+    padding: 60px 24px 40px;
   }
 
-  .issues-grid {
+  .issues-header-right {
+    max-width: 100%;
+  }
+
+  .issues-steps {
     grid-template-columns: 1fr;
   }
 
-  .issue-card {
-    padding: 20px 24px;
+  .issue-step {
+    padding: 28px 24px 24px;
+    border-right: none;
   }
 
-  .issue-card::before {
+  .issue-line {
+    top: 28px;
     left: 24px;
   }
 
   .issue-name,
   .issue-text {
     padding-left: 28px;
+  }
+
+  .issue-text {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.75;
   }
 }
   
@@ -774,59 +760,66 @@ footer { background: var(--ink); padding: 0 56px; }
 
 <!-- ISSUES -->
 <section class="issues" id="issues">
-  <div class="issues-intro reveal">
-    <div class="issues-intro-left">
-      <div class="section-tag issues-tag">Частые запросы</div>
-      <div class="issues-title">
+  <div class="issues-header reveal">
+    <div>
+      <div class="section-tag">Частые запросы</div>
+      <div class="section-title">
         С чем можно
         <span class="section-title-italic">обратиться</span>
       </div>
     </div>
-
-    <div class="issues-intro-right">
+    <div class="issues-header-right">
       Вы можете прийти с чётким запросом или просто с ощущением, что что-то не так. Ниже — лишь часть тем, с которыми ко мне обращаются чаще всего.
     </div>
   </div>
 
-  <div class="issues-grid">
-    <div class="issue-card reveal">
+  <div class="issues-steps">
+    <div class="issue-step reveal">
+      <div class="issue-line"></div>
       <div class="issue-name">Тревога и напряжение</div>
-      <div class="issue-text">Когда сложно расслабиться, остановить мысли и почувствовать внутреннюю опору.</div>
+      <p class="issue-text">Когда сложно расслабиться, остановить мысли и почувствовать внутреннюю опору.</p>
     </div>
 
-    <div class="issue-card reveal">
+    <div class="issue-step reveal">
+      <div class="issue-line"></div>
       <div class="issue-name">Выгорание и усталость</div>
-      <div class="issue-text">Когда сил всё меньше, а привычная жизнь начинает давить и утомлять.</div>
+      <p class="issue-text">Когда сил всё меньше, а привычная жизнь начинает давить и утомлять.</p>
     </div>
 
-    <div class="issue-card reveal">
+    <div class="issue-step reveal">
+      <div class="issue-line"></div>
       <div class="issue-name">Отношения и близость</div>
-      <div class="issue-text">Когда трудно выстраивать контакт, говорить о важном и чувствовать понимание.</div>
+      <p class="issue-text">Когда трудно выстраивать контакт, говорить о важном и чувствовать понимание.</p>
     </div>
 
-    <div class="issue-card reveal">
+    <div class="issue-step reveal">
+      <div class="issue-line"></div>
       <div class="issue-name">Сомнения в себе</div>
-      <div class="issue-text">Когда внутренней критики слишком много, а уверенности в себе и своих решениях не хватает.</div>
+      <p class="issue-text">Когда внутренней критики слишком много, а уверенности в себе и своих решениях не хватает.</p>
     </div>
 
-    <div class="issue-card reveal">
+    <div class="issue-step reveal">
+      <div class="issue-line"></div>
       <div class="issue-name">Жизненные перемены</div>
-      <div class="issue-text">Когда приходится проходить через кризис, расставание, потерю или новый этап жизни.</div>
+      <p class="issue-text">Когда приходится проходить через кризис, расставание, потерю или новый этап жизни.</p>
     </div>
 
-    <div class="issue-card reveal">
+    <div class="issue-step reveal">
+      <div class="issue-line"></div>
       <div class="issue-name">Подростковый возраст</div>
-      <div class="issue-text">Конфликты, тревога, поиск себя и сложности во взаимоотношениях с близкими.</div>
+      <p class="issue-text">Конфликты, тревога, поиск себя и сложности во взаимоотношениях с близкими.</p>
     </div>
 
-    <div class="issue-card reveal">
+    <div class="issue-step reveal">
+      <div class="issue-line"></div>
       <div class="issue-name">Ощущение, что что-то не так</div>
-      <div class="issue-text">Когда тяжело объяснить словами, но внутри давно есть напряжение, потерянность или внутренний дискомфорт.</div>
+      <p class="issue-text">Когда тяжело объяснить словами, но внутри давно есть напряжение, потерянность или внутренний дискомфорт.</p>
     </div>
 
-    <div class="issue-card reveal">
+    <div class="issue-step reveal">
+      <div class="issue-line"></div>
       <div class="issue-name">И многое другое</div>
-      <div class="issue-text">Если вы не нашли свой запрос в этом списке, это не значит, что с ним нельзя работать.</div>
+      <p class="issue-text">Если вы не нашли свой запрос в этом списке, это не значит, что с ним нельзя работать.</p>
     </div>
   </div>
 </section>
