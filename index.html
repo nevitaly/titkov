@@ -470,6 +470,74 @@ footer { background: var(--ink); padding: 0 56px; }
   display: block;
   width: 100%; }
 }
+
+  /* ISSUES */
+.issues {
+  border-bottom: 2px solid var(--ink);
+  background: var(--bg);
+}
+
+.issues-header {
+  padding: 64px 56px 48px;
+  border-bottom: 1px solid var(--sand-dark);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.issues-header-right {
+  max-width: 320px;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+
+.issues-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.issue-item {
+  padding: 32px 40px;
+  border-right: 1px solid var(--sand-dark);
+  border-bottom: 1px solid var(--sand-dark);
+
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--ink-mid);
+
+  transition: background 0.3s, color 0.3s;
+}
+
+.issue-item:nth-child(3n) {
+  border-right: none;
+}
+
+.issue-item:hover {
+  background: var(--sand);
+  color: var(--ink);
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .issues-header {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 48px 24px 32px;
+  }
+
+  .issues-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .issue-item {
+    padding: 24px;
+    border-right: none;
+  }
+}
+  
 </style>
 </head>
   
@@ -632,6 +700,30 @@ footer { background: var(--ink); padding: 0 56px; }
       <div class="approach-item"><span class="approach-icon">🌱</span><span class="approach-text">Фокус на долгосрочных изменениях</span></div>
       <div class="approach-item"><span class="approach-icon">🤝</span><span class="approach-text">Конфиденциальность и профессиональная этика</span></div>
     </div>
+  </div>
+</section>
+
+  <!-- WHAT I WORK WITH -->
+<section class="issues">
+  <div class="issues-header reveal">
+    <div>
+      <div class="section-tag">Запросы</div>
+      <div class="section-title">
+        С чем я<span class="section-title-italic">работаю</span>
+      </div>
+    </div>
+    <div class="issues-header-right">
+      Вы можете прийти с чётким запросом или просто с ощущением, что «что-то не так». Это уже достаточная причина начать.
+    </div>
+  </div>
+
+  <div class="issues-grid">
+    <div class="issue-item reveal">Тревога и внутреннее напряжение</div>
+    <div class="issue-item reveal">Эмоциональное выгорание</div>
+    <div class="issue-item reveal">Трудности в отношениях</div>
+    <div class="issue-item reveal">Неуверенность в себе</div>
+    <div class="issue-item reveal">Жизненные кризисы и перемены</div>
+    <div class="issue-item reveal">Ощущение «что-то не так»</div>
   </div>
 </section>
 
