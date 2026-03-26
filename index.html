@@ -1,1102 +1,2203 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>А. Титков — Психолог</title>
-<meta name="description" content="Александр Титков — практикующий психолог в Ростове-на-Дону. Индивидуальные консультации онлайн и офлайн. Работа с тревогой, стрессом, отношениями и жизненными переходами. Без осуждения, в вашем темпе.">
-<meta name="keywords" content="психолог Ростов-на-Дону, психолог онлайн, консультация психолога, психотерапия Ростов, тревога помощь, стресс психолог, отношения психолог, выгорание, личностный рост, КПТ терапия">
-<meta name="author" content="Александр Титков">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://titkov-psy.ru">
-<meta name="yandex-verification" content="94ede48edb542169" />
-<!-- Open Graph превью  -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Александр Титков — Психолог в Ростове-на-Дону">
-<meta property="og:description" content="Индивидуальная психологическая помощь онлайн и офлайн. Работаю с тревогой, стрессом, отношениями и жизненными переходами — без осуждения.">
-<meta property="og:url" content="https://titkov-psy.ru">
-<meta property="og:locale" content="ru_RU">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>А. Титков — Психолог</title>
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Александр Титков — Психолог">
-<meta name="twitter:description" content="Индивидуальная психологическая помощь онлайн и офлайн. Ростов-на-Дону.">
+  <!-- SEO Meta -->
+  <meta name="description" content="Александр Титков — практикующий психолог в Ростове-на-Дону. Индивидуальные консультации онлайн и офлайн. Работа с тревогой, стрессом, отношениями и жизненными переходами. Без осуждения, в вашем темпе.">
+  <meta name="keywords" content="психолог Ростов-на-Дону, психолог онлайн, консультация психолога, психотерапия Ростов, тревога помощь, стресс психолог, отношения психолог, выгорание, личностный рост, КПТ терапия">
+  <meta name="author" content="Александр Титков">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://titkov-psy.ru">
+  <meta name="yandex-verification" content="94ede48edb542169">
 
-<!-- Structured Data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Александр Титков",
-  "jobTitle": "Психолог",
-  "url": "https://titkov-psy.ru",
-  "telephone": "+79957609588",
-  "address": {
-  "@type": "PostalAddress",
-  "streetAddress": "Большая Садовая, 150, офис 707",
-  "addressLocality": "Ростов-на-Дону",
-  "addressCountry": "RU"
-},
-  "sameAs": [
-    "https://www.instagram.com/titkov_psy",
-    "https://t.me/sashatitkov1998"
-  ],
-  "description": "Практикующий психолог. Индивидуальные консультации онлайн и офлайн. Работа с тревогой, стрессом, отношениями и жизненными переходами."
-}
-</script>
-<link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
-<link rel="shortcut icon" href="favicon/favicon.ico">
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Александр Титков — Психолог в Ростове-на-Дону">
+  <meta property="og:description" content="Индивидуальная психологическая помощь онлайн и офлайн. Работаю с тревогой, стрессом, отношениями и жизненными переходами — без осуждения.">
+  <meta property="og:url" content="https://titkov-psy.ru">
+  <meta property="og:locale" content="ru_RU">
 
-<style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Александр Титков — Психолог">
+  <meta name="twitter:description" content="Индивидуальная психологическая помощь онлайн и офлайн. Ростов-на-Дону.">
 
-:root {
-  --bg:       #F0EAE2;
-  --bg-dark:  #1C1A17;
-  --terra:    #C4602A;
-  --terra-lt: #D97A46;
-  --ink:      #1C1A17;
-  --ink-mid:  #4A4540;
-  --ink-soft: #888078;
-  --sand:     #E8DFD3;
-  --sand-dark:#D5C9B8;
-  --white:    #FAF7F3;
-}
-
-html { scroll-behavior: smooth; overflow-x: hidden; }
-
-body {
-  font-family: 'DM Sans', sans-serif;
-  background: var(--bg);
-  color: var(--ink);
-  overflow-x: hidden;
-  overscroll-behavior-x: none;
-}
-
-/* ─── CURSOR ─── */
-@media (pointer: fine) {
-  body { cursor: none; }
-  a, button, input, textarea, select, label,
-  .format-card, .svc-card { cursor: none !important; }
-  select option { cursor: auto !important; }
-
-  .cursor {
-    width: 10px; height: 10px;
-    background: #ffffff;
-    border-radius: 50%;
-    position: fixed; top: 0; left: 0;
-    pointer-events: none; z-index: 9999;
-    transform: translate(-50%, -50%);
-    transition: width 0.25s, height 0.25s, opacity 0.25s;
-    mix-blend-mode: difference;
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Александр Титков",
+    "jobTitle": "Психолог",
+    "url": "https://titkov-psy.ru",
+    "telephone": "+79957609588",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Большая Садовая, 150, офис 707",
+      "addressLocality": "Ростов-на-Дону",
+      "addressCountry": "RU"
+    },
+    "sameAs": [
+      "https://www.instagram.com/titkov_psy",
+      "https://t.me/sashatitkov1998"
+    ],
+    "description": "Практикующий психолог. Индивидуальные консультации онлайн и офлайн. Работа с тревогой, стрессом, отношениями и жизненными переходами."
   }
-  .cursor.hover { width: 36px; height: 36px; opacity: 0.4; }
-}
-@media (pointer: coarse) { .cursor { display: none; } }
+  </script>
 
-/* NAV */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 20px 56px;
-  background: rgba(240, 234, 226, 0.94);
-  backdrop-filter: blur(16px);
-  border-bottom: 2px solid var(--ink);
-  transition: padding 0.3s;
-}
-.nav-logo {
-  font-family: 'Unbounded', sans-serif; font-size: 16px; font-weight: 700;
-  letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink); text-decoration: none;
-}
-.nav-logo span { color: var(--terra); }
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+  <link rel="shortcut icon" href="favicon/favicon.ico">
 
-.nav-center {
-  display: flex; gap: 36px; list-style: none; align-items: center;
-}
-.nav-center a {
-  font-size: 12px; font-weight: 400; letter-spacing: 0.15em; text-transform: uppercase;
-  color: var(--ink-soft); text-decoration: none; transition: color 0.3s;
-}
-.nav-center a:hover { color: var(--terra); }
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-/* Иконки соцсетей в шапке */
-.nav-socials {
-  display: flex; align-items: center; gap: 16px;
-}
-.nav-social {
-  display: flex; align-items: center; justify-content: center;
-  width: 32px; height: 32px;
-  border: 1px solid var(--sand-dark); border-radius: 2px;
-  transition: border-color 0.3s, background 0.3s;
-  text-decoration: none;
-}
-.nav-social:hover { border-color: var(--terra); background: var(--terra); }
-.nav-social svg { width: 14px; height: 14px; fill: var(--ink-soft); transition: fill 0.3s; }
-.nav-social:hover svg { fill: var(--white); }
+  <style>
 
-.nav-right { display: flex; align-items: center; gap: 20px; }
+    /* ─────────────────────────────────────────
+       RESET & ROOT
+    ───────────────────────────────────────── */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-.nav-cta {
-  font-family: 'Unbounded', sans-serif; font-size: 10px; font-weight: 700;
-  letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--white) !important; background: var(--ink);
-  padding: 12px 28px; border-radius: 2px; text-decoration: none; transition: background 0.3s !important;
-}
-.nav-cta:hover { background: var(--terra) !important; }
+    :root {
+      --bg:        #F0EAE2;
+      --bg-dark:   #1C1A17;
+      --terra:     #C4602A;
+      --terra-lt:  #D97A46;
+      --ink:       #1C1A17;
+      --ink-mid:   #4A4540;
+      --ink-soft:  #888078;
+      --sand:      #E8DFD3;
+      --sand-dark: #D5C9B8;
+      --white:     #FAF7F3;
+    }
 
-/* HERO */
-.hero {
-  min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr;
-  padding-top: 66px; border-bottom: 2px solid var(--ink);
-}
-.hero-left {
-  padding: 64px 56px; display: flex; flex-direction: column; justify-content: space-between;
-  border-right: 2px solid var(--ink);
-}
-.hero-eyebrow {
-  display: flex; align-items: center; justify-content: space-between;
-  opacity: 0; animation: fadeUp 0.6s 0.1s forwards;
-}
-.eyebrow-tag { font-size: 10px; font-weight: 400; letter-spacing: 0.25em; text-transform: uppercase; color: var(--ink-soft); }
-.eyebrow-year { font-family: 'Unbounded', sans-serif; font-size: 10px; font-weight: 300; color: var(--ink-soft); letter-spacing: 0.1em; }
-.hero-main { opacity: 0; animation: fadeUp 0.7s 0.3s forwards; }
-.hero-title {
-  font-family: 'Unbounded', sans-serif; font-size: clamp(40px, 4.5vw, 64px);
-  font-weight: 900; line-height: 1.0; text-transform: uppercase; letter-spacing: -0.02em; color: var(--ink);
-}
-.hero-title-italic {
-  font-family: 'Cormorant Garamond', serif; font-size: clamp(52px, 6vw, 84px);
-  font-weight: 400; font-style: italic; text-transform: none; letter-spacing: -0.01em;
-  color: var(--terra); line-height: 0.9; display: block; margin: 8px 0 16px 0;
-}
-.hero-desc { font-size: 19px; font-weight: 300; line-height: 1.8; color: var(--ink-mid); max-width: 400px; margin-top: 36px; }
-.hero-bottom {
-  display: flex; align-items: center; justify-content: space-between;
-  opacity: 0; animation: fadeUp 0.7s 0.5s forwards;
-}
-.hero-btn {
-  font-family: 'Unbounded', sans-serif; font-size: 10px; font-weight: 700;
-  letter-spacing: 0.15em; text-transform: uppercase; color: var(--white); background: var(--terra);
-  padding: 20px 48px; border-radius: 2px; text-decoration: none; display: inline-block;
-  transition: background 0.3s, transform 0.2s; text-align: center;
-}
-.hero-btn:hover { background: var(--terra-lt); transform: translateY(-2px); }
-.hero-scroll-hint {
-  font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-soft);
-  display: flex; align-items: center; gap: 12px;
-}
-.hero-scroll-hint::before { content: ''; display: block; width: 32px; height: 1px; background: var(--ink-soft); }
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
 
-.hero-right {
-  background: var(--ink); position: relative; overflow: hidden;
-  display: flex; flex-direction: column; justify-content: space-between; padding: 64px 48px;
-  opacity: 0; animation: fadeIn 1s 0.4s forwards;
-}
-.hero-bg-text {
-  position: absolute; top: 30px; right: -20px;
-  font-family: 'Unbounded', sans-serif; font-size: 110px; font-weight: 900;
-  letter-spacing: -0.05em; color: rgba(255,255,255,0.03); line-height: 1;
-  white-space: nowrap; pointer-events: none; user-select: none;
-}
-.hero-photo-area { flex: 1; display: flex; align-items: center; justify-content: center; }
-.hero-photo-frame {
-  width: 280px; height: 360px;
-  border: 1px solid rgba(255,255,255,0.1); border-radius: 2px;
-  display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 16px; position: relative;
-  overflow: hidden;
-}
-.hero-photo-frame::before { content: ''; position: absolute; inset: 8px; border: 1px solid rgba(196,96,42,0.3); border-radius: 1px; pointer-events: none; z-index: 1; }
-.hero-right-stats {
-  display: flex; border-top: 1px solid rgba(255,255,255,0.08);
-  margin: 0 -48px -64px; padding: 0 48px;
-}
-.hero-stat { flex: 1; padding: 28px 0; border-right: 1px solid rgba(255,255,255,0.08); }
-.hero-stat:last-child { border-right: none; padding-left: 32px; }
-.hero-stat:first-child { padding-right: 32px; }
-.stat-n { font-family: 'Unbounded', sans-serif; font-size: 28px; font-weight: 700; color: var(--white); line-height: 1; margin-bottom: 6px; }
-.stat-l { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.3); }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      overflow-x: hidden;
+      overscroll-behavior-x: none;
+    }
 
-/* TICKER */
-.ticker { background: var(--terra); overflow: hidden; border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); padding: 14px 0; }
-.ticker-inner { display: flex; animation: ticker 20s linear infinite; white-space: nowrap; }
-.ticker-item {
-  font-family: 'Unbounded', sans-serif; font-size: 11px; font-weight: 700;
-  letter-spacing: 0.15em; text-transform: uppercase; color: var(--white); padding: 0 40px;
-  display: flex; align-items: center; gap: 24px;
-}
-.ticker-item::after { content: '✦'; color: rgba(255,255,255,0.5); font-size: 8px; }
-@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-/* ABOUT */
-.about { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); border-bottom: 2px solid var(--ink); }
-.about-left { padding: 80px 56px; border-right: 2px solid var(--ink); }
-.section-tag {
-  font-family: 'Unbounded', sans-serif; font-size: 9px; font-weight: 700;
-  letter-spacing: 0.3em; text-transform: uppercase; color: var(--terra);
-  margin-bottom: 24px; display: flex; align-items: center; gap: 14px;
-}
-.section-tag::after { content: ''; flex: 1; height: 1px; background: var(--terra); opacity: 0.3; }
-.section-title {
-  font-family: 'Unbounded', sans-serif; font-size: clamp(28px, 2.8vw, 42px);
-  font-weight: 900; text-transform: uppercase; letter-spacing: -0.02em; line-height: 1.05; color: var(--ink); margin-bottom: 12px;
-}
-.section-title-italic {
-  font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 3.5vw, 54px);
-  font-style: italic; font-weight: 400; text-transform: none; color: var(--terra);
-  display: block; line-height: 1; margin-bottom: 36px;
-}
-.about-text { font-size: 15px; font-weight: 300; line-height: 1.9; color: var(--ink-mid); margin-bottom: 20px; }
-.about-creds { margin-top: 40px; border-top: 1px solid var(--sand-dark); padding-top: 32px; display: flex; flex-direction: column; gap: 16px; }
-.cred { display: flex; align-items: flex-start; gap: 16px; font-size: 13px; font-weight: 300; color: var(--ink-mid); line-height: 1.5; }
-.cred-num { font-family: 'Unbounded', sans-serif; font-size: 9px; font-weight: 700; color: var(--terra); flex-shrink: 0; margin-top: 2px; letter-spacing: 0.1em; }
-.about-right { padding: 80px 56px 56px 20px;; background: var(--sand); display: flex; flex-direction: column; justify-content: space-between; }
-.about-quote-wrap { position: relative; }
-.quote-mark { font-family: 'Cormorant Garamond', serif; font-size: 200px; font-weight: 400; color: var(--terra); opacity: 0.12; line-height: 0.7; position: absolute; top: -20px; left: -16px; pointer-events: none; user-select: none; }
-.about-quote { font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 2.2vw, 30px); font-style: italic; font-weight: 300; line-height: 1.5; color: var(--ink); position: relative; z-index: 1; margin-bottom: 28px; }
-.quote-author { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-soft); }
-.about-approach { margin-top: 20px; display: flex; flex-direction: column; }
-.approach-item { display: flex; align-items: center; gap: 20px; padding: 18px 0; border-bottom: 1px solid var(--sand-dark); }
-.approach-item:first-child { border-top: 1px solid var(--sand-dark); }
-.approach-icon { font-size: 20px; }
-.approach-text { font-size: 14px; font-weight: 400; color: var(--ink-mid); }
-.approach-arrow { margin-left: auto; font-family: 'Unbounded', sans-serif; font-size: 10px; color: var(--terra); }
+    /* ─────────────────────────────────────────
+       CURSOR
+    ───────────────────────────────────────── */
+    @media (pointer: fine) {
+      body { cursor: none; }
 
-.certs { margin-top: 32px; padding-top: 32px; border-top: 1px solid var(--sand-dark); }
-.certs-label { font-family: 'Unbounded', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: var(--terra); margin-bottom: 16px; }
-.certs-scroll { display: flex; gap: 16px; overflow-x: auto; overflow-y: hidden; padding-bottom: 8px; scrollbar-width: none; }
-.certs-scroll::-webkit-scrollbar { display: none; }
-.cert-card { flex-shrink: 0; width: 140px; height: 100px; background: var(--white); border: 1px solid var(--sand-dark); border-radius: 2px; display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--ink-soft); text-align: center; overflow: hidden; cursor: none; transition: border-color 0.3s; }
-.cert-card:hover { border-color: var(--terra); }
-.cert-card img { width: 100%; height: 100%; object-fit: cover; }
+      a, button, input, textarea, select, label,
+      .format-card, .svc-card { cursor: none !important; }
 
-.certs-nav { display: none; }
-@media (pointer: fine) {
-  .certs-nav {
-    display: flex; justify-content: center; align-items: center; gap: 12px; margin-top: 14px;
-  }
-  .certs-scroll {
-    max-width: calc(4 * 140px + 3 * 16px); /* 4 карточки + 3 отступа = 608px */
-    margin: 0 auto;
-  }
-  .certs-arrow {
-    width: 32px; height: 32px; border: 1px solid var(--sand-dark); border-radius: 2px;
-    background: transparent; display: flex; align-items: center; justify-content: center;
-    cursor: none; transition: border-color 0.3s, background 0.3s;
-    font-size: 16px; color: var(--ink-soft); line-height: 1;
-  }
-  .certs-arrow:hover { border-color: var(--terra); background: var(--terra); color: var(--white); }
-}
-  .office-btn {
-  margin-top: 16px;
-  font-family: 'Unbounded', sans-serif; font-size: 11px; font-weight: 700;
-  letter-spacing: 0.15em; text-transform: uppercase;
-  color: var(--ink); background: transparent;
-  border: 1px solid var(--sand-dark); border-radius: 2px;
-  padding: 12px 20px; cursor: none;
-  transition: border-color 0.3s, background 0.3s, color 0.3s;
-}
-  #lightbox, #office-lightbox {
-  overflow: hidden;
-}
-.office-btn:hover { border-color: var(--terra); background: var(--terra); color: var(--white); }
-/* SERVICES */
-.services { background: var(--ink); border-bottom: 2px solid var(--ink); }
-.services-header { padding: 64px 56px 48px; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; align-items: flex-end; justify-content: space-between; }
-.services-header .section-tag { color: var(--terra); }
-.services-header .section-tag::after { background: var(--terra); }
-.services-header .section-title { color: var(--white); margin-bottom: 6px; }
-.services-header .section-title-italic { margin-bottom: 0; }
-.services-header-right { max-width: 300px; font-size: 15px; font-weight: 300; line-height: 1.7; color: rgba(255,255,255,0.35); }
-.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
-.svc-card { padding: 48px; border-right: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); position: relative; overflow: hidden; transition: background 0.4s; }
-.svc-card:last-child { border-right: none; }
-.svc-card:hover { background: rgba(196,96,42,0.06); }
-.svc-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--terra); transform: scaleX(0); transform-origin: left; transition: transform 0.4s; }
-.svc-card:hover::before { transform: scaleX(1); }
-.svc-num { font-family: 'Unbounded', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; color: var(--terra); margin-bottom: 32px; }
-.svc-icon { font-size: 32px; margin-bottom: 20px; display: block; }
-.svc-title { font-family: 'Unbounded', sans-serif; font-size: 19px; font-weight: 700; text-transform: uppercase; letter-spacing: -0.01em; color: var(--white); margin-bottom: 16px; line-height: 1.2; }
-.svc-desc { font-size: 16px; font-weight: 300; line-height: 1.8; color: rgba(255,255,255,0.35); margin-bottom: 32px; }
-.svc-price { font-family: 'Unbounded', sans-serif; font-size: 11px; font-weight: 600; color: var(--terra); letter-spacing: 0.05em; }
+      select option { cursor: auto !important; }
 
-/* FORMAT */
-.format { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 2px solid var(--ink); }
-.format-left { padding: 80px 56px; border-right: 2px solid var(--ink); }
-.format-cards { display: flex; flex-direction: column; margin-top: 48px; }
-.format-card { display: flex; align-items: flex-start; gap: 28px; padding: 32px 0; border-bottom: 1px solid var(--sand-dark); transition: padding-left 0.3s; }
-.format-card:first-child { border-top: 1px solid var(--sand-dark); }
-.format-card:hover { padding-left: 12px; }
-.format-icon-wrap { width: 56px; height: 56px; border: 1px solid var(--sand-dark); border-radius: 2px; display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; transition: background 0.3s, border-color 0.3s; background: var(--white); }
-.format-card:hover .format-icon-wrap { background: var(--terra); border-color: var(--terra); }
-.format-title { font-family: 'Unbounded', sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; color: var(--ink); margin-bottom: 8px; }
-.format-desc { font-size: 17px; font-weight: 300; color: var(--ink-soft); line-height: 1.7; }
-.format-right { background: var(--terra); padding: 80px 56px; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden; }
-.format-right::before { content: 'ОНЛАЙН\AОФЛАЙН'; white-space: pre; position: absolute; right: -40px; top: 40px; font-family: 'Unbounded', sans-serif; font-size: 80px; font-weight: 900; color: rgba(255,255,255,0.06); line-height: 1; letter-spacing: -0.03em; }
-.format-right .section-tag { color: rgba(255,255,255,0.5); }
-.format-right .section-tag::after { background: rgba(255,255,255,0.3); }
-.format-right .section-title { color: var(--white); }
-.format-right .section-title-italic { color: rgba(255,255,255,0.7); }
-.format-cta { font-family: 'Unbounded', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--terra); background: var(--white); padding: 18px 40px; border-radius: 2px; text-decoration: none; display: inline-block; align-self: flex-start; transition: transform 0.2s; }
-.format-cta:hover { transform: translateY(-2px); }
+      .cursor {
+        width: 10px;
+        height: 10px;
+        background: #ffffff;
+        border-radius: 50%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        z-index: 9999;
+        transform: translate(-50%, -50%);
+        transition: width 0.25s, height 0.25s, opacity 0.25s;
+        mix-blend-mode: difference;
+      }
 
-/* PROCESS */
-.process { border-bottom: 2px solid var(--ink); }
-.process-header { padding: 80px 56px 56px; border-bottom: 1px solid var(--sand-dark); display: flex; align-items: center; justify-content: space-between; }
-.process-steps { display: grid; grid-template-columns: repeat(4, 1fr); }
-.step { padding: 48px 40px; border-right: 1px solid var(--sand-dark); position: relative; }
-.step:last-child { border-right: none; }
-.step-line { position: absolute; top: 72px; right: -1px; width: 2px; height: 24px; background: var(--terra); opacity: 0.4; }
-.step:last-child .step-line { display: none; }
-.step-num { font-family: 'Unbounded', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; color: var(--terra); margin-bottom: 20px; }
-.step-title { font-family: 'Unbounded', sans-serif; font-size: 15px; font-weight: 700; text-transform: uppercase; color: var(--ink); margin-bottom: 14px; letter-spacing: -0.01em; }
-.step-desc { font-size: 15px; font-weight: 300; line-height: 1.7; color: var(--ink-soft); }
+      .cursor.hover {
+        width: 36px;
+        height: 36px;
+        opacity: 0.4;
+      }
+    }
 
-/* CONTACT */
-.contact { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 2px solid var(--ink); }
-.contact-left { padding: 80px 56px; background: var(--ink); border-right: 2px solid var(--ink); }
-.contact-left .section-tag { color: var(--terra); }
-.contact-left .section-tag::after { background: var(--terra); opacity: 0.3; }
-.contact-left .section-title { color: var(--white); }
-.contact-left .section-title-italic { color: var(--terra); }
-.contact-tagline { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-style: italic; font-weight: 300; color: rgba(255,255,255,0.45); line-height: 1.7; margin-bottom: 48px; }
-.contact-items { display: flex; flex-direction: column; }
-.contact-item { display: flex; align-items: flex-start; gap: 20px; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
-.contact-item:first-child { border-top: 1px solid rgba(255,255,255,0.06); }
-.contact-icon { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
-.contact-label { font-family: 'Unbounded', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--terra); margin-bottom: 4px; }
-.contact-val { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.65); }
-.contact-val a { color: rgba(255,255,255,0.65); text-decoration: none; transition: color 0.3s; }
-.contact-val a:hover { color: var(--terra); }
+    @media (pointer: coarse) {
+      .cursor { display: none; }
+    }
 
-/* Иконки соцсетей в контактах */
-.contact-socials {
-  display: flex; gap: 12px; margin-top: 40px; padding-top: 32px;
-  border-top: 1px solid rgba(255,255,255,0.06);
-}
-.contact-social {
-  display: flex; align-items: center; justify-content: center;
-  width: 44px; height: 44px;
-  border: 1px solid rgba(255,255,255,0.1); border-radius: 2px;
-  text-decoration: none; transition: border-color 0.3s, background 0.3s;
-}
-.contact-social:hover { border-color: var(--terra); background: var(--terra); }
-.contact-social svg { width: 18px; height: 18px; fill: rgba(255,255,255,0.4); transition: fill 0.3s; }
-.contact-social:hover svg { fill: var(--white); }
 
-/* FORM */
-.contact-right { padding: 80px 56px; background: var(--sand); }
-.form-title { font-family: 'Unbounded', sans-serif; font-size: 18px; font-weight: 700; text-transform: uppercase; letter-spacing: -0.01em; color: var(--ink); margin-bottom: 40px; line-height: 1.2; }
-.form-title span { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; text-transform: none; font-size: 26px; color: var(--terra); display: block; margin-top: 4px; }
-.form-group { margin-bottom: 28px; }
-.form-label { display: block; font-family: 'Unbounded', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 10px; }
-.form-input, .form-textarea, .form-select {
-  width: 100%; padding: 14px 0; background: transparent;
-  border: none; border-bottom: 2px solid var(--sand-dark);
-  font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 300;
-  color: var(--ink); outline: none; transition: border-color 0.3s; appearance: none;
-}
-.form-input::placeholder, .form-textarea::placeholder { color: var(--ink-soft); opacity: 0.5; }
-.form-input:focus, .form-textarea:focus, .form-select:focus { border-color: var(--terra); }
-.form-textarea { resize: none; height: 80px; }
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    /* ─────────────────────────────────────────
+       TYPOGRAPHY HELPERS
+    ───────────────────────────────────────── */
+    .section-tag {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--terra);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
 
-.hp-trap { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; opacity: 0; pointer-events: none; }
+    .section-tag::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--terra);
+      opacity: 0.3;
+    }
 
-.form-submit {
-  width: 100%; padding: 20px; background: var(--ink); color: var(--white);
-  border: none; border-radius: 2px;
-  font-family: 'Unbounded', sans-serif; font-size: 10px; font-weight: 700;
-  letter-spacing: 0.2em; text-transform: uppercase;
-  transition: background 0.3s, transform 0.2s; margin-top: 8px;
-}
-.form-submit:not(:disabled):hover { background: var(--terra); transform: translateY(-2px); }
-.form-submit:disabled { background: #888; opacity: 0.7; }
-.form-note { font-size: 11px; font-weight: 300; color: var(--ink-soft); text-align: center; margin-top: 16px; line-height: 1.6; }
-.form-feedback { margin-top: 16px; padding: 14px 20px; border-radius: 2px; font-size: 13px; font-weight: 400; text-align: center; display: none; }
-.form-feedback.ok  { background: #d4edda; color: #2d6a4f; display: block; }
-.form-feedback.err { background: #f8d7da; color: #842029; display: block; }
+    .section-title {
+      font-family: 'Unbounded', sans-serif;
+      font-size: clamp(28px, 2.8vw, 42px);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
 
-/* FOOTER */
-footer { background: var(--ink); padding: 0 56px; }
-.footer-top { display: flex; justify-content: space-between; align-items: center; padding: 40px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
-.footer-logo { font-family: 'Unbounded', sans-serif; font-size: 16px; font-weight: 900; letter-spacing: 0.04em; text-transform: uppercase; color: var(--white); }
-.footer-logo span { color: var(--terra); }
-.footer-links { display: flex; gap: 32px; }
-.footer-links a { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.3s; }
-.footer-links a:hover { color: var(--terra); }
-.footer-bottom { display: flex; justify-content: space-between; align-items: center; padding: 24px 0; }
-.footer-copy { font-size: 11px; color: rgba(255,255,255,0.2); letter-spacing: 0.05em; }
-.footer-made { font-size: 11px; color: rgba(255,255,255,0.15); letter-spacing: 0.05em; }
+    .section-title-italic {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(36px, 3.5vw, 54px);
+      font-style: italic;
+      font-weight: 400;
+      text-transform: none;
+      color: var(--terra);
+      display: block;
+      line-height: 1;
+      margin-bottom: 36px;
+    }
 
-/* ANIMATIONS */
-@keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s, transform 0.7s; }
-.reveal.visible { opacity: 1; transform: none; }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  nav { padding: 16px 24px; }
-  .nav-center { display: none; }
-  .nav-socials { display: none; }
-  .hero { grid-template-columns: 1fr; }
-  .hero-right { height: 320px; height: auto;}
-  .hero-left { padding: 10px 24px 15px 24px; }
-  .hero-title { font-size: 32px; }
-  .hero-title-italic { font-size: 40px; }
-  .hero-eyebrow { margin: 16px 0; }
-  .hero-scroll-hint { display: none !important; }
-  .hero-bottom { justify-content: flex-start; margin-top: 10px; }
-  .hero-btn { width: auto; align-self: flex-start; }
-  .about, .format, .contact { grid-template-columns: 1fr; }
-  .about-left, .about-right, .format-left, .contact-left, .contact-right { padding: 60px 24px; border-right: none; }
-  .format-right { padding: 60px 24px 15px 24px; }
-  .services-header { flex-direction: column; gap: 24px; align-items: flex-start; padding: 48px 24px 32px; }
-  .services-grid { grid-template-columns: 1fr; }
-  .svc-card { border-right: none; }
-  .process-steps { grid-template-columns: 1fr 1fr; }
-  .step { padding: 36px 24px; }
-  .process-header { flex-direction: column; align-items: flex-start; gap: 20px; padding: 60px 24px 40px; }
-  footer { padding: 0 24px; }
-  .footer-top { flex-direction: column; gap: 24px; text-align: center; }
-  .footer-bottom { flex-direction: column; gap: 12px; }
-  .form-row { grid-template-columns: 1fr; }
-  .hero-bg-text { font-size: 60px; }
-  .footer-links { flex-wrap: wrap; justify-content: center; gap: 16px; }
-  .footer-links a { text-align: center; }
-  .certs-scroll { max-width: calc(100vw - 48px); }
-  .office-btn {
-  display: block;
-  width: 100%; }
-  .issues .process-header {
-  padding: 44px 24px 28px;
-  gap: 10px !important;
-}
+    /* ─────────────────────────────────────────
+       ANIMATIONS
+    ───────────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
 
-.issues .process-steps {
-  grid-template-columns: 1fr 1fr;
-}
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
 
-.issues .step {
-  padding: 24px 20px 20px;
-}
-.issues .step:nth-child(n+3) {
-  border-top: 1px solid var(--sand-dark);}
-}
-.issues .step:nth-child(n+5) {
-  border-top: 1px solid var(--sand-dark);
-}  
-  .issues .step {
-  position: relative;
-  overflow: hidden;
-  transition: background 0.35s ease;
-}
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
 
-.issues .step::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: var(--terra);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.35s ease;
-}
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s, transform 0.7s;
+    }
 
-.issues .step:hover {
-  background: rgba(196, 96, 42, 0.06);
-}
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
 
-.issues .step:hover::before {
-  transform: scaleX(1);
-}
-</style>
+
+    /* ─────────────────────────────────────────
+       NAV
+    ───────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 56px;
+      background: rgba(240, 234, 226, 0.94);
+      backdrop-filter: blur(16px);
+      border-bottom: 2px solid var(--ink);
+      transition: padding 0.3s;
+    }
+
+    .nav-logo {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .nav-logo span { color: var(--terra); }
+
+    .nav-center {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-center a {
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .nav-center a:hover { color: var(--terra); }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-socials {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .nav-social {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border: 1px solid var(--sand-dark);
+      border-radius: 2px;
+      text-decoration: none;
+      transition: border-color 0.3s, background 0.3s;
+    }
+
+    .nav-social:hover {
+      border-color: var(--terra);
+      background: var(--terra);
+    }
+
+    .nav-social svg {
+      width: 14px;
+      height: 14px;
+      fill: var(--ink-soft);
+      transition: fill 0.3s;
+    }
+
+    .nav-social:hover svg { fill: var(--white); }
+
+    .nav-cta {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--white) !important;
+      background: var(--ink);
+      padding: 12px 28px;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: background 0.3s !important;
+    }
+
+    .nav-cta:hover { background: var(--terra) !important; }
+
+
+    /* ─────────────────────────────────────────
+       HERO
+    ───────────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: 66px;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .hero-left {
+      padding: 64px 56px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-right: 2px solid var(--ink);
+    }
+
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      opacity: 0;
+      animation: fadeUp 0.6s 0.1s forwards;
+    }
+
+    .eyebrow-tag {
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+
+    .eyebrow-year {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 10px;
+      font-weight: 300;
+      color: var(--ink-soft);
+      letter-spacing: 0.1em;
+    }
+
+    .hero-main {
+      opacity: 0;
+      animation: fadeUp 0.7s 0.3s forwards;
+    }
+
+    .hero-title {
+      font-family: 'Unbounded', sans-serif;
+      font-size: clamp(40px, 4.5vw, 64px);
+      font-weight: 900;
+      line-height: 1.0;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+
+    .hero-title-italic {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(52px, 6vw, 84px);
+      font-weight: 400;
+      font-style: italic;
+      text-transform: none;
+      letter-spacing: -0.01em;
+      color: var(--terra);
+      line-height: 0.9;
+      display: block;
+      margin: 8px 0 16px 0;
+    }
+
+    .hero-desc {
+      font-size: 19px;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--ink-mid);
+      max-width: 400px;
+      margin-top: 36px;
+    }
+
+    .hero-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.5s forwards;
+    }
+
+    .hero-btn {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--terra);
+      padding: 20px 48px;
+      border-radius: 2px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.3s, transform 0.2s;
+      text-align: center;
+    }
+
+    .hero-btn:hover {
+      background: var(--terra-lt);
+      transform: translateY(-2px);
+    }
+
+    .hero-scroll-hint {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .hero-scroll-hint::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: var(--ink-soft);
+    }
+
+    .hero-right {
+      background: var(--ink);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 64px 48px;
+      opacity: 0;
+      animation: fadeIn 1s 0.4s forwards;
+    }
+
+    .hero-bg-text {
+      position: absolute;
+      top: 30px;
+      right: -20px;
+      font-family: 'Unbounded', sans-serif;
+      font-size: 110px;
+      font-weight: 900;
+      letter-spacing: -0.05em;
+      color: rgba(255,255,255,0.03);
+      line-height: 1;
+      white-space: nowrap;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .hero-photo-area {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-photo-frame {
+      width: 280px;
+      height: 360px;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-photo-frame::before {
+      content: '';
+      position: absolute;
+      inset: 8px;
+      border: 1px solid rgba(196,96,42,0.3);
+      border-radius: 1px;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .hero-right-stats {
+      display: flex;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin: 0 -48px -64px;
+      padding: 0 48px;
+    }
+
+    .hero-stat {
+      flex: 1;
+      padding: 28px 0;
+      border-right: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero-stat:last-child  { border-right: none; padding-left: 32px; }
+    .hero-stat:first-child { padding-right: 32px; }
+
+    .stat-n {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat-l {
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+    }
+
+
+    /* ─────────────────────────────────────────
+       TICKER
+    ───────────────────────────────────────── */
+    .ticker {
+      background: var(--terra);
+      overflow: hidden;
+      border-top: 2px solid var(--ink);
+      border-bottom: 2px solid var(--ink);
+      padding: 14px 0;
+    }
+
+    .ticker-inner {
+      display: flex;
+      animation: ticker 20s linear infinite;
+      white-space: nowrap;
+    }
+
+    .ticker-item {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--white);
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .ticker-item::after {
+      content: '✦';
+      color: rgba(255,255,255,0.5);
+      font-size: 8px;
+    }
+
+
+    /* ─────────────────────────────────────────
+       ABOUT
+    ───────────────────────────────────────── */
+    .about {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .about-left {
+      padding: 80px 56px;
+      border-right: 2px solid var(--ink);
+    }
+
+    .about-text {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.9;
+      color: var(--ink-mid);
+      margin-bottom: 20px;
+    }
+
+    .about-creds {
+      margin-top: 40px;
+      border-top: 1px solid var(--sand-dark);
+      padding-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .cred {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--ink-mid);
+      line-height: 1.5;
+    }
+
+    .cred-num {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      color: var(--terra);
+      flex-shrink: 0;
+      margin-top: 2px;
+      letter-spacing: 0.1em;
+    }
+
+    .about-right {
+      padding: 80px 56px 56px 20px;
+      background: var(--sand);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .about-quote-wrap { position: relative; }
+
+    .quote-mark {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 200px;
+      font-weight: 400;
+      color: var(--terra);
+      opacity: 0.12;
+      line-height: 0.7;
+      position: absolute;
+      top: -20px;
+      left: -16px;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .about-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(22px, 2.2vw, 30px);
+      font-style: italic;
+      font-weight: 300;
+      line-height: 1.5;
+      color: var(--ink);
+      position: relative;
+      z-index: 1;
+      margin-bottom: 28px;
+    }
+
+    .quote-author {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+
+    .about-approach {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .approach-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--sand-dark);
+    }
+
+    .approach-item:first-child { border-top: 1px solid var(--sand-dark); }
+
+    .approach-icon { font-size: 20px; }
+
+    .approach-text {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--ink-mid);
+    }
+
+    .approach-arrow {
+      margin-left: auto;
+      font-family: 'Unbounded', sans-serif;
+      font-size: 10px;
+      color: var(--terra);
+    }
+
+
+    /* ─────────────────────────────────────────
+       CERTIFICATES
+    ───────────────────────────────────────── */
+    .certs {
+      margin-top: 32px;
+      padding-top: 32px;
+      border-top: 1px solid var(--sand-dark);
+    }
+
+    .certs-label {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--terra);
+      margin-bottom: 16px;
+    }
+
+    .certs-scroll {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding-bottom: 8px;
+      scrollbar-width: none;
+    }
+
+    .certs-scroll::-webkit-scrollbar { display: none; }
+
+    .cert-card {
+      flex-shrink: 0;
+      width: 140px;
+      height: 100px;
+      background: var(--white);
+      border: 1px solid var(--sand-dark);
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: var(--ink-soft);
+      text-align: center;
+      overflow: hidden;
+      cursor: none;
+      transition: border-color 0.3s;
+    }
+
+    .cert-card:hover { border-color: var(--terra); }
+
+    .cert-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .certs-nav { display: none; }
+
+    @media (pointer: fine) {
+      .certs-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        margin-top: 14px;
+      }
+
+      .certs-scroll {
+        max-width: calc(4 * 140px + 3 * 16px);
+        margin: 0 auto;
+      }
+
+      .certs-arrow {
+        width: 32px;
+        height: 32px;
+        border: 1px solid var(--sand-dark);
+        border-radius: 2px;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: none;
+        transition: border-color 0.3s, background 0.3s;
+        font-size: 16px;
+        color: var(--ink-soft);
+        line-height: 1;
+      }
+
+      .certs-arrow:hover {
+        border-color: var(--terra);
+        background: var(--terra);
+        color: var(--white);
+      }
+    }
+
+    .office-btn {
+      margin-top: 16px;
+      font-family: 'Unbounded', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink);
+      background: transparent;
+      border: 1px solid var(--sand-dark);
+      border-radius: 2px;
+      padding: 12px 20px;
+      cursor: none;
+      transition: border-color 0.3s, background 0.3s, color 0.3s;
+    }
+
+    .office-btn:hover {
+      border-color: var(--terra);
+      background: var(--terra);
+      color: var(--white);
+    }
+
+
+    /* ─────────────────────────────────────────
+       LIGHTBOXES
+    ───────────────────────────────────────── */
+    #lightbox,
+    #office-lightbox {
+      overflow: hidden;
+    }
+
+
+    /* ─────────────────────────────────────────
+       ISSUES (Частые запросы)
+    ───────────────────────────────────────── */
+    .issues {
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .issues .process-header {
+      padding: 80px 56px 56px;
+      border-bottom: 1px solid var(--sand-dark);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .issues .step {
+      position: relative;
+      overflow: hidden;
+      transition: background 0.35s ease;
+    }
+
+    .issues .step::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--terra);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.35s ease;
+    }
+
+    .issues .step:hover { background: rgba(196, 96, 42, 0.06); }
+    .issues .step:hover::before { transform: scaleX(1); }
+
+
+    /* ─────────────────────────────────────────
+       SERVICES
+    ───────────────────────────────────────── */
+    .services {
+      background: var(--ink);
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .services-header {
+      padding: 64px 56px 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+
+    .services-header .section-tag { color: var(--terra); }
+    .services-header .section-tag::after { background: var(--terra); }
+    .services-header .section-title { color: var(--white); margin-bottom: 6px; }
+    .services-header .section-title-italic { margin-bottom: 0; }
+
+    .services-header-right {
+      max-width: 300px;
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.35);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .svc-card {
+      padding: 48px;
+      border-right: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      position: relative;
+      overflow: hidden;
+      transition: background 0.4s;
+    }
+
+    .svc-card:last-child { border-right: none; }
+    .svc-card:hover { background: rgba(196,96,42,0.06); }
+
+    .svc-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--terra);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s;
+    }
+
+    .svc-card:hover::before { transform: scaleX(1); }
+
+    .svc-num {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      color: var(--terra);
+      margin-bottom: 32px;
+    }
+
+    .svc-icon {
+      font-size: 32px;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .svc-title {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 19px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      color: var(--white);
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .svc-desc {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 32px;
+    }
+
+    .svc-price {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--terra);
+      letter-spacing: 0.05em;
+    }
+
+
+    /* ─────────────────────────────────────────
+       FORMAT
+    ───────────────────────────────────────── */
+    .format {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .format-left {
+      padding: 80px 56px;
+      border-right: 2px solid var(--ink);
+    }
+
+    .format-cards {
+      display: flex;
+      flex-direction: column;
+      margin-top: 48px;
+    }
+
+    .format-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 28px;
+      padding: 32px 0;
+      border-bottom: 1px solid var(--sand-dark);
+      transition: padding-left 0.3s;
+    }
+
+    .format-card:first-child { border-top: 1px solid var(--sand-dark); }
+    .format-card:hover { padding-left: 12px; }
+
+    .format-icon-wrap {
+      width: 56px;
+      height: 56px;
+      border: 1px solid var(--sand-dark);
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      flex-shrink: 0;
+      transition: background 0.3s, border-color 0.3s;
+      background: var(--white);
+    }
+
+    .format-card:hover .format-icon-wrap {
+      background: var(--terra);
+      border-color: var(--terra);
+    }
+
+    .format-title {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .format-desc {
+      font-size: 17px;
+      font-weight: 300;
+      color: var(--ink-soft);
+      line-height: 1.7;
+    }
+
+    .format-right {
+      background: var(--terra);
+      padding: 80px 56px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .format-right::before {
+      content: 'ОНЛАЙН\AОФЛАЙН';
+      white-space: pre;
+      position: absolute;
+      right: -40px;
+      top: 40px;
+      font-family: 'Unbounded', sans-serif;
+      font-size: 80px;
+      font-weight: 900;
+      color: rgba(255,255,255,0.06);
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+
+    .format-right .section-tag { color: rgba(255,255,255,0.5); }
+    .format-right .section-tag::after { background: rgba(255,255,255,0.3); }
+    .format-right .section-title { color: var(--white); }
+    .format-right .section-title-italic { color: rgba(255,255,255,0.7); }
+
+    .format-cta {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--terra);
+      background: var(--white);
+      padding: 18px 40px;
+      border-radius: 2px;
+      text-decoration: none;
+      display: inline-block;
+      align-self: flex-start;
+      transition: transform 0.2s;
+    }
+
+    .format-cta:hover { transform: translateY(-2px); }
+
+
+    /* ─────────────────────────────────────────
+       PROCESS (Как работаем)
+    ───────────────────────────────────────── */
+    .process {
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .process-header {
+      padding: 80px 56px 56px;
+      border-bottom: 1px solid var(--sand-dark);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .step {
+      padding: 48px 40px;
+      border-right: 1px solid var(--sand-dark);
+      position: relative;
+    }
+
+    .step:last-child { border-right: none; }
+
+    .step-line {
+      position: absolute;
+      top: 72px;
+      right: -1px;
+      width: 2px;
+      height: 24px;
+      background: var(--terra);
+      opacity: 0.4;
+    }
+
+    .step:last-child .step-line { display: none; }
+
+    .step-num {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      color: var(--terra);
+      margin-bottom: 20px;
+    }
+
+    .step-title {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin-bottom: 14px;
+      letter-spacing: -0.01em;
+    }
+
+    .step-desc {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.7;
+      color: var(--ink-soft);
+    }
+
+
+    /* ─────────────────────────────────────────
+       CONTACT
+    ───────────────────────────────────────── */
+    .contact {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .contact-left {
+      padding: 80px 56px;
+      background: var(--ink);
+      border-right: 2px solid var(--ink);
+    }
+
+    .contact-left .section-tag { color: var(--terra); }
+    .contact-left .section-tag::after { background: var(--terra); opacity: 0.3; }
+    .contact-left .section-title { color: var(--white); }
+    .contact-left .section-title-italic { color: var(--terra); }
+
+    .contact-tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-style: italic;
+      font-weight: 300;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.7;
+      margin-bottom: 48px;
+    }
+
+    .contact-items {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .contact-item:first-child { border-top: 1px solid rgba(255,255,255,0.06); }
+
+    .contact-icon {
+      font-size: 18px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .contact-label {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--terra);
+      margin-bottom: 4px;
+    }
+
+    .contact-val {
+      font-size: 14px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.65);
+    }
+
+    .contact-val a {
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .contact-val a:hover { color: var(--terra); }
+
+    .contact-socials {
+      display: flex;
+      gap: 12px;
+      margin-top: 40px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .contact-social {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 2px;
+      text-decoration: none;
+      transition: border-color 0.3s, background 0.3s;
+    }
+
+    .contact-social:hover {
+      border-color: var(--terra);
+      background: var(--terra);
+    }
+
+    .contact-social svg {
+      width: 18px;
+      height: 18px;
+      fill: rgba(255,255,255,0.4);
+      transition: fill 0.3s;
+    }
+
+    .contact-social:hover svg { fill: var(--white); }
+
+
+    /* ─────────────────────────────────────────
+       FORM
+    ───────────────────────────────────────── */
+    .contact-right {
+      padding: 80px 56px;
+      background: var(--sand);
+    }
+
+    .form-title {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin-bottom: 40px;
+      line-height: 1.2;
+    }
+
+    .form-title span {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      text-transform: none;
+      font-size: 26px;
+      color: var(--terra);
+      display: block;
+      margin-top: 4px;
+    }
+
+    .form-group { margin-bottom: 28px; }
+
+    .form-label {
+      display: block;
+      font-family: 'Unbounded', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin-bottom: 10px;
+    }
+
+    .form-input,
+    .form-textarea,
+    .form-select {
+      width: 100%;
+      padding: 14px 0;
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid var(--sand-dark);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--ink);
+      outline: none;
+      transition: border-color 0.3s;
+      appearance: none;
+    }
+
+    .form-input::placeholder,
+    .form-textarea::placeholder { color: var(--ink-soft); opacity: 0.5; }
+
+    .form-input:focus,
+    .form-textarea:focus,
+    .form-select:focus { border-color: var(--terra); }
+
+    .form-textarea {
+      resize: none;
+      height: 80px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .hp-trap {
+      position: absolute;
+      left: -9999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .form-submit {
+      width: 100%;
+      padding: 20px;
+      background: var(--ink);
+      color: var(--white);
+      border: none;
+      border-radius: 2px;
+      font-family: 'Unbounded', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      transition: background 0.3s, transform 0.2s;
+      margin-top: 8px;
+    }
+
+    .form-submit:not(:disabled):hover {
+      background: var(--terra);
+      transform: translateY(-2px);
+    }
+
+    .form-submit:disabled { background: #888; opacity: 0.7; }
+
+    .form-note {
+      font-size: 11px;
+      font-weight: 300;
+      color: var(--ink-soft);
+      text-align: center;
+      margin-top: 16px;
+      line-height: 1.6;
+    }
+
+    .form-feedback {
+      margin-top: 16px;
+      padding: 14px 20px;
+      border-radius: 2px;
+      font-size: 13px;
+      font-weight: 400;
+      text-align: center;
+      display: none;
+    }
+
+    .form-feedback.ok  { background: #d4edda; color: #2d6a4f; display: block; }
+    .form-feedback.err { background: #f8d7da; color: #842029; display: block; }
+
+
+    /* ─────────────────────────────────────────
+       FOOTER
+    ───────────────────────────────────────── */
+    footer {
+      background: var(--ink);
+      padding: 0 56px;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .footer-logo {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 16px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+
+    .footer-logo span { color: var(--terra); }
+
+    .footer-links {
+      display: flex;
+      gap: 32px;
+    }
+
+    .footer-links a {
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover { color: var(--terra); }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 0;
+    }
+
+    .footer-copy {
+      font-size: 11px;
+      color: rgba(255,255,255,0.2);
+      letter-spacing: 0.05em;
+    }
+
+    .footer-made {
+      font-size: 11px;
+      color: rgba(255,255,255,0.15);
+      letter-spacing: 0.05em;
+    }
+
+
+    /* ─────────────────────────────────────────
+       RESPONSIVE
+    ───────────────────────────────────────── */
+    @media (max-width: 900px) {
+      nav { padding: 16px 24px; }
+      .nav-center { display: none; }
+      .nav-socials { display: none; }
+
+      .hero { grid-template-columns: 1fr; }
+      .hero-right { height: auto; }
+      .hero-left { padding: 10px 24px 15px 24px; }
+      .hero-title { font-size: 32px; }
+      .hero-title-italic { font-size: 40px; }
+      .hero-eyebrow { margin: 16px 0; }
+      .hero-scroll-hint { display: none !important; }
+      .hero-bottom { justify-content: flex-start; margin-top: 10px; }
+      .hero-btn { width: auto; align-self: flex-start; }
+
+      .about,
+      .format,
+      .contact { grid-template-columns: 1fr; }
+
+      .about-left,
+      .about-right,
+      .format-left,
+      .contact-left,
+      .contact-right { padding: 60px 24px; border-right: none; }
+
+      .format-right { padding: 60px 24px 15px 24px; }
+
+      .services-header {
+        flex-direction: column;
+        gap: 24px;
+        align-items: flex-start;
+        padding: 48px 24px 32px;
+      }
+
+      .services-grid { grid-template-columns: 1fr; }
+      .svc-card { border-right: none; }
+
+      .process-steps { grid-template-columns: 1fr 1fr; }
+      .step { padding: 36px 24px; }
+
+      .process-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 60px 24px 40px;
+      }
+
+      .issues .process-header {
+        padding: 44px 24px 28px;
+        gap: 10px !important;
+      }
+
+      .issues .process-steps { grid-template-columns: 1fr 1fr; }
+
+      .issues .step { padding: 24px 20px 20px; }
+
+      .issues .step:nth-child(n+3) { border-top: 1px solid var(--sand-dark); }
+      .issues .step:nth-child(n+5) { border-top: 1px solid var(--sand-dark); }
+
+      footer { padding: 0 24px; }
+
+      .footer-top {
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+      }
+
+      .footer-links a { text-align: center; }
+
+      .form-row { grid-template-columns: 1fr; }
+
+      .certs-scroll { max-width: calc(100vw - 48px); }
+
+      .office-btn {
+        display: block;
+        width: 100%;
+      }
+    }
+
+  </style>
 </head>
-  
+
 <body>
-  
-   <!-- Yandex.Metrika counter -->
-<script type="text/javascript">
+
+  <!-- Yandex.Metrika -->
+  <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
     })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=107284276', 'ym');
     ym(107284276, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/107284276" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-  
-<div id="lightbox" onclick="closeCert()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.9);z-index:9998;align-items:center;justify-content:center;padding:24px;">
-  <img id="lightbox-img" alt="Сертификат" style="max-width:90vw;max-height:90vh;object-fit:contain;border-radius:2px;">
-  <div onclick="closeCert()" style="position:absolute;top:20px;right:28px;font-size:32px;color:white;cursor:none;line-height:1;">×</div>
-  <div onclick="event.stopPropagation();prevCert()" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);font-size:40px;color:white;cursor:none;user-select:none;padding:16px;">‹</div>
-  <div onclick="event.stopPropagation();nextCert()" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:40px;color:white;cursor:none;user-select:none;padding:16px;">›</div>
-</div>
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/107284276" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+  <!-- /Yandex.Metrika -->
 
-<div id="office-lightbox" onclick="closeOffice()" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.9);z-index:99999;align-items:center;justify-content:center;padding:24px;">
-  <img id="office-img" alt="Фото кабинета" style="max-width:90vw;max-height:90vh;object-fit:contain;border-radius:2px;">
-  <div onclick="closeOffice()" style="position:absolute;top:20px;right:28px;font-size:32px;color:white;cursor:none;line-height:1;">×</div>
-  <div onclick="event.stopPropagation();prevOffice()" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);font-size:40px;color:white;cursor:none;user-select:none;padding:16px;">‹</div>
-  <div onclick="event.stopPropagation();nextOffice()" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:40px;color:white;cursor:none;user-select:none;padding:16px;">›</div>
-</div>
-<div class="cursor" id="cursor"></div>
-
-<!-- NAV -->
-<nav id="nav">
-  <a href="#" class="nav-logo">А.<span>Титков</span></a>
-  <ul class="nav-center">
-    <li><a href="#about">О психологе</a></li>
-    <li><a href="#issues">Запросы</a></li>
-    <li><a href="#services">Услуги</a></li>
-    <li><a href="#process">Как работаем</a></li>
-    <li><a href="#contact">Контакты</a></li>
-  </ul>
-  <div class="nav-right">
-    <!-- Иконки соцсетей -->
-    <div class="nav-socials">
-      <!-- Instagram -->
-      <a href="https://www.instagram.com/titkov_psy?igsh=azhoNzl3cGNmNWt6" target="_blank" class="nav-social" title="Instagram">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-      </a>
-      <!-- Telegram -->
-      <a href="https://t.me/sashatitkov1998" target="_blank" class="nav-social" title="Telegram">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-      </a>
-      <!-- WhatsApp -->
-      <a href="https://wa.me/79957609588" target="_blank" class="nav-social" title="WhatsApp">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-      </a>
-    </div>
-    <a href="#contact" class="nav-cta">Записаться</a>
+  <!-- Lightbox: Сертификаты -->
+  <div id="lightbox" onclick="closeCert()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.9);z-index:9998;align-items:center;justify-content:center;padding:24px;">
+    <img id="lightbox-img" alt="Сертификат" style="max-width:90vw;max-height:90vh;object-fit:contain;border-radius:2px;">
+    <div onclick="closeCert()" style="position:absolute;top:20px;right:28px;font-size:32px;color:white;cursor:none;line-height:1;">×</div>
+    <div onclick="event.stopPropagation();prevCert()" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);font-size:40px;color:white;cursor:none;user-select:none;padding:16px;">‹</div>
+    <div onclick="event.stopPropagation();nextCert()" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:40px;color:white;cursor:none;user-select:none;padding:16px;">›</div>
   </div>
-</nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-left">
-    <div class="hero-eyebrow">
-      <span class="eyebrow-tag">Психолог · Онлайн и офлайн</span>
-      <span class="eyebrow-year">© 2026</span>
-    </div>
-    <div class="hero-main">
-      <div class="hero-title">
-        Твой путь
-        <span class="hero-title-italic">к себе</span>
-        начинается
+  <!-- Lightbox: Офис -->
+  <div id="office-lightbox" onclick="closeOffice()" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.9);z-index:99999;align-items:center;justify-content:center;padding:24px;">
+    <img id="office-img" alt="Фото кабинета" style="max-width:90vw;max-height:90vh;object-fit:contain;border-radius:2px;">
+    <div onclick="closeOffice()" style="position:absolute;top:20px;right:28px;font-size:32px;color:white;cursor:none;line-height:1;">×</div>
+    <div onclick="event.stopPropagation();prevOffice()" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);font-size:40px;color:white;cursor:none;user-select:none;padding:16px;">‹</div>
+    <div onclick="event.stopPropagation();nextOffice()" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:40px;color:white;cursor:none;user-select:none;padding:16px;">›</div>
+  </div>
+
+  <div class="cursor" id="cursor"></div>
+
+  <!-- ─── NAV ─── -->
+  <nav id="nav">
+    <a href="#" class="nav-logo">А.<span>Титков</span></a>
+    <ul class="nav-center">
+      <li><a href="#about">О психологе</a></li>
+      <li><a href="#issues">Запросы</a></li>
+      <li><a href="#services">Услуги</a></li>
+      <li><a href="#process">Как работаем</a></li>
+      <li><a href="#contact">Контакты</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-socials">
+        <a href="https://www.instagram.com/titkov_psy?igsh=azhoNzl3cGNmNWt6" target="_blank" class="nav-social" title="Instagram">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://t.me/sashatitkov1998" target="_blank" class="nav-social" title="Telegram">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+        </a>
+        <a href="https://wa.me/79957609588" target="_blank" class="nav-social" title="WhatsApp">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        </a>
       </div>
-      <div class="hero-desc">
-        Индивидуальная психологическая помощь. Работаю с тревогой, стрессом, отношениями и жизненными переходами — без осуждения, с полным уважением к вашему пути.
+      <a href="#contact" class="nav-cta">Записаться</a>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ─── -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-tag">Психолог · Онлайн и офлайн</span>
+        <span class="eyebrow-year">© 2026</span>
       </div>
-    </div>
-    <div class="hero-bottom">
-      <a href="#contact" class="hero-btn">Записаться на консультацию</a>
-      <span class="hero-scroll-hint">Листать вниз</span>
-    </div>
-  </div>
-  <div class="hero-right">
-    <div class="hero-bg-text">А.ТИТКОВ</div>
-    <div class="hero-photo-area">
-      <div class="hero-photo-frame">
-        <img src="img/photo.jpg" alt="Александр Титков" style="width:100%;height:100%;object-fit:cover;border-radius:2px;">
-      </div>
-    </div>
-    <div class="hero-right-stats">
-      <div class="hero-stat"><div class="stat-n">5+</div><div class="stat-l">лет практики</div></div>
-      <div class="hero-stat"><div class="stat-n">200+</div><div class="stat-l">клиентов</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- TICKER -->
-<div class="ticker">
-  <div class="ticker-inner">
-    <span class="ticker-item">Индивидуальная терапия</span>
-    <span class="ticker-item">Работа с тревогой</span>
-    <span class="ticker-item">Онлайн и офлайн</span>
-    <span class="ticker-item">Личностный рост</span>
-    <span class="ticker-item">Отношения</span>
-    <span class="ticker-item">Эмоциональное выгорание</span>
-    <span class="ticker-item">Психологическая поддержка</span>
-    <span class="ticker-item">Индивидуальная терапия</span>
-    <span class="ticker-item">Работа с тревогой</span>
-    <span class="ticker-item">Онлайн и офлайн</span>
-    <span class="ticker-item">Личностный рост</span>
-    <span class="ticker-item">Отношения</span>
-    <span class="ticker-item">Эмоциональное выгорание</span>
-    <span class="ticker-item">Психологическая поддержка</span>
-  </div>
-</div>
-
-<!-- ABOUT -->
-<section class="about" id="about">
-  <div class="about-left reveal">
-    <div class="section-tag">О психологе</div>
-    <div class="section-title">Александр<span class="section-title-italic">Титков</span></div>
-   <p class="about-text">Я — практикующий психолог с многолетним опытом работы. Специализируюсь на индивидуальной терапии и помогаю людям справляться с тревогой, депрессивными состояниями, трудностями в отношениях и жизненными переменами.</p>
-   <p class="about-text">Мой подход основан на глубоком уважении к каждому человеку и его уникальному пути. Я создаю пространство, где можно открыто говорить о самом важном — без осуждения.</p>
-   <p class="about-text">Если вы чувствуете, что что-то идёт не так — но сложно даже объяснить что именно — это уже достаточная причина чтобы поговорить.</p>
-    <div class="about-creds">
-      <div class="cred"><span class="cred-num">01</span> Высшее психологическое образование</div>
-      <div class="cred"><span class="cred-num">02</span> Психологические консультации семей и детей в кризисе — 4+ года в благотворительном фонде</div>
-      <div class="cred"><span class="cred-num">03</span> Гештальт-терапия и терапия принятия и ответственности (АСТ)</div>
-      <div class="cred"><span class="cred-num">04</span> Регулярная супервизия и повышение квалификации</div>
-      <div class="cred"><span class="cred-num">05</span> Член профессиональной психологической ассоциации</div>
-    </div>
-  </div>
-  <div class="about-right reveal">
-    <div class="about-quote-wrap">
-      <div class="quote-mark">"</div>
-      <div class="about-quote">«Каждый человек несёт в себе ресурсы для изменений. Моя задача — помочь их найти и начать использовать»</div>
-      <div class="quote-author">— Александр Титков, психолог</div>
-    </div>
-       <div class="certs">
- <div class="certs-label">Документы и сертификаты</div>
-<div class="certs-scroll">
-  <div class="cert-card" onclick="openCert('img/sert/sert1.jpg')"><img src="img/sert/sert1.jpg" alt="Сертификат 1"></div>
-  <div class="cert-card" onclick="openCert('img/sert/sert2.jpg')"><img src="img/sert/sert2.jpg" alt="Сертификат 2"></div>
-  <div class="cert-card" onclick="openCert('img/sert/sert3.jpg')"><img src="img/sert/sert3.jpg" alt="Сертификат 3"></div>
-  <div class="cert-card" onclick="openCert('img/sert/sert4.jpg')"><img src="img/sert/sert4.jpg" alt="Сертификат 4"></div>
-  <div class="cert-card" onclick="openCert('img/sert/sert5.jpg')"><img src="img/sert/sert5.jpg" alt="Сертификат 5"></div>
-  <div class="cert-card" onclick="openCert('img/sert/sert6.jpg')"><img src="img/sert/sert6.jpg" alt="Сертификат 6"></div>
-  <div class="cert-card" onclick="openCert('img/sert/sert7.jpg')"><img src="img/sert/sert7.jpg" alt="Сертификат 7"></div>
-</div>
-<div class="certs-nav">
-  <button class="certs-arrow" onclick="scrollCerts(-1)">‹</button>
-  <button class="certs-arrow" onclick="scrollCerts(1)">›</button>
-</div>
-</div>
-      
-    <div class="about-approach">
-      <div class="approach-item"><span class="approach-icon">🧭</span><span class="approach-text">Безопасная и доверительная атмосфера</span></div>
-      <div class="approach-item"><span class="approach-icon">🔍</span><span class="approach-text">Работа в вашем темпе, без давления</span></div>
-      <div class="approach-item"><span class="approach-icon">🌱</span><span class="approach-text">Фокус на долгосрочных изменениях</span></div>
-      <div class="approach-item"><span class="approach-icon">🤝</span><span class="approach-text">Конфиденциальность и профессиональная этика</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ISSUES -->
-<section class="issues" id="issues">
-  <div class="process-header reveal">
-    <div>
-      <div class="section-tag">Частые запросы</div>
-      <div class="section-title">С чем можно<span class="section-title-italic">обратиться</span></div>
-    </div>
-    <div style="max-width:280px;font-size:14px;font-weight:300;color:var(--ink-soft);line-height:1.7;">
-      Вы можете прийти с чётким запросом или просто с ощущением, что что-то не так. Ниже — лишь часть тем, с которыми ко мне обращаются чаще всего.
-    </div>
-  </div>
-
-  <div class="process-steps">
-    <div class="step reveal">
-      <div class="step-line"></div>
-      <div class="step-num">01 —</div>
-      <div class="step-title">Тревога и напряжение</div>
-      <p class="step-desc">Когда сложно расслабиться, остановить мысли и почувствовать внутреннюю опору.</p>
-    </div>
-
-    <div class="step reveal">
-      <div class="step-line"></div>
-      <div class="step-num">02 —</div>
-      <div class="step-title">Выгорание и усталость</div>
-      <p class="step-desc">Когда сил всё меньше, а привычная жизнь начинает давить и утомлять.</p>
-    </div>
-
-    <div class="step reveal">
-      <div class="step-line"></div>
-      <div class="step-num">03 —</div>
-      <div class="step-title">Отношения и близость</div>
-      <p class="step-desc">Когда трудно выстраивать контакт, говорить о важном и чувствовать понимание.</p>
-    </div>
-
-    <div class="step reveal">
-      <div class="step-num">04 —</div>
-      <div class="step-title">Сомнения в себе</div>
-      <p class="step-desc">Когда внутренней критики слишком много, а уверенности в себе и своих решениях не хватает.</p>
-    </div>
-
-    <div class="step reveal">
-      <div class="step-line"></div>
-      <div class="step-num">05 —</div>
-      <div class="step-title">Жизненные перемены</div>
-      <p class="step-desc">Когда приходится проходить через кризис, расставание, потерю или новый этап жизни.</p>
-    </div>
-
-    <div class="step reveal">
-      <div class="step-line"></div>
-      <div class="step-num">06 —</div>
-      <div class="step-title">Подростковый возраст</div>
-      <p class="step-desc">Конфликты, тревога, поиск себя и сложности во взаимоотношениях с близкими.</p>
-    </div>
-
-    <div class="step reveal">
-      <div class="step-line"></div>
-      <div class="step-num">07 —</div>
-      <div class="step-title">Ощущение, что что-то не так</div>
-      <p class="step-desc">Когда тяжело объяснить словами, но внутри давно есть напряжение, потерянность или внутренний дискомфорт.</p>
-    </div>
-
-    <div class="step reveal">
-      <div class="step-num">08 —</div>
-      <div class="step-title">И многое другое</div>
-      <p class="step-desc">Если вы не нашли свой запрос в этом списке, это не значит, что с ним нельзя работать.</p>
-    </div>
-  </div>
-</section>
-  
-<!-- SERVICES -->
-<section class="services" id="services">
-  <div class="services-header reveal">
-    <div>
-      <div class="section-tag">Услуги</div>
-      <div class="section-title">Виды<span class="section-title-italic">консультаций</span></div>
-    </div>
-    <div class="services-header-right">Работаю онлайн и офлайн — выбирайте удобный формат. Также доступны пакеты сессий со скидкой.</div>
-  </div>
-  <div class="services-grid">
-    <div class="svc-card reveal">
-      <div class="svc-num">01 —</div><span class="svc-icon">🖥️</span>
-      <div class="svc-title">Онлайн-консультация</div>
-      <div class="svc-desc">Telegram, Яндекс Телемост или любая удобная для вас платформа. Тот же результат — без дороги и лишних затрат времени.</div>
-      <div class="svc-price">3 000 ₽ · 50 минут</div>
-    </div>
-    <div class="svc-card reveal">
-      <div class="svc-num">02 —</div><span class="svc-icon">🏡</span>
-      <div class="svc-title">Офлайн-консультация</div>
-      <div class="svc-desc">Ростов-на-Дону, Большая Садовая, 150, офис 707. Уютное пространство для открытого разговора.</div>
-      <div class="svc-price">3 000 ₽ · 50 минут</div>
-    </div>
-    <div class="svc-card reveal">
-      <div class="svc-num">03 —</div><span class="svc-icon">📦</span>
-      <div class="svc-title">Пакет сессий</div>
-      <div class="svc-desc">Регулярная работа со скидкой. Фиксируете место в расписании и получаете лучшую цену за сессию.</div>
-      <div class="svc-price">4 сессии — 10 800 ₽ <span style="opacity:0.4;font-size:11px;text-decoration:line-through;">12 000 ₽</span></div>
-      <div class="svc-price" style="margin-top:6px;">8 сессий — 20 400 ₽ <span style="opacity:0.4;font-size:11px;text-decoration:line-through;">24 000 ₽</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- FORMAT -->
-<section class="format" id="format">
-  <div class="format-left reveal">
-    <div class="section-tag">Форматы работы</div>
-    <div class="section-title">Как мы<span class="section-title-italic">встречаемся</span></div>
-    <div class="format-cards">
-      <div class="format-card">
-        <div class="format-icon-wrap">🖥️</div>
-        <div><div class="format-title">Онлайн</div><div class="format-desc">Встречаемся на удобной для вас платформе. Работаем из любой точки мира в удобное для вас время.</div></div>
-      </div>
-      <div class="format-card">
-        <div class="format-icon-wrap">🏡</div>
-        <div><div class="format-title">Офлайн</div><div class="format-desc">Встречаемся лично в уютном, приватном кабинете с видом на Дон. Как добраться и найти — пришлю после записи.</div></div>
-      </div>
-    </div>
-    <button class="office-btn" onclick="openOffice()">📷 Посмотреть офис</button>
-  </div>
-  <div class="format-right reveal">
-    <div>
-      <div class="section-tag">Удобно для вас</div>
-      <div class="section-title">Оба формата<span class="section-title-italic">равноценны</span></div>
-      <p style="font-size:17px;font-weight:300;line-height:1.8;color:rgba(255,255,255,0.75);margin-top:0;margin-bottom:16px;max-width:360px;">Исследования показывают, что онлайн-терапия так же эффективна, как и очная.</p>
-      <p style="font-size:17px;font-weight:300;line-height:1.8;color:rgba(255,255,255,0.75);margin-top:0;margin-bottom:10px;max-width:360px;">Главное — не формат встречи, а то что происходит внутри неё. Выбирайте то, что комфортно именно вам.</p>
-    </div>
-    <a href="#contact" class="format-cta">Записаться на приём</a>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section class="process" id="process">
-  <div class="process-header reveal">
-    <div>
-      <div class="section-tag">Как это работает</div>
-      <div class="section-title">Четыре шага<span class="section-title-italic">к изменениям</span></div>
-    </div>
-    <div style="max-width:280px;font-size:14px;font-weight:300;color:var(--ink-soft);line-height:1.7;">Простой и понятный процесс — от первого сообщения до реальных результатов.</div>
-  </div>
-  <div class="process-steps">
-    <div class="step reveal"><div class="step-line"></div><div class="step-num">01 —</div><div class="step-title">Запись</div><p class="step-desc">Оставьте заявку через форму или напишите напрямую. Отвечу в течение 24 часов.</p></div>
-    <div class="step reveal"><div class="step-line"></div><div class="step-num">02 —</div><div class="step-title">Знакомство</div><p class="step-desc">Первая встреча — возможность познакомиться, обозначить запрос и почувствовать, комфортно ли нам вместе.</p></div>
-    <div class="step reveal"><div class="step-line"></div><div class="step-num">03 —</div><div class="step-title">Работа</div><p class="step-desc">Регулярные сессии раз в неделю или по вашему запросу. Работаем в вашем темпе.</p></div>
-    <div class="step reveal"><div class="step-num">04 —</div><div class="step-title">Результат</div><p class="step-desc">Изменения в мышлении, поведении и качестве жизни — постепенно, но ощутимо.</p></div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="contact-left reveal">
-    <div class="section-tag">Контакты</div>
-    <div class="section-title">Начнём<span class="section-title-italic">вместе?</span></div>
-    <p class="contact-tagline">Первый шаг — самый сложный. Но именно он меняет всё. Напишите мне, и мы найдём удобное время для первой встречи.</p>
-    <div class="contact-items">
-      <div class="contact-item">
-        <div class="contact-icon">📧</div>
-        <div>
-          <div class="contact-label">Email</div>
-          <div class="contact-val"><a href="mailto:titkov.aleksandr1998@mail.ru">titkov.aleksandr1998@mail.ru</a></div>
+      <div class="hero-main">
+        <div class="hero-title">
+          Твой путь
+          <span class="hero-title-italic">к себе</span>
+          начинается
+        </div>
+        <div class="hero-desc">
+          Индивидуальная психологическая помощь. Работаю с тревогой, стрессом, отношениями и жизненными переходами — без осуждения, с полным уважением к вашему пути.
         </div>
       </div>
-      <div class="contact-item">
-        <div class="contact-icon">📱</div>
-        <div>
-          <div class="contact-label">Телефон / WhatsApp</div>
-          <div class="contact-val"><a href="tel:+79957609588">+7 (995) 760-95-88</a></div>
+      <div class="hero-bottom">
+        <a href="#contact" class="hero-btn">Записаться на консультацию</a>
+        <span class="hero-scroll-hint">Листать вниз</span>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-bg-text">А.ТИТКОВ</div>
+      <div class="hero-photo-area">
+        <div class="hero-photo-frame">
+          <img src="img/photo.jpg" alt="Александр Титков" style="width:100%;height:100%;object-fit:cover;border-radius:2px;">
         </div>
       </div>
-      <div class="contact-item">
-        <div class="contact-icon">✈️</div>
-        <div>
-          <div class="contact-label">Telegram</div>
-          <div class="contact-val"><a href="https://t.me/sashatitkov1998" target="_blank">@sashatitkov1998</a></div>
+      <div class="hero-right-stats">
+        <div class="hero-stat">
+          <div class="stat-n">5+</div>
+          <div class="stat-l">лет практики</div>
         </div>
-      </div>
-      <div class="contact-item">
-        <div class="contact-icon">🕐</div>
-        <div>
-          <div class="contact-label">Время работы</div>
-          <div class="contact-val">По записи, в удобное для вас время</div>
+        <div class="hero-stat">
+          <div class="stat-n">200+</div>
+          <div class="stat-l">клиентов</div>
         </div>
       </div>
     </div>
-    <!-- Иконки соцсетей -->
-    <div class="contact-socials">
-      <a href="https://www.instagram.com/titkov_psy?igsh=azhoNzl3cGNmNWt6" target="_blank" class="contact-social" title="Instagram">
-        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-      </a>
-      <a href="https://t.me/sashatitkov1998" target="_blank" class="contact-social" title="Telegram">
-        <svg viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-      </a>
-      <a href="https://wa.me/79957609588" target="_blank" class="contact-social" title="WhatsApp">
-        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-      </a>
+  </section>
+
+  <!-- ─── TICKER ─── -->
+  <div class="ticker">
+    <div class="ticker-inner">
+      <span class="ticker-item">Индивидуальная терапия</span>
+      <span class="ticker-item">Работа с тревогой</span>
+      <span class="ticker-item">Онлайн и офлайн</span>
+      <span class="ticker-item">Личностный рост</span>
+      <span class="ticker-item">Отношения</span>
+      <span class="ticker-item">Эмоциональное выгорание</span>
+      <span class="ticker-item">Психологическая поддержка</span>
+      <span class="ticker-item">Индивидуальная терапия</span>
+      <span class="ticker-item">Работа с тревогой</span>
+      <span class="ticker-item">Онлайн и офлайн</span>
+      <span class="ticker-item">Личностный рост</span>
+      <span class="ticker-item">Отношения</span>
+      <span class="ticker-item">Эмоциональное выгорание</span>
+      <span class="ticker-item">Психологическая поддержка</span>
     </div>
   </div>
 
-  <div class="contact-right reveal" id="contact-form">
-    <div class="form-title">Оставить заявку<span>на консультацию</span></div>
-    <div class="hp-trap" aria-hidden="true">
-      <label for="hp-website">Leave this empty</label>
-      <input type="text" id="hp-website" name="website" tabindex="-1" autocomplete="off">
+  <!-- ─── ABOUT ─── -->
+  <section class="about" id="about">
+    <div class="about-left reveal">
+      <div class="section-tag">О психологе</div>
+      <div class="section-title">Александр<span class="section-title-italic">Титков</span></div>
+      <p class="about-text">Я — практикующий психолог с многолетним опытом работы. Специализируюсь на индивидуальной терапии и помогаю людям справляться с тревогой, депрессивными состояниями, трудностями в отношениях и жизненными переменами.</p>
+      <p class="about-text">Мой подход основан на глубоком уважении к каждому человеку и его уникальному пути. Я создаю пространство, где можно открыто говорить о самом важном — без осуждения.</p>
+      <p class="about-text">Если вы чувствуете, что что-то идёт не так — но сложно даже объяснить что именно — это уже достаточная причина чтобы поговорить.</p>
+      <div class="about-creds">
+        <div class="cred"><span class="cred-num">01</span> Высшее психологическое образование</div>
+        <div class="cred"><span class="cred-num">02</span> Психологические консультации семей и детей в кризисе — 4+ года в благотворительном фонде</div>
+        <div class="cred"><span class="cred-num">03</span> Гештальт-терапия и терапия принятия и ответственности (АСТ)</div>
+        <div class="cred"><span class="cred-num">04</span> Регулярная супервизия и повышение квалификации</div>
+        <div class="cred"><span class="cred-num">05</span> Член профессиональной психологической ассоциации</div>
+      </div>
     </div>
-    <div class="form-row">
+    <div class="about-right reveal">
+      <div class="about-quote-wrap">
+        <div class="quote-mark">"</div>
+        <div class="about-quote">«Каждый человек несёт в себе ресурсы для изменений. Моя задача — помочь их найти и начать использовать»</div>
+        <div class="quote-author">— Александр Титков, психолог</div>
+      </div>
+      <div class="certs">
+        <div class="certs-label">Документы и сертификаты</div>
+        <div class="certs-scroll">
+          <div class="cert-card" onclick="openCert('img/sert/sert1.jpg')"><img src="img/sert/sert1.jpg" alt="Сертификат 1"></div>
+          <div class="cert-card" onclick="openCert('img/sert/sert2.jpg')"><img src="img/sert/sert2.jpg" alt="Сертификат 2"></div>
+          <div class="cert-card" onclick="openCert('img/sert/sert3.jpg')"><img src="img/sert/sert3.jpg" alt="Сертификат 3"></div>
+          <div class="cert-card" onclick="openCert('img/sert/sert4.jpg')"><img src="img/sert/sert4.jpg" alt="Сертификат 4"></div>
+          <div class="cert-card" onclick="openCert('img/sert/sert5.jpg')"><img src="img/sert/sert5.jpg" alt="Сертификат 5"></div>
+          <div class="cert-card" onclick="openCert('img/sert/sert6.jpg')"><img src="img/sert/sert6.jpg" alt="Сертификат 6"></div>
+          <div class="cert-card" onclick="openCert('img/sert/sert7.jpg')"><img src="img/sert/sert7.jpg" alt="Сертификат 7"></div>
+        </div>
+        <div class="certs-nav">
+          <button class="certs-arrow" onclick="scrollCerts(-1)">‹</button>
+          <button class="certs-arrow" onclick="scrollCerts(1)">›</button>
+        </div>
+      </div>
+      <div class="about-approach">
+        <div class="approach-item"><span class="approach-icon">🧭</span><span class="approach-text">Безопасная и доверительная атмосфера</span></div>
+        <div class="approach-item"><span class="approach-icon">🔍</span><span class="approach-text">Работа в вашем темпе, без давления</span></div>
+        <div class="approach-item"><span class="approach-icon">🌱</span><span class="approach-text">Фокус на долгосрочных изменениях</span></div>
+        <div class="approach-item"><span class="approach-icon">🤝</span><span class="approach-text">Конфиденциальность и профессиональная этика</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── ISSUES (Частые запросы) ─── -->
+  <section class="issues" id="issues">
+    <div class="process-header reveal">
+      <div>
+        <div class="section-tag">Частые запросы</div>
+        <div class="section-title">С чем можно<span class="section-title-italic">обратиться</span></div>
+      </div>
+      <div style="max-width:280px;font-size:14px;font-weight:300;color:var(--ink-soft);line-height:1.7;">
+        Вы можете прийти с чётким запросом или просто с ощущением, что что-то не так. Ниже — лишь часть тем, с которыми ко мне обращаются чаще всего.
+      </div>
+    </div>
+    <div class="process-steps">
+      <div class="step reveal">
+        <div class="step-line"></div>
+        <div class="step-num">01 —</div>
+        <div class="step-title">Тревога и напряжение</div>
+        <p class="step-desc">Когда сложно расслабиться, остановить мысли и почувствовать внутреннюю опору.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-line"></div>
+        <div class="step-num">02 —</div>
+        <div class="step-title">Выгорание и усталость</div>
+        <p class="step-desc">Когда сил всё меньше, а привычная жизнь начинает давить и утомлять.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-line"></div>
+        <div class="step-num">03 —</div>
+        <div class="step-title">Отношения и близость</div>
+        <p class="step-desc">Когда трудно выстраивать контакт, говорить о важном и чувствовать понимание.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">04 —</div>
+        <div class="step-title">Сомнения в себе</div>
+        <p class="step-desc">Когда внутренней критики слишком много, а уверенности в себе и своих решениях не хватает.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-line"></div>
+        <div class="step-num">05 —</div>
+        <div class="step-title">Жизненные перемены</div>
+        <p class="step-desc">Когда приходится проходить через кризис, расставание, потерю или новый этап жизни.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-line"></div>
+        <div class="step-num">06 —</div>
+        <div class="step-title">Подростковый возраст</div>
+        <p class="step-desc">Конфликты, тревога, поиск себя и сложности во взаимоотношениях с близкими.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-line"></div>
+        <div class="step-num">07 —</div>
+        <div class="step-title">Ощущение, что что-то не так</div>
+        <p class="step-desc">Когда тяжело объяснить словами, но внутри давно есть напряжение, потерянность или внутренний дискомфорт.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">08 —</div>
+        <div class="step-title">И многое другое</div>
+        <p class="step-desc">Если вы не нашли свой запрос в этом списке, это не значит, что с ним нельзя работать.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SERVICES ─── -->
+  <section class="services" id="services">
+    <div class="services-header reveal">
+      <div>
+        <div class="section-tag">Услуги</div>
+        <div class="section-title">Виды<span class="section-title-italic">консультаций</span></div>
+      </div>
+      <div class="services-header-right">Работаю онлайн и офлайн — выбирайте удобный формат. Также доступны пакеты сессий со скидкой.</div>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card reveal">
+        <div class="svc-num">01 —</div>
+        <span class="svc-icon">🖥️</span>
+        <div class="svc-title">Онлайн-консультация</div>
+        <div class="svc-desc">Telegram, Яндекс Телемост или любая удобная для вас платформа. Тот же результат — без дороги и лишних затрат времени.</div>
+        <div class="svc-price">3 000 ₽ · 50 минут</div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-num">02 —</div>
+        <span class="svc-icon">🏡</span>
+        <div class="svc-title">Офлайн-консультация</div>
+        <div class="svc-desc">Ростов-на-Дону, Большая Садовая, 150, офис 707. Уютное пространство для открытого разговора.</div>
+        <div class="svc-price">3 000 ₽ · 50 минут</div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-num">03 —</div>
+        <span class="svc-icon">📦</span>
+        <div class="svc-title">Пакет сессий</div>
+        <div class="svc-desc">Регулярная работа со скидкой. Фиксируете место в расписании и получаете лучшую цену за сессию.</div>
+        <div class="svc-price">4 сессии — 10 800 ₽ <span style="opacity:0.4;font-size:11px;text-decoration:line-through;">12 000 ₽</span></div>
+        <div class="svc-price" style="margin-top:6px;">8 сессий — 20 400 ₽ <span style="opacity:0.4;font-size:11px;text-decoration:line-through;">24 000 ₽</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FORMAT ─── -->
+  <section class="format" id="format">
+    <div class="format-left reveal">
+      <div class="section-tag">Форматы работы</div>
+      <div class="section-title">Как мы<span class="section-title-italic">встречаемся</span></div>
+      <div class="format-cards">
+        <div class="format-card">
+          <div class="format-icon-wrap">🖥️</div>
+          <div>
+            <div class="format-title">Онлайн</div>
+            <div class="format-desc">Встречаемся на удобной для вас платформе. Работаем из любой точки мира в удобное для вас время.</div>
+          </div>
+        </div>
+        <div class="format-card">
+          <div class="format-icon-wrap">🏡</div>
+          <div>
+            <div class="format-title">Офлайн</div>
+            <div class="format-desc">Встречаемся лично в уютном, приватном кабинете с видом на Дон. Как добраться и найти — пришлю после записи.</div>
+          </div>
+        </div>
+      </div>
+      <button class="office-btn" onclick="openOffice()">📷 Посмотреть офис</button>
+    </div>
+    <div class="format-right reveal">
+      <div>
+        <div class="section-tag">Удобно для вас</div>
+        <div class="section-title">Оба формата<span class="section-title-italic">равноценны</span></div>
+        <p style="font-size:17px;font-weight:300;line-height:1.8;color:rgba(255,255,255,0.75);margin-bottom:16px;max-width:360px;">Исследования показывают, что онлайн-терапия так же эффективна, как и очная.</p>
+        <p style="font-size:17px;font-weight:300;line-height:1.8;color:rgba(255,255,255,0.75);max-width:360px;">Главное — не формат встречи, а то что происходит внутри неё. Выбирайте то, что комфортно именно вам.</p>
+      </div>
+      <a href="#contact" class="format-cta">Записаться на приём</a>
+    </div>
+  </section>
+
+  <!-- ─── PROCESS ─── -->
+  <section class="process" id="process">
+    <div class="process-header reveal">
+      <div>
+        <div class="section-tag">Как это работает</div>
+        <div class="section-title">Четыре шага<span class="section-title-italic">к изменениям</span></div>
+      </div>
+      <div style="max-width:280px;font-size:14px;font-weight:300;color:var(--ink-soft);line-height:1.7;">Простой и понятный процесс — от первого сообщения до реальных результатов.</div>
+    </div>
+    <div class="process-steps">
+      <div class="step reveal">
+        <div class="step-line"></div>
+        <div class="step-num">01 —</div>
+        <div class="step-title">Запись</div>
+        <p class="step-desc">Оставьте заявку через форму или напишите напрямую. Отвечу в течение 24 часов.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-line"></div>
+        <div class="step-num">02 —</div>
+        <div class="step-title">Знакомство</div>
+        <p class="step-desc">Первая встреча — возможность познакомиться, обозначить запрос и почувствовать, комфортно ли нам вместе.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-line"></div>
+        <div class="step-num">03 —</div>
+        <div class="step-title">Работа</div>
+        <p class="step-desc">Регулярные сессии раз в неделю или по вашему запросу. Работаем в вашем темпе.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">04 —</div>
+        <div class="step-title">Результат</div>
+        <p class="step-desc">Изменения в мышлении, поведении и качестве жизни — постепенно, но ощутимо.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ─── -->
+  <section class="contact" id="contact">
+    <div class="contact-left reveal">
+      <div class="section-tag">Контакты</div>
+      <div class="section-title">Начнём<span class="section-title-italic">вместе?</span></div>
+      <p class="contact-tagline">Первый шаг — самый сложный. Но именно он меняет всё. Напишите мне, и мы найдём удобное время для первой встречи.</p>
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-val"><a href="mailto:titkov.aleksandr1998@mail.ru">titkov.aleksandr1998@mail.ru</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📱</div>
+          <div>
+            <div class="contact-label">Телефон / WhatsApp</div>
+            <div class="contact-val"><a href="tel:+79957609588">+7 (995) 760-95-88</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">✈️</div>
+          <div>
+            <div class="contact-label">Telegram</div>
+            <div class="contact-val"><a href="https://t.me/sashatitkov1998" target="_blank">@sashatitkov1998</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <div class="contact-label">Время работы</div>
+            <div class="contact-val">По записи, в удобное для вас время</div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-socials">
+        <a href="https://www.instagram.com/titkov_psy?igsh=azhoNzl3cGNmNWt6" target="_blank" class="contact-social" title="Instagram">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://t.me/sashatitkov1998" target="_blank" class="contact-social" title="Telegram">
+          <svg viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+        </a>
+        <a href="https://wa.me/79957609588" target="_blank" class="contact-social" title="WhatsApp">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="contact-right reveal" id="contact-form">
+      <div class="form-title">Оставить заявку<span>на консультацию</span></div>
+      <div class="hp-trap" aria-hidden="true">
+        <label for="hp-website">Leave this empty</label>
+        <input type="text" id="hp-website" name="website" tabindex="-1" autocomplete="off">
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Имя</label>
+          <input class="form-input" id="f-name" type="text" placeholder="Ваше имя">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Телефон или Email</label>
+          <input class="form-input" id="f-contact" type="text" placeholder="Как связаться">
+        </div>
+      </div>
       <div class="form-group">
-        <label class="form-label">Имя</label>
-        <input class="form-input" id="f-name" type="text" placeholder="Ваше имя">
+        <label class="form-label">Формат</label>
+        <select class="form-select" id="f-format">
+          <option value="">Выберите формат встречи</option>
+          <option>Онлайн</option>
+          <option>Офлайн</option>
+          <option>Не знаю, подскажите</option>
+        </select>
       </div>
       <div class="form-group">
-        <label class="form-label">Телефон или Email</label>
-        <input class="form-input" id="f-contact" type="text" placeholder="Как связаться">
+        <label class="form-label">С чем хотите разобраться?</label>
+        <textarea class="form-textarea" id="f-message" placeholder="Напишите в нескольких словах, если хотите..."></textarea>
+      </div>
+      <button class="form-submit" id="submitBtn" onclick="submitForm(this)">Отправить заявку →</button>
+      <div class="form-feedback" id="formFeedback"></div>
+      <p class="form-note">
+        Конфиденциальность гарантирована. Отвечу в течение 24 часов.<br>
+        Нажимая кнопку, вы соглашаетесь с <a href="privacy.html" style="color:var(--ink-soft);text-decoration:underline;">политикой конфиденциальности</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-logo">А.<span>Титков</span></div>
+      <div class="footer-links">
+        <a href="#about">О психологе</a>
+        <a href="#issues">Запросы</a>
+        <a href="#services">Услуги</a>
+        <a href="#process">Как работаем</a>
+        <a href="#contact">Контакты</a>
       </div>
     </div>
-    <div class="form-group">
-      <label class="form-label">Формат</label>
-      <select class="form-select" id="f-format">
-        <option value="">Выберите формат встречи</option>
-        <option>Онлайн</option>
-        <option>Офлайн</option>
-        <option>Не знаю, подскажите</option>
-      </select>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Александр Титков — Психолог</div>
+      <div class="footer-made">Разработка — <a href="https://t.me/du1brov" target="_blank" style="color:rgba(255,255,255,0.15);text-decoration:none;transition:color 0.3s;" onmouseover="this.style.color='#C4602A'" onmouseout="this.style.color='rgba(255,255,255,0.15)'">@du1brov</a></div>
     </div>
-    <div class="form-group">
-      <label class="form-label">С чем хотите разобраться?</label>
-      <textarea class="form-textarea" id="f-message" placeholder="Напишите в нескольких словах, если хотите..."></textarea>
-    </div>
-    <button class="form-submit" id="submitBtn" onclick="submitForm(this)">Отправить заявку →</button>
-    <div class="form-feedback" id="formFeedback"></div>
-    <p class="form-note">Конфиденциальность гарантирована. Отвечу в течение 24 часов.<br>Нажимая кнопку, вы соглашаетесь с <a href="privacy.html" style="color:var(--ink-soft);text-decoration:underline;">политикой конфиденциальности</a></p>
-  </div>
-</section>
+  </footer>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-top">
-    <div class="footer-logo">А.<span>Титков</span></div>
-    <div class="footer-links">
-      <a href="#about">О психологе</a>
-      <a href="#issues">Запросы</a>
-      <a href="#services">Услуги</a>
-      <a href="#process">Как работаем</a>
-      <a href="#contact">Контакты</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <div class="footer-copy">© 2026 Александр Титков — Психолог</div>
-    <div class="footer-made">Разработка — <a href="https://t.me/du1brov" target="_blank" style="color:rgba(255,255,255,0.15);text-decoration:none;transition:color 0.3s;" onmouseover="this.style.color='#C4602A'" onmouseout="this.style.color='rgba(255,255,255,0.15)'">@du1brov</a></div>
-  </div>
-</footer>
+  <script>
+    /* ─── CONFIG ─── */
+    const TG_TOKEN   = '8402147195:AAFHcqRYC8TeiINZSl-34hkjlvoFFYsV5rE';
+    const TG_CHAT_ID = '359370004';
 
-<script>
-const TG_TOKEN   = '8402147195:AAFHcqRYC8TeiINZSl-34hkjlvoFFYsV5rE';
-const TG_CHAT_ID = '359370004';
+    /* ─── CURSOR ─── */
+    if (window.matchMedia('(pointer: fine)').matches) {
+      const cursor = document.getElementById('cursor');
 
-if (window.matchMedia('(pointer: fine)').matches) {
-  const cursor = document.getElementById('cursor');
-  document.addEventListener('mousemove', e => {
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top  = e.clientY + 'px';
-  });
-  document.querySelectorAll('a, button, input, textarea, select, .format-card, .svc-card').forEach(el => {
-    el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
-    el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
-  });
-}
-
-const revealObs = new IntersectionObserver(
-  entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
-  { threshold: 0.12 }
-);
-document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
-
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  const wide = window.innerWidth > 900;
-  nav.style.padding = window.scrollY > 60
-    ? (wide ? '14px 56px' : '14px 24px')
-    : (wide ? '20px 56px' : '16px 24px');
-});
-
-async function submitForm(btn) {
-  const hp = document.getElementById('hp-website');
-  if (hp && hp.value.trim() !== '') {
-    showFeedback('ok', '✓ Заявка отправлена! Свяжусь с вами в течение 24 часов.');
-    return;
-  }
-  const name    = document.getElementById('f-name').value.trim();
-  const contact = document.getElementById('f-contact').value.trim();
-  const format  = document.getElementById('f-format').value;
-  const message = document.getElementById('f-message').value.trim();
-  if (!name || !contact) {
-    showFeedback('err', '⚠ Пожалуйста, укажите имя и способ связи.');
-    return;
-  }
-  const now  = new Date().toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' });
-  const text = `📬 <b>Новая заявка с сайта</b>\n\n` +
-               `👤 <b>Имя:</b> ${esc(name)}\n` +
-               `📞 <b>Контакт:</b> ${esc(contact)}\n` +
-               `🖥 <b>Формат:</b> ${esc(format || 'не указан')}\n` +
-               `💬 <b>Запрос:</b> ${esc(message || '—')}\n\n` +
-               `🕐 ${now} (МСК)`;
-  btn.disabled    = true;
-  btn.textContent = 'Отправляю...';
-  try {
-    const res = await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ chat_id: TG_CHAT_ID, text, parse_mode: 'HTML' })
-    });
-    const data = await res.json();
-    if (data.ok) {
-      btn.textContent = '✓ Отправлено';
-      showFeedback('ok', '✓ Заявка отправлена! Свяжусь с вами в течение 24 часов.');
-      ['f-name','f-contact','f-format','f-message'].forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.value = '';
+      document.addEventListener('mousemove', e => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top  = e.clientY + 'px';
       });
-    } else { throw new Error(data.description || 'Telegram error'); }
-  } catch (err) {
-    console.error(err);
-    btn.disabled    = false;
-    btn.textContent = 'Отправить заявку →';
-    showFeedback('err', '⚠ Ошибка отправки. Напишите напрямую в Telegram или WhatsApp.');
-  }
-}
 
-function showFeedback(type, msg) {
-  const el = document.getElementById('formFeedback');
-  el.className   = 'form-feedback ' + type;
-  el.textContent = msg;
-}
-function esc(s) {
-  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-}
-  function scrollCerts(dir) {
-  const scroll = document.querySelector('.certs-scroll');
-  if (!scroll) return;
-  const cardW = 140 + 16;
-  const visible = Math.floor(scroll.clientWidth / cardW) || 1;
-  const step = visible * cardW;
-  const maxScroll = scroll.scrollWidth - scroll.clientWidth;
-  let next = scroll.scrollLeft + dir * step;
-  if (next > maxScroll) next = 0;
-  if (next < 0) next = maxScroll;
-  scroll.scrollTo({ left: next, behavior: 'smooth' });
-}
-  const certImages = ['img/sert/sert1.jpg',
-  'img/sert/sert2.jpg',
-  'img/sert/sert3.jpg',
-  'img/sert/sert4.jpg',
-  'img/sert/sert5.jpg',
-  'img/sert/sert6.jpg',
-  'img/sert/sert7.jpg'
-];
-let currentCert = 0;
+      document.querySelectorAll('a, button, input, textarea, select, .format-card, .svc-card').forEach(el => {
+        el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+        el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+      });
+    }
 
-function openCert(src) {
-  currentCert = certImages.indexOf(src);
-  const lb = document.getElementById('lightbox');
-  document.getElementById('lightbox-img').src = src;
-  lb.style.display = 'flex';
-  document.body.style.overflow = 'hidden';
-}
-function closeCert() {
-  document.getElementById('lightbox').style.display = 'none';
-  document.body.style.overflow = '';
-}
-function nextCert() {
-  currentCert = (currentCert + 1) % certImages.length;
-  document.getElementById('lightbox-img').src = certImages[currentCert];
-}
-function prevCert() {
-  currentCert = (currentCert - 1 + certImages.length) % certImages.length;
-  document.getElementById('lightbox-img').src = certImages[currentCert];
-}
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') closeCert();
-  if (e.key === 'ArrowRight') nextCert();
-  if (e.key === 'ArrowLeft') prevCert();
-});
-  const navCta = document.querySelector('.nav-cta');
-function updateCtaHref() {
-  navCta.href = window.innerWidth <= 900 ? '#contact-form' : '#contact';
-}
-updateCtaHref();
-window.addEventListener('resize', updateCtaHref);
-  const officeImages = [
-  'img/office/office1.jpg',
-  'img/office/office2.jpg',
-  'img/office/office3.jpg',
-  'img/office/office4.jpg'
-  ];
-let currentOffice = 0;
+    /* ─── SCROLL REVEAL ─── */
+    const revealObs = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+      { threshold: 0.12 }
+    );
+    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
-function openOffice() {
-  document.getElementById('cursor').style.zIndex = '999999';
-  currentOffice = 0;
-  document.getElementById('office-img').src = officeImages[0];
-  document.getElementById('office-lightbox').style.display = 'flex';
-  document.body.style.overflow = 'hidden';
-}
-function closeOffice() {
-  document.getElementById('cursor').style.zIndex = '9999';
-  document.getElementById('office-lightbox').style.display = 'none';
-  document.body.style.overflow = '';
-}
-function nextOffice() {
-  currentOffice = (currentOffice + 1) % officeImages.length;
-  document.getElementById('office-img').src = officeImages[currentOffice];
-}
-function prevOffice() {
-  currentOffice = (currentOffice - 1 + officeImages.length) % officeImages.length;
-  document.getElementById('office-img').src = officeImages[currentOffice];
-}
-document.querySelectorAll('.form-input, .form-textarea, .form-select').forEach(el => {
-  el.addEventListener('focus', () => document.body.style.overscrollBehaviorX = 'none');
-  el.addEventListener('blur', () => document.body.style.overscrollBehaviorX = 'auto');
-});
-</script>
+    /* ─── NAV SHRINK ON SCROLL ─── */
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      const wide = window.innerWidth > 900;
+      nav.style.padding = window.scrollY > 60
+        ? (wide ? '14px 56px' : '14px 24px')
+        : (wide ? '20px 56px' : '16px 24px');
+    });
+
+    /* ─── NAV CTA HREF (mobile → form, desktop → section) ─── */
+    const navCta = document.querySelector('.nav-cta');
+    function updateCtaHref() {
+      navCta.href = window.innerWidth <= 900 ? '#contact-form' : '#contact';
+    }
+    updateCtaHref();
+    window.addEventListener('resize', updateCtaHref);
+
+    /* ─── FORM SUBMIT ─── */
+    async function submitForm(btn) {
+      const hp = document.getElementById('hp-website');
+      if (hp && hp.value.trim() !== '') {
+        showFeedback('ok', '✓ Заявка отправлена! Свяжусь с вами в течение 24 часов.');
+        return;
+      }
+
+      const name    = document.getElementById('f-name').value.trim();
+      const contact = document.getElementById('f-contact').value.trim();
+      const format  = document.getElementById('f-format').value;
+      const message = document.getElementById('f-message').value.trim();
+
+      if (!name || !contact) {
+        showFeedback('err', '⚠ Пожалуйста, укажите имя и способ связи.');
+        return;
+      }
+
+      const now  = new Date().toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' });
+      const text = `📬 <b>Новая заявка с сайта</b>\n\n`
+                 + `👤 <b>Имя:</b> ${esc(name)}\n`
+                 + `📞 <b>Контакт:</b> ${esc(contact)}\n`
+                 + `🖥 <b>Формат:</b> ${esc(format || 'не указан')}\n`
+                 + `💬 <b>Запрос:</b> ${esc(message || '—')}\n\n`
+                 + `🕐 ${now} (МСК)`;
+
+      btn.disabled    = true;
+      btn.textContent = 'Отправляю...';
+
+      try {
+        const res  = await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ chat_id: TG_CHAT_ID, text, parse_mode: 'HTML' })
+        });
+        const data = await res.json();
+
+        if (data.ok) {
+          btn.textContent = '✓ Отправлено';
+          showFeedback('ok', '✓ Заявка отправлена! Свяжусь с вами в течение 24 часов.');
+          ['f-name','f-contact','f-format','f-message'].forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.value = '';
+          });
+        } else {
+          throw new Error(data.description || 'Telegram error');
+        }
+      } catch (err) {
+        console.error(err);
+        btn.disabled    = false;
+        btn.textContent = 'Отправить заявку →';
+        showFeedback('err', '⚠ Ошибка отправки. Напишите напрямую в Telegram или WhatsApp.');
+      }
+    }
+
+    function showFeedback(type, msg) {
+      const el = document.getElementById('formFeedback');
+      el.className   = 'form-feedback ' + type;
+      el.textContent = msg;
+    }
+
+    function esc(s) {
+      return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    }
+
+    /* ─── CERTIFICATES SLIDER ─── */
+    const certImages = [
+      'img/sert/sert1.jpg',
+      'img/sert/sert2.jpg',
+      'img/sert/sert3.jpg',
+      'img/sert/sert4.jpg',
+      'img/sert/sert5.jpg',
+      'img/sert/sert6.jpg',
+      'img/sert/sert7.jpg'
+    ];
+    let currentCert = 0;
+
+    function openCert(src) {
+      currentCert = certImages.indexOf(src);
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCert() {
+      document.getElementById('lightbox').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    function nextCert() {
+      currentCert = (currentCert + 1) % certImages.length;
+      document.getElementById('lightbox-img').src = certImages[currentCert];
+    }
+
+    function prevCert() {
+      currentCert = (currentCert - 1 + certImages.length) % certImages.length;
+      document.getElementById('lightbox-img').src = certImages[currentCert];
+    }
+
+    function scrollCerts(dir) {
+      const scroll = document.querySelector('.certs-scroll');
+      if (!scroll) return;
+      const cardW      = 140 + 16;
+      const visible    = Math.floor(scroll.clientWidth / cardW) || 1;
+      const step       = visible * cardW;
+      const maxScroll  = scroll.scrollWidth - scroll.clientWidth;
+      let next = scroll.scrollLeft + dir * step;
+      if (next > maxScroll) next = 0;
+      if (next < 0) next = maxScroll;
+      scroll.scrollTo({ left: next, behavior: 'smooth' });
+    }
+
+    /* ─── OFFICE GALLERY ─── */
+    const officeImages = [
+      'img/office/office1.jpg',
+      'img/office/office2.jpg',
+      'img/office/office3.jpg',
+      'img/office/office4.jpg'
+    ];
+    let currentOffice = 0;
+
+    function openOffice() {
+      document.getElementById('cursor').style.zIndex = '999999';
+      currentOffice = 0;
+      document.getElementById('office-img').src = officeImages[0];
+      document.getElementById('office-lightbox').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeOffice() {
+      document.getElementById('cursor').style.zIndex = '9999';
+      document.getElementById('office-lightbox').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    function nextOffice() {
+      currentOffice = (currentOffice + 1) % officeImages.length;
+      document.getElementById('office-img').src = officeImages[currentOffice];
+    }
+
+    function prevOffice() {
+      currentOffice = (currentOffice - 1 + officeImages.length) % officeImages.length;
+      document.getElementById('office-img').src = officeImages[currentOffice];
+    }
+
+    /* ─── KEYBOARD NAVIGATION ─── */
+    document.addEventListener('keydown', e => {
+      const certOpen   = document.getElementById('lightbox').style.display === 'flex';
+      const officeOpen = document.getElementById('office-lightbox').style.display === 'flex';
+
+      if (e.key === 'Escape') {
+        if (certOpen)   closeCert();
+        if (officeOpen) closeOffice();
+      }
+      if (e.key === 'ArrowRight') {
+        if (certOpen)   nextCert();
+        if (officeOpen) nextOffice();
+      }
+      if (e.key === 'ArrowLeft') {
+        if (certOpen)   prevCert();
+        if (officeOpen) prevOffice();
+      }
+    });
+
+    /* ─── FORM INPUT SCROLL FIX ─── */
+    document.querySelectorAll('.form-input, .form-textarea, .form-select').forEach(el => {
+      el.addEventListener('focus', () => document.body.style.overscrollBehaviorX = 'none');
+      el.addEventListener('blur',  () => document.body.style.overscrollBehaviorX = 'auto');
+    });
+  </script>
+
 </body>
 </html>
