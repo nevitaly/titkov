@@ -471,7 +471,7 @@ footer { background: var(--ink); padding: 0 56px; }
   width: 100%; }
 }
 
-  /* ISSUES */
+/* ISSUES */
 .issues {
   border-bottom: 2px solid var(--ink);
   background: var(--bg);
@@ -483,43 +483,76 @@ footer { background: var(--ink); padding: 0 56px; }
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  gap: 32px;
 }
 
 .issues-header-right {
-  max-width: 320px;
+  max-width: 340px;
   font-size: 15px;
   font-weight: 300;
-  line-height: 1.7;
+  line-height: 1.8;
   color: var(--ink-soft);
 }
 
 .issues-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
-.issue-item {
-  padding: 32px 40px;
+.issue-card {
+  padding: 36px 32px;
   border-right: 1px solid var(--sand-dark);
   border-bottom: 1px solid var(--sand-dark);
-
-  font-size: 16px;
-  font-weight: 300;
-  color: var(--ink-mid);
-
-  transition: background 0.3s, color 0.3s;
+  transition: background 0.3s, transform 0.3s;
+  min-height: 220px;
 }
 
-.issue-item:nth-child(3n) {
+.issue-card:nth-child(4n) {
   border-right: none;
 }
 
-.issue-item:hover {
+.issue-card:hover {
   background: var(--sand);
-  color: var(--ink);
+  transform: translateY(-2px);
 }
 
-/* MOBILE */
+.issue-icon {
+  font-size: 24px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.issue-title {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+
+.issue-desc {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--ink-mid);
+}
+
+@media (max-width: 1200px) {
+  .issues-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .issue-card:nth-child(4n) {
+    border-right: 1px solid var(--sand-dark);
+  }
+
+  .issue-card:nth-child(2n) {
+    border-right: none;
+  }
+}
+
 @media (max-width: 900px) {
   .issues-header {
     flex-direction: column;
@@ -532,12 +565,12 @@ footer { background: var(--ink); padding: 0 56px; }
     grid-template-columns: 1fr;
   }
 
-  .issue-item {
-    padding: 24px;
-    border-right: none;
+  .issue-card {
+    padding: 28px 24px;
+    border-right: none !important;
+    min-height: auto;
   }
 }
-  
 </style>
 </head>
   
@@ -713,22 +746,61 @@ footer { background: var(--ink); padding: 0 56px; }
       </div>
     </div>
     <div class="issues-header-right">
-      Вы можете прийти с чётким запросом или просто с ощущением, что «что-то не так». Это уже достаточная причина начать.
+      Вы можете прийти с чётким запросом или просто с ощущением, что что-то не так. Это уже достаточная причина начать.
     </div>
   </div>
 
   <div class="issues-grid">
-    <div class="issue-item reveal">Постоянная тревога и внутреннее напряжение</div>
-    <div class="issue-item reveal">Чувство усталости и выгорания</div>
-    <div class="issue-item reveal">Сложности в отношениях и близости</div>
-    <div class="issue-item reveal">Сомнения в себе и своих решениях</div>
-    <div class="issue-item reveal">Ощущение, что «что-то не так», но непонятно что</div>
-    <div class="issue-item reveal">Жизненные кризисы и важные перемены</div>
-    <div class="issue-item reveal">Подростковый возраст: конфликты, тревога, поиск себя</div>
-    <div class="issue-item reveal">Прокрастинация и трудности с принятием решений</div>
+    <div class="issue-card reveal">
+      <div class="issue-icon">🧠</div>
+      <div class="issue-title">Тревога и напряжение</div>
+      <div class="issue-desc">Когда сложно расслабиться, остановить мысли и почувствовать внутреннюю опору.</div>
+    </div>
+
+    <div class="issue-card reveal">
+      <div class="issue-icon">🔥</div>
+      <div class="issue-title">Выгорание и усталость</div>
+      <div class="issue-desc">Когда сил всё меньше, а привычная жизнь начинает давить и утомлять.</div>
+    </div>
+
+    <div class="issue-card reveal">
+      <div class="issue-icon">💬</div>
+      <div class="issue-title">Отношения и близость</div>
+      <div class="issue-desc">Когда трудно выстраивать контакт, говорить о важном и чувствовать понимание.</div>
+    </div>
+
+    <div class="issue-card reveal">
+      <div class="issue-icon">🌿</div>
+      <div class="issue-title">Сомнения в себе</div>
+      <div class="issue-desc">Когда внутренней критики слишком много, а уверенности в себе и своих решениях не хватает.</div>
+    </div>
+
+    <div class="issue-card reveal">
+      <div class="issue-icon">🌀</div>
+      <div class="issue-title">Ощущение “что-то не так”</div>
+      <div class="issue-desc">Когда тяжело объяснить словами, но внутри давно есть напряжение, пустота или потерянность.</div>
+    </div>
+
+    <div class="issue-card reveal">
+      <div class="issue-icon">🔄</div>
+      <div class="issue-title">Жизненные перемены</div>
+      <div class="issue-desc">Когда приходится проходить через кризис, расставание, потерю или новый этап жизни.</div>
+    </div>
+
+    <div class="issue-card reveal">
+      <div class="issue-icon">🧑‍🎓</div>
+      <div class="issue-title">Подростковый возраст</div>
+      <div class="issue-desc">Конфликты, тревога, поиск себя и сложности во взаимоотношениях с близкими.</div>
+    </div>
+
+    <div class="issue-card reveal">
+      <div class="issue-icon">⏳</div>
+      <div class="issue-title">Прокрастинация и выбор</div>
+      <div class="issue-desc">Когда трудно решиться, начать, не откладывать и двигаться дальше.</div>
+    </div>
   </div>
 </section>
-
+  
 <!-- SERVICES -->
 <section class="services" id="services">
   <div class="services-header reveal">
