@@ -477,6 +477,7 @@ footer { background: var(--ink); padding: 0 56px; }
   background: var(--bg);
 }
 
+/* HEADER */
 .issues-header {
   padding: 64px 56px 48px;
   border-bottom: 1px solid var(--sand-dark);
@@ -494,36 +495,55 @@ footer { background: var(--ink); padding: 0 56px; }
   color: var(--ink-soft);
 }
 
+/* GRID */
 .issues-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
+/* CARD */
 .issue-row {
-  padding: 34px 40px;
+  position: relative;
+  padding: 40px 48px;
   border-right: 1px solid var(--sand-dark);
   border-bottom: 1px solid var(--sand-dark);
-  transition: background 0.3s, padding-left 0.3s;
+  transition: all 0.35s ease;
+  overflow: hidden;
 }
 
 .issue-row:nth-child(2n) {
   border-right: none;
 }
 
+/* HOVER */
 .issue-row:hover {
   background: var(--sand);
-  padding-left: 48px;
+  transform: translateY(-2px);
 }
 
-.issue-content {
-  max-width: 480px;
+/* TOP ACCENT LINE */
+.issue-row::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: var(--terra);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
 }
 
+.issue-row:hover::before {
+  transform: scaleX(1);
+}
+
+/* TITLE */
 .issue-name {
   font-family: 'Unbounded', sans-serif;
   font-size: 15px;
   font-weight: 700;
-  line-height: 1.35;
   text-transform: uppercase;
   letter-spacing: -0.01em;
   color: var(--ink);
@@ -531,30 +551,52 @@ footer { background: var(--ink); padding: 0 56px; }
   display: flex;
   align-items: center;
   gap: 14px;
+  transition: color 0.3s;
 }
 
+/* SMALL LINE BEFORE TITLE */
 .issue-name::before {
   content: '';
-  display: inline-block;
-  width: 26px;
+  width: 24px;
   height: 1px;
   background: var(--terra);
-  flex-shrink: 0;
+  display: inline-block;
+  transition: width 0.3s;
 }
 
+/* HOVER EFFECTS */
+.issue-row:hover .issue-name {
+  color: var(--terra);
+}
+
+.issue-row:hover .issue-name::before {
+  width: 40px;
+}
+
+/* TEXT */
 .issue-text {
   font-size: 15px;
   font-weight: 300;
   line-height: 1.8;
   color: var(--ink-mid);
+  transition: color 0.3s;
 }
 
+.issue-row:hover .issue-text {
+  color: var(--ink);
+}
+
+/* MOBILE */
 @media (max-width: 900px) {
   .issues-header {
     flex-direction: column;
     gap: 20px;
     align-items: flex-start;
     padding: 48px 24px 32px;
+  }
+
+  .issues-header-right {
+    max-width: 100%;
   }
 
   .issues-list {
@@ -567,11 +609,8 @@ footer { background: var(--ink); padding: 0 56px; }
   }
 
   .issue-row:hover {
+    transform: none;
     padding-left: 30px;
-  }
-
-  .issues-header-right {
-    max-width: 100%;
   }
 
   .issue-name {
