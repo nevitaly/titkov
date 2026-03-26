@@ -471,90 +471,97 @@ footer { background: var(--ink); padding: 0 56px; }
   width: 100%; }
 }
 
-/* ISSUES SPLIT */
-.issues-split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+/* ISSUES */
+.issues {
   border-bottom: 2px solid var(--ink);
-  align-items: stretch;
-}
-
-.issues-photo {
-  background: var(--ink);
-  border-right: 2px solid var(--ink);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 64px 48px;
-  overflow: hidden;
-}
-
-.issues-photo-inner {
-  width: 280px;
-  height: 360px;
-  position: relative;
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 2px;
-  overflow: hidden;
-  flex-shrink: 0;
-}
-
-.issues-photo-inner::before {
-  content: '';
-  position: absolute;
-  inset: 8px;
-  border: 1px solid rgba(196,96,42,0.3);
-  border-radius: 1px;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.issues-photo img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  object-position: center center;
-  border-radius: 2px;
-}
-
-.issues-content {
   background: var(--bg);
-  display: flex;
-  flex-direction: column;
 }
 
-.issues-header {
-  padding: 64px 56px 48px;
+.issues-intro {
+  padding: 84px 56px 56px;
   border-bottom: 1px solid var(--sand-dark);
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
+  text-align: center;
+  max-width: 980px;
+  margin: 0 auto;
 }
 
-.issues-header-right {
-  max-width: 420px;
-  font-size: 15px;
+.issues-tag {
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.issues-tag::after {
+  display: none;
+}
+
+.issues-title {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(30px, 3.4vw, 46px);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  color: var(--ink);
+}
+
+.issues-title .section-title-italic {
+  display: block;
+  margin-top: 6px;
+  margin-bottom: 18px;
+}
+
+.issues-intro-text {
+  max-width: 620px;
+  margin: 0 auto;
+  font-size: 16px;
   font-weight: 300;
-  line-height: 1.8;
+  line-height: 1.85;
   color: var(--ink-soft);
 }
 
-.issues-list {
+.issues-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
-.issue-row {
+.issue-card {
   position: relative;
-  padding: 30px 56px;
+  padding: 34px 56px 32px 56px;
   border-bottom: 1px solid var(--sand-dark);
-  transition: background 0.3s, padding-left 0.3s;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.issue-row:hover {
+.issue-card:nth-child(odd) {
+  border-right: 1px solid var(--sand-dark);
+}
+
+.issue-card::before {
+  content: '';
+  position: absolute;
+  top: 34px;
+  left: 56px;
+  width: 26px;
+  height: 1px;
+  background: var(--terra);
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+.issue-card:hover {
   background: var(--sand);
-  padding-left: 64px;
+}
+
+.issue-card:hover::before {
+  width: 42px;
+}
+
+.issue-card:hover .issue-name {
+  color: var(--terra);
+  transform: translateX(10px);
+}
+
+.issue-card:hover .issue-text {
+  color: var(--ink);
+  transform: translateX(10px);
 }
 
 .issue-name {
@@ -564,93 +571,68 @@ footer { background: var(--ink); padding: 0 56px; }
   text-transform: uppercase;
   letter-spacing: -0.01em;
   color: var(--ink);
-  margin-bottom: 12px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  transition: color 0.3s;
-}
-
-.issue-name::before {
-  content: '';
-  width: 24px;
-  height: 1px;
-  background: var(--terra);
-  display: inline-block;
-  flex-shrink: 0;
-  transition: width 0.3s;
-}
-
-.issue-row:hover .issue-name {
-  color: var(--terra);
-}
-
-.issue-row:hover .issue-name::before {
-  width: 40px;
+  line-height: 1.35;
+  margin-bottom: 14px;
+  padding-left: 42px;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .issue-text {
-  max-width: 540px;
   font-size: 15px;
   font-weight: 300;
   line-height: 1.8;
   color: var(--ink-mid);
-  transition: color 0.3s;
+  padding-left: 42px;
+  max-width: 460px;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.issue-row:hover .issue-text {
-  color: var(--ink);
-}
+@media (max-width: 900px) {
+  .issues-intro {
+    padding: 60px 24px 40px;
+  }
 
-  @media (max-width: 900px) {
-  .issues-split {
+  .issues-grid {
     grid-template-columns: 1fr;
   }
 
-  .issues-photo {
+  .issue-card {
+    padding: 26px 24px 24px 24px;
+  }
+
+  .issue-card:nth-child(odd) {
     border-right: none;
-    border-bottom: 2px solid var(--ink);
-    padding: 40px 24px;
   }
 
-  .issues-photo-inner {
-    width: min(100%, 280px);
-    height: 360px;
+  .issue-card::before {
+    top: 26px;
+    left: 24px;
+    width: 20px;
   }
 
-  .issues-header {
-    padding: 48px 24px 32px;
-    gap: 20px;
-  }
-
-  .issues-header-right {
-    max-width: 100%;
-    font-size: 14px;
-    line-height: 1.7;
-  }
-
-  .issue-row {
-    padding: 24px;
-  }
-
-  .issue-row:hover {
-    padding-left: 28px;
+  .issue-card:hover::before {
+    width: 30px;
   }
 
   .issue-name {
     font-size: 13px;
-    gap: 10px;
-  }
-
-  .issue-name::before {
-    width: 18px;
+    padding-left: 32px;
+    margin-bottom: 10px;
   }
 
   .issue-text {
     font-size: 14px;
-    line-height: 1.7;
+    line-height: 1.75;
+    padding-left: 32px;
+    max-width: 100%;
+  }
+
+  .issue-card:hover .issue-name,
+  .issue-card:hover .issue-text {
+    transform: translateX(6px);
   }
 }
+  
 </style>
 </head>
   
@@ -816,68 +798,57 @@ footer { background: var(--ink); padding: 0 56px; }
   </div>
 </section>
 
-<!-- ISSUES SPLIT -->
-<section class="issues-split">
-  <div class="issues-photo reveal">
-    <div class="issues-photo-inner">
-      <img src="img/photo2.jpg" alt="Александр Титков">
+<!-- ISSUES -->
+<section class="issues" id="issues">
+  <div class="issues-intro reveal">
+    <div class="section-tag issues-tag">Частые запросы</div>
+    <div class="issues-title">
+      С чем можно<span class="section-title-italic">обратиться</span>
+    </div>
+    <div class="issues-intro-text">
+      Вы можете прийти с чётким запросом или просто с ощущением, что что-то не так. Ниже — лишь часть тем, с которыми ко мне обращаются чаще всего.
     </div>
   </div>
 
-  <div class="issues-content reveal">
-    <div class="issues-header">
-      <div>
-        <div class="section-tag">Частые запросы</div>
-        <div class="section-title">
-          С чем можно<span class="section-title-italic">обратиться</span>
-        </div>
-      </div>
-
-      <div class="issues-header-right">
-        Вы можете прийти с чётким запросом или просто с ощущением, что что-то не так. Ниже — лишь часть тем, с которыми ко мне обращаются чаще всего.
-      </div>
+  <div class="issues-grid">
+    <div class="issue-card reveal">
+      <div class="issue-name">Тревога и напряжение</div>
+      <div class="issue-text">Когда сложно расслабиться, остановить мысли и почувствовать внутреннюю опору.</div>
     </div>
 
-    <div class="issues-list">
-      <div class="issue-row">
-        <div class="issue-name">Тревога и напряжение</div>
-        <div class="issue-text">Когда сложно расслабиться, остановить мысли и почувствовать внутреннюю опору.</div>
-      </div>
+    <div class="issue-card reveal">
+      <div class="issue-name">Выгорание и усталость</div>
+      <div class="issue-text">Когда сил всё меньше, а привычная жизнь начинает давить и утомлять.</div>
+    </div>
 
-      <div class="issue-row">
-        <div class="issue-name">Выгорание и усталость</div>
-        <div class="issue-text">Когда сил всё меньше, а привычная жизнь начинает давить и утомлять.</div>
-      </div>
+    <div class="issue-card reveal">
+      <div class="issue-name">Отношения и близость</div>
+      <div class="issue-text">Когда трудно выстраивать контакт, говорить о важном и чувствовать понимание.</div>
+    </div>
 
-      <div class="issue-row">
-        <div class="issue-name">Отношения и близость</div>
-        <div class="issue-text">Когда трудно выстраивать контакт, говорить о важном и чувствовать понимание.</div>
-      </div>
+    <div class="issue-card reveal">
+      <div class="issue-name">Сомнения в себе</div>
+      <div class="issue-text">Когда внутренней критики слишком много, а уверенности в себе и своих решениях не хватает.</div>
+    </div>
 
-      <div class="issue-row">
-        <div class="issue-name">Сомнения в себе</div>
-        <div class="issue-text">Когда внутренней критики слишком много, а уверенности в себе и своих решениях не хватает.</div>
-      </div>
+    <div class="issue-card reveal">
+      <div class="issue-name">Ощущение, что что-то не так</div>
+      <div class="issue-text">Когда тяжело объяснить словами, но внутри давно есть напряжение, потерянность или внутренний дискомфорт.</div>
+    </div>
 
-      <div class="issue-row">
-        <div class="issue-name">Ощущение, что что-то не так</div>
-        <div class="issue-text">Когда тяжело объяснить словами, но внутри давно есть напряжение, потерянность или внутренний дискомфорт.</div>
-      </div>
+    <div class="issue-card reveal">
+      <div class="issue-name">Жизненные перемены</div>
+      <div class="issue-text">Когда приходится проходить через кризис, расставание, потерю или новый этап жизни.</div>
+    </div>
 
-      <div class="issue-row">
-        <div class="issue-name">Жизненные перемены</div>
-        <div class="issue-text">Когда приходится проходить через кризис, расставание, потерю или новый этап жизни.</div>
-      </div>
+    <div class="issue-card reveal">
+      <div class="issue-name">Подростковый возраст</div>
+      <div class="issue-text">Конфликты, тревога, поиск себя и сложности во взаимоотношениях с близкими.</div>
+    </div>
 
-      <div class="issue-row">
-        <div class="issue-name">Подростковый возраст</div>
-        <div class="issue-text">Конфликты, тревога, поиск себя и сложности во взаимоотношениях с близкими.</div>
-      </div>
-
-      <div class="issue-row">
-        <div class="issue-name">И многое другое</div>
-        <div class="issue-text">Если вы не нашли свой запрос в этом списке, это не значит, что с ним нельзя работать.</div>
-      </div>
+    <div class="issue-card reveal">
+      <div class="issue-name">И многое другое</div>
+      <div class="issue-text">Если вы не нашли свой запрос в этом списке, это не значит, что с ним нельзя работать.</div>
     </div>
   </div>
 </section>
