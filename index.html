@@ -487,6 +487,32 @@ footer { background: var(--ink); padding: 0 56px; }
 .issues .step:nth-child(n+5) {
   border-top: 1px solid var(--sand-dark);
 }  
+  .issues .step {
+  position: relative;
+  overflow: hidden;
+  transition: background 0.35s ease;
+}
+
+.issues .step::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--terra);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+
+.issues .step:hover {
+  background: rgba(196, 96, 42, 0.06);
+}
+
+.issues .step:hover::before {
+  transform: scaleX(1);
+}
 </style>
 </head>
   
