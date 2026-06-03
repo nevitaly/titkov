@@ -53,9 +53,14 @@ async function submitForm(btn) {
   const contact = document.getElementById('f-contact').value.trim();
   const format  = document.getElementById('f-format').value;
   const message = document.getElementById('f-message').value.trim();
+  const consent = document.getElementById('f-consent').checked;
 
   if (!name || !contact) {
     showFeedback('err', '⚠ Пожалуйста, укажите имя и способ связи.');
+    return;
+  }
+  if (!consent) {
+    showFeedback('err', '⚠ Необходимо согласие на обработку персональных данных.');
     return;
   }
 
